@@ -587,12 +587,13 @@ button:hover,
 .module-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-auto-rows: minmax(112px, auto);
+  grid-template-rows: repeat(3, minmax(96px, auto));
+  grid-auto-rows: minmax(96px, auto);
   gap: 12px;
 }
 
 .module-card {
-  min-height: 112px;
+  min-height: 96px;
   display: grid;
   place-items: center;
   gap: 10px;
@@ -606,8 +607,8 @@ button:hover,
 }
 
 .module-card--featured {
-  grid-row: span 2;
-  min-height: 236px;
+  grid-row: span 3;
+  min-height: 312px;
   background: linear-gradient(155deg, #d51b73 0%, #a40063 48%, #5a0d65 100%);
   box-shadow: 0 18px 38px rgba(90, 13, 101, 0.24);
 }
@@ -1230,11 +1231,11 @@ button:hover,
   }
 
   .module-card {
-    min-height: 128px;
+    min-height: 118px;
   }
 
   .module-card--featured {
-    min-height: 268px;
+    min-height: 378px;
   }
 
   .result-layout {
@@ -1393,11 +1394,11 @@ button:hover,
   }
 
   .module-card {
-    min-height: 112px;
+    min-height: 96px;
   }
 
   .module-card--featured {
-    min-height: 236px;
+    min-height: 312px;
   }
 
   .module-card strong {
