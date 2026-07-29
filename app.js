@@ -5,8 +5,11 @@ const state = {
   selectedDate: data.sessions[0].date,
   venue: "all",
   track: "all",
-  type: "all"
+  type: "all",
+  showAllExperts: false
 };
+
+const DEFAULT_EXPERT_LIMIT = 10;
 
 const $ = (selector) => document.querySelector(selector);
 
@@ -39,6 +42,11 @@ function validText(value) {
   return text && text !== "无" && text !== "undefined" && text !== "null" ? text : "";
 }
 
+function displayOrganization(value) {
+  const text = validText(value);
+  return text === "参会单位待补充" ? "" : text;
+}
+
 function fieldRow(label, value) {
   const text = validText(value);
   return text ? `<div><dt>${label}</dt><dd>${text}</dd></div>` : "";
@@ -52,19 +60,10 @@ function taskTextLine(label, value) {
 function renderConference() {
   $("#heroTitle").innerHTML = "<span>血液肿瘤精准诊疗与</span><span>细胞治疗前沿学术会议</span>";
 
-  $("#infoGrid").innerHTML = `
+  $("#noticeGrid").innerHTML = `
     <article class="info-card info-card--intro">
       <h3>会议简介</h3>
       <p>此次会议将特邀国内血液病领域顶尖专家，围绕急性髓系白血病、多发性骨髓瘤、淋巴瘤、骨髓纤维化、造血干细胞移植、CAR-T 细胞治疗等前沿热点议题进行深度探讨。会议特别设立“免疫治疗专场”，聚焦细胞治疗在血液肿瘤中的排兵布阵、毒副反应管理及指南更新解读；另设血小板管理专题分会场，探讨临床实际问题。</p>
-    </article>
-    <article class="info-card info-card--key">
-      <h3>会议时间</h3>
-      <p><strong>2026年7月31日14:30</strong><span>至</span><strong>2026年8月2日17:10</strong></p>
-    </article>
-    <article class="info-card info-card--key">
-      <h3>会议地点</h3>
-      <p><span>线下会议地点</span><strong>深圳福田区福华一路28号好日子皇冠假日酒店会议厅（详见日程）</strong></p>
-      <p><span>线上会议号</span><strong>腾讯会议 813-726-169</strong></p>
     </article>
   `;
 }
@@ -87,8 +86,12 @@ function renderExpertResults() {
   const matches = data.experts
     .filter((expert) => expertMatches(expert, query))
     .sort((a, b) => getExpertTaskCount(b.id) - getExpertTaskCount(a.id) || a.name.localeCompare(b.name, "zh-Hans-CN"));
+  const visibleMatches = !query && !state.showAllExperts ? matches.slice(0, DEFAULT_EXPERT_LIMIT) : matches;
+  const hasMoreDefaultExperts = !query && !state.showAllExperts && matches.length > DEFAULT_EXPERT_LIMIT;
 
-  $("#resultMeta").textContent = query ? `找到 ${matches.length} 位匹配专家` : "默认展示已有任务的专家";
+  $("#resultMeta").textContent = query
+    ? `找到 ${matches.length} 位匹配专家`
+    : `默认展示任务较多的 ${Math.min(DEFAULT_EXPERT_LIMIT, matches.length)} 位专家`;
 
   if (!matches.length) {
     $("#expertResults").innerHTML = `
@@ -110,18 +113,22 @@ function renderExpertResults() {
     state.selectedExpertId = matches[0].id;
   }
 
-  $("#expertResults").innerHTML = matches.map((expert) => {
+  $("#expertResults").classList.toggle("is-single-match", Boolean(query && matches.length === 1));
+  $("#expertResults").innerHTML = visibleMatches.map((expert) => {
     const count = getExpertTaskCount(expert.id);
+    const organization = displayOrganization(expert.organization);
     return `
       <button class="expert-card ${expert.id === state.selectedExpertId ? "is-active" : ""}" type="button" data-expert-id="${expert.id}">
         <span>
           <strong>${expert.name}</strong>
-          <small>${expert.organization}</small>
+          ${organization ? `<small>${organization}</small>` : `<small class="is-muted">单位待补充</small>`}
         </span>
         <em>${count}项任务</em>
       </button>
     `;
-  }).join("");
+  }).join("") + (hasMoreDefaultExperts ? `
+    <button class="expert-more" id="showMoreExperts" type="button">展开更多专家</button>
+  ` : "");
 
   document.querySelectorAll(".expert-card").forEach((button) => {
     button.addEventListener("click", () => {
@@ -129,6 +136,13 @@ function renderExpertResults() {
       renderExpertResults();
     });
   });
+  const showMoreButton = $("#showMoreExperts");
+  if (showMoreButton) {
+    showMoreButton.addEventListener("click", () => {
+      state.showAllExperts = true;
+      renderExpertResults();
+    });
+  }
 
   renderTaskDetail();
 }
@@ -137,6 +151,7 @@ function renderTaskDetail() {
   const expert = expertById.get(state.selectedExpertId);
   if (!expert) return;
   const tasks = sortedTasks(tasksByExpert.get(expert.id) || []);
+  const expertMeta = [displayOrganization(expert.organization), validText(expert.title)].filter(Boolean).join(" · ");
   const taskItems = tasks.map((task) => {
     const session = sessionById.get(task.sessionId);
     const partners = getPartners(session, expert.name);
@@ -164,9 +179,9 @@ function renderTaskDetail() {
     <header class="task-detail__head">
       <div>
         <h3>${expert.name}</h3>
-        <p>${expert.organization} · ${expert.title}</p>
+        ${expertMeta ? `<p>${expertMeta}</p>` : ""}
       </div>
-      <button class="primary" id="copyTasks" type="button">复制任务清单</button>
+      <button class="primary" id="copyTasks" type="button" ${tasks.length ? "" : "disabled"}>复制任务清单</button>
     </header>
     <div class="task-summary">
       <span>共 ${tasks.length} 项任务</span>
@@ -205,9 +220,11 @@ function copyExpertTasks(expert, tasks) {
     if (validText(task.note)) lines.push(`   备注：${task.note}`);
   });
   const text = lines.join("\n");
-  if (navigator.clipboard && window.isSecureContext) {
-    navigator.clipboard.writeText(text).then(() => showToast("任务清单已复制"));
-  } else {
+  tryCopyText(text);
+}
+
+function fallbackCopyText(text) {
+  try {
     const textarea = document.createElement("textarea");
     textarea.value = text;
     textarea.setAttribute("readonly", "");
@@ -215,9 +232,29 @@ function copyExpertTasks(expert, tasks) {
     textarea.style.opacity = "0";
     document.body.appendChild(textarea);
     textarea.select();
-    document.execCommand("copy");
+    const copied = document.execCommand("copy");
     textarea.remove();
+    return copied;
+  } catch (error) {
+    return false;
+  }
+}
+
+function tryCopyText(text) {
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text)
+      .then(() => showToast("任务清单已复制"))
+      .catch(() => {
+        if (fallbackCopyText(text)) {
+          showToast("任务清单已复制");
+        } else {
+          showToast("复制失败，请手动选择复制");
+        }
+      });
+  } else if (fallbackCopyText(text)) {
     showToast("任务清单已复制");
+  } else {
+    showToast("复制失败，请手动选择复制");
   }
 }
 
@@ -348,11 +385,13 @@ function bindSectionNavigation() {
 function bindEvents() {
   $("#expertSearch").addEventListener("input", (event) => {
     state.query = event.target.value;
+    state.showAllExperts = false;
     $("#globalSearch").value = state.query;
     renderExpertResults();
   });
   $("#globalSearch").addEventListener("input", (event) => {
     state.query = event.target.value;
+    state.showAllExperts = false;
     $("#expertSearch").value = state.query;
     renderExpertResults();
   });
@@ -364,6 +403,7 @@ function bindEvents() {
   });
   $("#clearSearch").addEventListener("click", () => {
     state.query = "";
+    state.showAllExperts = false;
     $("#expertSearch").value = "";
     $("#globalSearch").value = "";
     renderExpertResults();
