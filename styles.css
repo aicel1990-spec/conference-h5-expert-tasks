@@ -376,14 +376,14 @@ h1 span {
 }
 
 .hero-media__city {
-  right: -18px;
-  top: 74px;
-  width: min(36vw, 232px);
-  height: min(36vw, 232px);
+  right: -22px;
+  top: 76px;
+  width: min(33vw, 214px);
+  height: min(33vw, 214px);
   border-radius: 50%;
   border: 4px solid rgba(255, 194, 55, 0.32);
   background: linear-gradient(135deg, #fff7fb, #f4e8f6);
-  opacity: 0.76;
+  opacity: 0.68;
 }
 
 .hero-media__city::after {
@@ -396,16 +396,17 @@ h1 span {
 }
 
 .hero-media__hospital {
-  right: 98px;
-  bottom: 16px;
-  width: min(26vw, 168px);
-  height: min(26vw, 168px);
+  right: 112px;
+  bottom: 22px;
+  width: min(29vw, 188px);
+  height: min(29vw, 188px);
   border-radius: 50%;
-  border: 4px solid rgba(197, 0, 107, 0.48);
+  border: 4px solid rgba(197, 0, 107, 0.5);
+  z-index: 2;
 }
 
 .hero-media__hospital img {
-  object-position: 72% center;
+  object-position: 10% center;
 }
 
 .hero-search-card {
@@ -1029,17 +1030,6 @@ button:hover,
   box-shadow: 0 10px 22px rgba(197, 0, 107, 0.18);
 }
 
-.image-credit {
-  color: var(--muted);
-  font-size: 10px;
-  line-height: 1.4;
-}
-
-.image-credit a {
-  color: var(--magenta);
-  text-decoration: none;
-}
-
 .toast {
   position: fixed;
   left: 50%;
@@ -1099,17 +1089,17 @@ button:hover,
   }
 
   .hero-media__city {
-    right: 28px;
-    top: 64px;
-    width: 232px;
-    height: 232px;
+    right: 24px;
+    top: 68px;
+    width: 218px;
+    height: 218px;
   }
 
   .hero-media__hospital {
-    right: 208px;
+    right: 196px;
     bottom: 24px;
-    width: 142px;
-    height: 142px;
+    width: 168px;
+    height: 168px;
   }
 
   .hero-search-card {
@@ -1122,8 +1112,7 @@ button:hover,
   }
 
   .site-footer__address,
-  .map-link,
-  .image-credit {
+  .map-link {
     grid-column: 1 / -1;
   }
 
@@ -1185,10 +1174,6 @@ button:hover,
     grid-column: auto;
   }
 
-  .image-credit {
-    grid-column: 1 / -1;
-  }
-
   .info-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -1247,18 +1232,18 @@ button:hover,
   }
 
   .hero-media__city {
-    right: -42px;
-    top: 138px;
-    width: 126px;
-    height: 126px;
+    right: -44px;
+    top: 142px;
+    width: 116px;
+    height: 116px;
     border-width: 3px;
   }
 
   .hero-media__hospital {
     right: 34px;
-    bottom: 13px;
-    width: 92px;
-    height: 92px;
+    bottom: 14px;
+    width: 104px;
+    height: 104px;
     border-width: 3px;
   }
 
