@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>会议 H5 微站 · 专家任务查询系统</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23860f58'/%3E%3Ccircle cx='44' cy='18' r='12' fill='%23f25585' opacity='.72'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-size='34' fill='white' font-family='Arial'%3E会%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar__inner">
+        <a class="brand" href="#home" aria-label="返回首页">
+          <span class="brand__mark">会</span>
+          <span>
+            <strong>会议微站 · 专家任务查询</strong>
+            <small>血液肿瘤精准诊疗与细胞治疗前沿学术会议</small>
+          </span>
+        </a>
+        <nav class="nav" aria-label="页面导航">
+          <a href="#info">大会信息</a>
+          <a href="#search">专家检索</a>
+          <a href="#schedule">会议日程</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-stage">
+          <div class="hero__visual" aria-hidden="true">
+            <span class="cell cell-a"></span>
+            <span class="cell cell-b"></span>
+            <span class="cell cell-c"></span>
+            <span class="ribbon"></span>
+            <span class="mountains"></span>
+            <span class="skyline"></span>
+          </div>
+
+          <div class="logo-strip" aria-label="参会单位标识">
+            <span class="logo-mark"><img src="assets/logo-pku-hospital.png" alt="北京大学深圳医院 Logo"></span>
+            <span class="logo-mark"><img src="广东省临床医学会logo.jpeg" alt="广东省临床医学会 Logo"></span>
+            <span class="logo-mark"><img src="assets/logo-gd-women.png" alt="广东省女医师协会 Logo"></span>
+            <span class="logo-mark"><img src="assets/logo-sz-health.png" alt="深圳市健康管理协会 Logo"></span>
+          </div>
+
+          <div class="hero__content">
+            <p class="eyebrow">2026 · Shenzhen · Hematology</p>
+            <h1 id="heroTitle"></h1>
+          </div>
+
+          <div class="hero-media" aria-hidden="true">
+            <figure class="hero-media__city">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/China_Resources_Headquarters_Shenzhen.jpg/960px-China_Resources_Headquarters_Shenzhen.jpg" alt="">
+            </figure>
+            <figure class="hero-media__hospital">
+              <img src="北京大学深圳医院建筑.jpeg" alt="">
+            </figure>
+          </div>
+        </div>
+
+        <div class="poster-card hero-search-card">
+          <form class="searchbox" id="heroSearchForm" autocomplete="off">
+            <label for="globalSearch">搜索专家任务</label>
+            <div class="searchbox__row">
+              <input id="globalSearch" type="search" placeholder="输入姓名/拼音/首字母/单位进行搜索">
+              <button type="submit">查询</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="home-panel">
+          <section class="module-grid" aria-label="功能板块入口">
+            <a class="module-card module-card--featured" href="#schedule"><span>≡</span><strong>会议日程</strong></a>
+            <a class="module-card" href="#info"><span>i</span><strong>大会信息</strong></a>
+            <a class="module-card" href="#search"><span>⌕</span><strong>专家检索</strong></a>
+          </section>
+        </div>
+      </section>
+
+      <section class="section content-section" id="info">
+        <a class="back-home" href="#home">返回首页</a>
+        <div class="section__head">
+          <div>
+            <p class="eyebrow">Conference Info</p>
+            <h2>大会信息</h2>
+          </div>
+        </div>
+        <div class="info-grid" id="infoGrid"></div>
+      </section>
+
+      <section class="section content-section" id="search">
+        <a class="back-home" href="#home">返回首页</a>
+        <div class="section__head">
+          <div>
+            <p class="eyebrow">Expert Search</p>
+            <h2>专家检索</h2>
+          </div>
+          <button class="ghost" id="clearSearch" type="button">清空</button>
+        </div>
+        <div class="panel search-panel">
+          <div class="search-panel__input">
+            <label for="expertSearch">搜索：</label>
+            <div class="searchline">
+              <input id="expertSearch" type="search" placeholder="输入姓名/拼音/首字母/单位进行搜索">
+              <button type="button" id="searchJump">查询</button>
+            </div>
+          </div>
+          <div class="result-layout">
+            <div>
+              <div class="result-meta" id="resultMeta"></div>
+              <div class="expert-list" id="expertResults"></div>
+            </div>
+            <article class="task-detail" id="taskDetail">
+              <div class="empty-state">
+                <strong>请选择一位专家</strong>
+                <p>搜索后点击专家卡片，即可查看该专家在会议期间的全部任务。</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section content-section" id="schedule">
+        <a class="back-home" href="#home">返回首页</a>
+        <div class="section__head">
+          <div>
+            <p class="eyebrow">Schedule</p>
+            <h2>会议日程</h2>
+          </div>
+          <span class="section__hint" id="scheduleCount"></span>
+        </div>
+        <div class="panel">
+          <div class="filters">
+            <div>
+              <span class="filter-label">日期</span>
+              <div class="segmented" id="dateTabs"></div>
+            </div>
+            <div>
+              <span class="filter-label">会场</span>
+              <select id="venueFilter"></select>
+            </div>
+            <div>
+              <span class="filter-label">专题</span>
+              <select id="trackFilter"></select>
+            </div>
+            <div>
+              <span class="filter-label">环节类型</span>
+              <select id="typeFilter"></select>
+            </div>
+          </div>
+          <div class="schedule-list" id="scheduleList"></div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div class="site-footer__item site-footer__time">
+          <span>会议时间</span>
+          <strong>2026年7月31日14:30 至 2026年8月2日17:10</strong>
+        </div>
+        <div class="footer-unit">
+          <img src="广东省临床医学会logo.jpeg" alt="广东省临床医学会 Logo">
+          <span>主办单位</span>
+          <strong>广东省临床医学会</strong>
+        </div>
+        <div class="footer-unit">
+          <img src="assets/logo-pku-hospital.png" alt="北京大学深圳医院 Logo">
+          <span>承办单位</span>
+          <strong>北京大学深圳医院</strong>
+        </div>
+        <div class="site-footer__address">
+          <span>会议地址</span>
+          <strong>深圳福田区福华一路28号好日子皇冠假日酒店会议厅</strong>
+        </div>
+        <a class="map-link" href="https://uri.amap.com/search?keyword=%E6%B7%B1%E5%9C%B3%E7%A6%8F%E7%94%B0%E5%8C%BA%E7%A6%8F%E5%8D%8E%E4%B8%80%E8%B7%AF28%E5%8F%B7%E5%A5%BD%E6%97%A5%E5%AD%90%E7%9A%87%E5%86%A0%E5%81%87%E6%97%A5%E9%85%92%E5%BA%97%E4%BC%9A%E8%AE%AE%E5%8E%85&city=%E6%B7%B1%E5%9C%B3" target="_blank" rel="noopener">高德地图导航</a>
+        <small class="image-credit">春笋大厦照片：<a href="https://commons.wikimedia.org/wiki/File:China_Resources_Headquarters_Shenzhen.jpg" target="_blank" rel="noopener">Dlm423 / CC BY-SA 4.0</a></small>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
