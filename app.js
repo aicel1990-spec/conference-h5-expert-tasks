@@ -79,14 +79,16 @@ function taskTextLine(label, value) {
   return text ? `<p><b>${label}：</b>${text}</p>` : "";
 }
 
-function sessionPersonRows(session) {
+function sessionPersonRows(session, task = {}) {
+  const pairedDiscussants = task.includePairedDiscussion ? session.pairedDiscussion?.discussants : [];
+  const discussants = [...new Set([...(session.discussants || []), ...(pairedDiscussants || [])])];
   return [
     ["主讲/主持", session.speakerChairs],
     ["大会主席", session.presidents],
     ["致辞", session.speeches],
     ["讲者", session.speakers],
     ["主持", session.chairs],
-    ["讨论", session.discussants],
+    ["讨论", discussants],
     ["评审", session.reviewers],
     ["总结", session.summaries]
   ].map(([label, value]) => [label, validText(value)]).filter(([, text]) => text);
@@ -95,7 +97,7 @@ function sessionPersonRows(session) {
 function taskAgendaRows(session, task = {}) {
   const rows = [
     ["讲题/议题", session.title],
-    ...sessionPersonRows(session)
+    ...sessionPersonRows(session, task)
   ];
   return rows.map(([label, value]) => [label, validText(value)]).filter(([, text]) => text);
 }

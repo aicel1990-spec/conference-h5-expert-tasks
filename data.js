@@ -1393,7 +1393,7 @@ window.MEETING_DATA = {
     },
     {
       "id": "expert-170",
-      "name": "谢闫悦",
+      "name": "谢闻悦",
       "pinyin": "",
       "initials": "",
       "organization": "参会单位待补充",
@@ -2404,6 +2404,27 @@ window.MEETING_DATA = {
       "speakers": [
         "张晓辉"
       ],
+      "discussants": [],
+      "reviewers": [],
+      "sourceAgenda": "2026年8月2日（星期日）大会主会场"
+    },
+    {
+      "id": "s0802-main-002",
+      "date": "2026-08-02",
+      "startTime": "09:00",
+      "endTime": "09:15",
+      "venue": "多伦多厅",
+      "track": "大会主会场",
+      "type": "讨论",
+      "title": "异基因造血干细胞移植治疗CMML近期研究进展讨论",
+      "speakerChairs": [],
+      "presidents": [],
+      "speeches": [],
+      "chairs": [
+        "冯佳",
+        "王钧"
+      ],
+      "speakers": [],
       "discussants": [
         "孙丽华",
         "杨华"
@@ -3417,7 +3438,7 @@ window.MEETING_DATA = {
         "孙丽华"
       ],
       "speakers": [
-        "谢闫悦"
+        "谢闻悦"
       ],
       "discussants": [],
       "reviewers": [],
@@ -3566,7 +3587,7 @@ window.MEETING_DATA = {
   ]
 };
 
-(function mergePairedDiscussions(data) {
+(function annotatePairedDiscussions(data) {
   const merges = [
     ["s0731-007", "s0731-008"],
     ["s0801-main-002", "s0801-main-003"],
@@ -3582,6 +3603,7 @@ window.MEETING_DATA = {
     ["s0801-tor-004", "s0801-tor-005"],
     ["s0801-tor-006", "s0801-tor-007"],
     ["s0801-tor-008", "s0801-tor-009"],
+    ["s0802-main-001", "s0802-main-002"],
     ["s0802-main-003", "s0802-main-004"],
     ["s0802-main-005", "s0802-main-006"],
     ["s0802-main-007", "s0802-main-008"],
@@ -3601,15 +3623,19 @@ window.MEETING_DATA = {
     ["s0802-women-011", "s0802-women-012"]
   ];
   const sessionById = new Map(data.sessions.map((session) => [session.id, session]));
-  const removed = new Set();
   merges.forEach(([targetId, discussionId]) => {
     const target = sessionById.get(targetId);
     const discussion = sessionById.get(discussionId);
     if (!target || !discussion) return;
-    target.discussants = [...new Set([...(target.discussants || []), ...(discussion.discussants || [])])];
-    removed.add(discussionId);
+    target.pairedDiscussion = {
+      id: discussion.id,
+      startTime: discussion.startTime,
+      endTime: discussion.endTime,
+      title: discussion.title,
+      discussants: [...(discussion.discussants || [])]
+    };
+    discussion.pairedReportId = target.id;
   });
-  data.sessions = data.sessions.filter((session) => !removed.has(session.id));
 })(window.MEETING_DATA);
 
 (function resolveTasks(data) {
@@ -3630,7 +3656,7 @@ window.MEETING_DATA = {
     传: "chuan", 王: "wang", 淡: "dan", 瑜: "yu", 立: "li", 新: "xin", 魏: "wei",
     永: "yong", 强: "qiang", 翁: "weng", 光: "guang", 祥: "xiang", 吴: "wu", 利: "li",
     微: "wei", 夏: "xia", 冰: "bing", 天: "tian", 向: "xiang", 泓: "hong", 先: "xian",
-    谢: "xie", 沐: "mu", 尘: "chen", 闫: "yan", 悦: "yue", 许: "xu", 蕾: "lei",
+    谢: "xie", 沐: "mu", 尘: "chen", 闫: "yan", 闻: "wen", 悦: "yue", 许: "xu", 蕾: "lei",
     晏: "yan", 杨: "yang", 会: "hui", 慧: "hui", 斯: "si", 恬: "tian", 张: "zhang",
     红: "hong", 郑: "zheng", 润: "run", 辉: "hui", 钟: "zhong", 凤: "feng", 鸾: "luan",
     周: "zhou", 凌: "ling", 走: "zou", 方: "fang", 丽: "li", 晓: "xiao", 瀚: "han",
@@ -3731,11 +3757,16 @@ window.MEETING_DATA = {
   ];
 
   const taskByExpertSession = new Map();
+  const sessionById = new Map(data.sessions.map((session) => [session.id, session]));
+  const reportTaskFields = new Set(["speakerChairs", "presidents", "speeches", "chairs", "speakers"]);
   data.sessions.forEach((session) => {
     roleConfigs.forEach(([field, role]) => {
       (session[field] || []).forEach((name, index) => {
         const expert = expertByName.get(name);
         if (!expert) return;
+        const pairedReport = session.pairedReportId ? sessionById.get(session.pairedReportId) : null;
+        const sameChairAsPairedReport = pairedReport && field === "chairs" && (pairedReport.chairs || []).includes(name);
+        if (sameChairAsPairedReport) return;
         const key = `${expert.id}|${session.id || `${session.date}-${session.startTime}-${session.endTime}-${session.venue}-${session.title}`}`;
         if (!taskByExpertSession.has(key)) {
           taskByExpertSession.set(key, {
@@ -3743,10 +3774,12 @@ window.MEETING_DATA = {
             expertId: expert.id,
             sessionId: session.id,
             roles: [],
-            role: ""
+            role: "",
+            includePairedDiscussion: Boolean(session.pairedDiscussion && reportTaskFields.has(field))
           });
         }
         const task = taskByExpertSession.get(key);
+        if (session.pairedDiscussion && reportTaskFields.has(field)) task.includePairedDiscussion = true;
         if (!task.roles.includes(role)) task.roles.push(role);
         task.role = task.roles.join(" / ");
       });
