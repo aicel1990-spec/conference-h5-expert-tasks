@@ -137,7 +137,7 @@ window.MEETING_DATA = {
     },
     {
       "id": "expert-013",
-      "name": "晏李平",
+      "name": "聂李平",
       "pinyin": "",
       "initials": "",
       "organization": "参会单位待补充",
@@ -1583,7 +1583,7 @@ window.MEETING_DATA = {
         "黄艳"
       ],
       "speakers": [
-        "晏李平"
+        "聂李平"
       ],
       "discussants": [],
       "reviewers": [],
