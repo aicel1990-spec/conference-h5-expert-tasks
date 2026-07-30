@@ -64,6 +64,11 @@ function validText(value) {
   return text && text !== "无" && text !== "undefined" && text !== "null" ? text : "";
 }
 
+function speakerOrganization(expert, task) {
+  const text = validText(expert.organization);
+  return task.roles?.includes("讲者") && text !== "参会单位待补充" ? text : "";
+}
+
 function fieldRow(label, value) {
   const text = validText(value);
   return text ? `<div><dt>${label}</dt><dd>${text}</dd></div>` : "";
@@ -227,6 +232,7 @@ function renderTaskDetail() {
   const taskItems = tasks.map((task) => {
     const session = sessionById.get(task.sessionId);
     const personRows = taskAgendaRows(session, task).map(([label, text]) => taskTextLine(label, text)).join("");
+    const organizationLine = taskTextLine("工作单位", speakerOrganization(expert, task));
     return `
       <article class="task-card">
         <div class="task-card__time">
@@ -240,6 +246,7 @@ function renderTaskDetail() {
           </div>
           <h4>${session.title}</h4>
           <p>${session.track} · ${session.type}</p>
+          ${organizationLine}
           ${personRows}
         </div>
       </article>
@@ -278,6 +285,8 @@ function copyExpertTasks(expert, tasks) {
     lines.push(`   专题/分会场：${session.track}`);
     lines.push(`   环节类型：${session.type}`);
     lines.push(`   讲题/议题：${session.title}`);
+    const organization = speakerOrganization(expert, task);
+    if (organization) lines.push(`   工作单位：${organization}`);
     taskAgendaRows(session, task).forEach(([label, text]) => {
       lines.push(`   ${label}：${text}`);
     });
