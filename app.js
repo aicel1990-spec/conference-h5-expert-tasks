@@ -103,7 +103,8 @@ function taskAgendaRows(session, task = {}) {
 }
 
 function taskEndTime(task, session) {
-  return session.endTime;
+  const spansPairedDiscussion = task.roles?.includes("主持") && session.pairedDiscussion;
+  return spansPairedDiscussion ? session.pairedDiscussion.endTime : session.endTime;
 }
 
 function renderConference() {
