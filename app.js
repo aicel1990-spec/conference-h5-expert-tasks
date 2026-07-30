@@ -10,6 +10,29 @@ const state = {
 };
 
 const DEFAULT_EXPERT_LIMIT = 10;
+const FILTER_CONFIG = {
+  venue: {
+    title: "选择会场",
+    allLabel: "全部会场",
+    stateKey: "venue",
+    valueGetter: (session) => session.venue,
+    triggerSelector: "#venueFilter"
+  },
+  track: {
+    title: "选择专题",
+    allLabel: "全部专题",
+    stateKey: "track",
+    valueGetter: (session) => session.track,
+    triggerSelector: "#trackFilter"
+  },
+  type: {
+    title: "选择环节类型",
+    allLabel: "全部类型",
+    stateKey: "type",
+    valueGetter: (session) => session.type,
+    triggerSelector: "#typeFilter"
+  }
+};
 
 const $ = (selector) => document.querySelector(selector);
 
@@ -273,17 +296,50 @@ function renderFilters() {
     });
   });
 
-  const venues = ["all", ...new Set(data.sessions.map((session) => session.venue))];
-  $("#venueFilter").innerHTML = venues.map((venue) => `<option value="${venue}">${venue === "all" ? "全部会场" : venue}</option>`).join("");
-  $("#venueFilter").value = state.venue;
+  renderFilterTriggers();
+}
 
-  const tracks = ["all", ...new Set(data.sessions.map((session) => session.track))];
-  $("#trackFilter").innerHTML = tracks.map((track) => `<option value="${track}">${track === "all" ? "全部专题" : track}</option>`).join("");
-  $("#trackFilter").value = state.track;
+function getFilterOptions(filterKey) {
+  const config = FILTER_CONFIG[filterKey];
+  return ["all", ...new Set(data.sessions.map(config.valueGetter).filter(validText))];
+}
 
-  const types = ["all", ...new Set(data.sessions.map((session) => session.type))];
-  $("#typeFilter").innerHTML = types.map((type) => `<option value="${type}">${type === "all" ? "全部类型" : type}</option>`).join("");
-  $("#typeFilter").value = state.type;
+function getFilterLabel(filterKey, value = state[FILTER_CONFIG[filterKey].stateKey]) {
+  const config = FILTER_CONFIG[filterKey];
+  return value === "all" ? config.allLabel : value;
+}
+
+function renderFilterTriggers() {
+  Object.entries(FILTER_CONFIG).forEach(([filterKey, config]) => {
+    const trigger = $(config.triggerSelector);
+    if (trigger) {
+      trigger.querySelector("span").textContent = getFilterLabel(filterKey);
+      trigger.classList.toggle("has-value", state[config.stateKey] !== "all");
+    }
+  });
+}
+
+function openFilterSheet(filterKey) {
+  const config = FILTER_CONFIG[filterKey];
+  const sheet = $("#filterSheet");
+  const options = getFilterOptions(filterKey);
+  $("#filterSheetTitle").textContent = config.title;
+  $("#filterOptions").innerHTML = options.map((value) => `
+    <button class="filter-option ${state[config.stateKey] === value ? "is-active" : ""}" type="button" data-filter-key="${filterKey}" data-filter-value="${value}">
+      <span>${getFilterLabel(filterKey, value)}</span>
+    </button>
+  `).join("");
+  sheet.classList.add("is-open");
+  sheet.setAttribute("aria-hidden", "false");
+  document.body.classList.add("has-filter-sheet");
+}
+
+function closeFilterSheet() {
+  const sheet = $("#filterSheet");
+  if (!sheet) return;
+  sheet.classList.remove("is-open");
+  sheet.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("has-filter-sheet");
 }
 
 function renderSchedule() {
@@ -411,17 +467,26 @@ function bindEvents() {
   $("#searchJump").addEventListener("click", () => {
     renderExpertResults();
   });
-  $("#venueFilter").addEventListener("change", (event) => {
-    state.venue = event.target.value;
-    renderSchedule();
+  Object.entries(FILTER_CONFIG).forEach(([filterKey, config]) => {
+    $(config.triggerSelector).addEventListener("click", () => openFilterSheet(filterKey));
   });
-  $("#trackFilter").addEventListener("change", (event) => {
-    state.track = event.target.value;
+  $("#filterSheet").addEventListener("click", (event) => {
+    const closeTarget = event.target.closest("[data-filter-close]");
+    if (closeTarget) {
+      closeFilterSheet();
+      return;
+    }
+    const option = event.target.closest(".filter-option");
+    if (!option) return;
+    const filterKey = option.dataset.filterKey;
+    const config = FILTER_CONFIG[filterKey];
+    state[config.stateKey] = option.dataset.filterValue;
+    renderFilterTriggers();
     renderSchedule();
+    closeFilterSheet();
   });
-  $("#typeFilter").addEventListener("change", (event) => {
-    state.type = event.target.value;
-    renderSchedule();
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeFilterSheet();
   });
   bindSectionNavigation();
 }
