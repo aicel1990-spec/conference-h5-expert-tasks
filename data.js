@@ -2974,6 +2974,7 @@ window.MEETING_DATA = {
       "presidents": [],
       "speeches": [],
       "chairs": [
+        "陈海飞",
         "林海清"
       ],
       "speakers": [
