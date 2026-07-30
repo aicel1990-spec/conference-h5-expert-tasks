@@ -1254,6 +1254,11 @@ button:disabled {
   box-shadow: 0 10px 22px rgba(197, 0, 107, 0.18);
 }
 
+.map-link.is-opening {
+  opacity: 0.78;
+  pointer-events: none;
+}
+
 .contact-panel {
   display: grid;
   gap: 12px;

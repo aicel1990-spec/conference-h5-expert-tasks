@@ -564,6 +564,21 @@ function bindEvents() {
   $("#scheduleBackTop").addEventListener("click", () => {
     $("#schedule").scrollIntoView({ behavior: "smooth", block: "start" });
   });
+  const mapLink = $("#hotelMapLink");
+  const resetMapLink = () => {
+    if (!mapLink) return;
+    mapLink.classList.remove("is-opening");
+    mapLink.removeAttribute("aria-busy");
+    mapLink.textContent = mapLink.dataset.defaultLabel || "酒店高德地图导航";
+  };
+  if (mapLink) {
+    mapLink.addEventListener("click", () => {
+      mapLink.classList.add("is-opening");
+      mapLink.setAttribute("aria-busy", "true");
+      mapLink.textContent = "正在打开高德地图…";
+    });
+    window.addEventListener("pageshow", resetMapLink);
+  }
   $("#filterSheet").addEventListener("click", (event) => {
     const closeTarget = event.target.closest("[data-filter-close]");
     if (closeTarget) {
