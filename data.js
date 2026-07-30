@@ -3684,39 +3684,9 @@ window.MEETING_DATA = {
     ["reviewers", "评审"]
   ];
 
-  function samePeople(left, right) {
-    const a = splitPeople(left);
-    const b = splitPeople(right);
-    return a.length > 0 && a.length === b.length && a.every((name, index) => name === b[index]);
-  }
-
-  data.sessions.forEach((session, index) => {
-    const previous = data.sessions[index - 1];
-    if (
-      previous &&
-      session.type === "讨论" &&
-      previous.type !== "讨论" &&
-      session.date === previous.date &&
-      session.venue === previous.venue &&
-      session.track === previous.track &&
-      samePeople(session.chairs, previous.chairs)
-    ) {
-      previous.linkedDiscussion = {
-        sessionId: session.id,
-        startTime: session.startTime,
-        endTime: session.endTime,
-        title: session.title,
-        discussants: splitPeople(session.discussants),
-        reviewers: splitPeople(session.reviewers)
-      };
-      session.chairTaskMergedToPrevious = true;
-    }
-  });
-
   const taskByExpertSession = new Map();
   data.sessions.forEach((session) => {
     roleConfigs.forEach(([field, role]) => {
-      if (field === "chairs" && session.chairTaskMergedToPrevious) return;
       (session[field] || []).forEach((name, index) => {
         const expert = expertByName.get(name);
         if (!expert) return;

@@ -96,16 +96,11 @@ function taskAgendaRows(session, task = {}) {
     ["讲题/议题", session.title],
     ...sessionPersonRows(session)
   ];
-  if (task.role?.includes("主持") && session.linkedDiscussion?.discussants?.length) {
-    rows.push(["讨论", session.linkedDiscussion.discussants]);
-  }
   return rows.map(([label, value]) => [label, validText(value)]).filter(([, text]) => text);
 }
 
 function taskEndTime(task, session) {
-  return task.role?.includes("主持") && session.linkedDiscussion?.endTime
-    ? session.linkedDiscussion.endTime
-    : session.endTime;
+  return session.endTime;
 }
 
 function renderConference() {
