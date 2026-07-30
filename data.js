@@ -1089,7 +1089,7 @@ window.MEETING_DATA = {
     },
     {
       "id": "expert-132",
-      "name": "范懿超",
+      "name": "范憬超",
       "pinyin": "",
       "initials": "",
       "organization": "参会单位待补充",
@@ -2953,7 +2953,7 @@ window.MEETING_DATA = {
       "speakers": [],
       "discussants": [
         "周凌云",
-        "范懿超",
+        "范憬超",
         "廖娅平",
         "李回军",
         "杨华"
