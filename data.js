@@ -33,9 +33,9 @@ window.MEETING_DATA = {
   },
   "sourceDocuments": [
     {
-      "title": "新议程解析",
-      "file": "新议程解析.md",
-      "note": "会议日程与专家任务查询的唯一权威来源"
+      "title": "最新议程海报",
+      "file": "image-1.jpg / image-2.jpg / image-3.jpg",
+      "note": "会议日程与专家任务查询以用户提供的三张最新议程海报为最高权威来源"
     }
   ],
   "experts": [
@@ -1089,7 +1089,7 @@ window.MEETING_DATA = {
     },
     {
       "id": "expert-132",
-      "name": "范憬超",
+      "name": "范懿超",
       "pinyin": "",
       "initials": "",
       "organization": "参会单位待补充",
@@ -1209,7 +1209,7 @@ window.MEETING_DATA = {
     },
     {
       "id": "expert-147",
-      "name": "龙涛",
+      "name": "龙潺",
       "pinyin": "",
       "initials": "",
       "organization": "参会单位待补充",
@@ -1442,7 +1442,9 @@ window.MEETING_DATA = {
       "track": "健康管理协会换届大会",
       "type": "签到",
       "title": "参会代表签到，领取会议资料",
-      "speakerChairs": [],
+      "speakerChairs": [
+        "会务组"
+      ],
       "presidents": [],
       "speeches": [],
       "chairs": [],
@@ -1541,7 +1543,7 @@ window.MEETING_DATA = {
       "venue": "蒙特利尔+温哥华厅",
       "track": "学术会议",
       "type": "讨论",
-      "title": "微生态干预在血液肿瘤的应用价值讨论",
+      "title": "讨论",
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
@@ -1589,7 +1591,7 @@ window.MEETING_DATA = {
       "venue": "蒙特利尔+温哥华厅",
       "track": "学术会议",
       "type": "讨论",
-      "title": "MRD流式监测在血液肿瘤中的应用讨论",
+      "title": "讨论",
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
@@ -1651,11 +1653,11 @@ window.MEETING_DATA = {
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
-      "chairs": [],
-      "summaries": [
+      "chairs": [
         "张红宇",
         "郭智"
       ],
+      "summaries": [],
       "speakers": [],
       "discussants": [],
       "reviewers": [],
@@ -1715,7 +1717,7 @@ window.MEETING_DATA = {
       "venue": "蒙特利尔+温哥华厅",
       "track": "大会主会场",
       "type": "讨论",
-      "title": "轻链淀粉样变治疗新进展讨论",
+      "title": "讨论",
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
@@ -1762,7 +1764,7 @@ window.MEETING_DATA = {
       "venue": "蒙特利尔+温哥华厅",
       "track": "大会主会场",
       "type": "讨论",
-      "title": "免疫时代B-ALL治疗进展讨论",
+      "title": "讨论",
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
@@ -1809,7 +1811,7 @@ window.MEETING_DATA = {
       "venue": "蒙特利尔+温哥华厅",
       "track": "大会主会场",
       "type": "讨论",
-      "title": "RNA修饰在肿瘤免疫中的作用机制和转化研究讨论",
+      "title": "讨论",
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
@@ -1857,7 +1859,7 @@ window.MEETING_DATA = {
       "venue": "蒙特利尔+温哥华厅",
       "track": "大会主会场",
       "type": "讨论",
-      "title": "骨髓瘤淋巴瘤细胞免疫治疗讨论",
+      "title": "讨论",
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
@@ -1905,7 +1907,7 @@ window.MEETING_DATA = {
       "venue": "蒙特利尔+温哥华厅",
       "track": "大会主会场",
       "type": "讨论",
-      "title": "SLL/CLL惰性淋巴瘤前沿进展讨论",
+      "title": "讨论",
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
@@ -1970,7 +1972,7 @@ window.MEETING_DATA = {
       "venue": "蒙特利尔+温哥华厅",
       "track": "大会主会场",
       "type": "讨论",
-      "title": "不同型血小板输注原则及策略讨论",
+      "title": "讨论",
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
@@ -2017,7 +2019,7 @@ window.MEETING_DATA = {
       "venue": "蒙特利尔+温哥华厅",
       "track": "大会主会场",
       "type": "讨论",
-      "title": "异基因造血干细胞移植GVHD诊疗现状和进展讨论",
+      "title": "讨论",
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
@@ -2064,7 +2066,7 @@ window.MEETING_DATA = {
       "venue": "蒙特利尔+温哥华厅",
       "track": "大会主会场",
       "type": "讨论",
-      "title": "Tp53突变髓系疾病患者造血干细胞移植治疗进展讨论",
+      "title": "讨论",
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
@@ -2110,7 +2112,7 @@ window.MEETING_DATA = {
       "venue": "蒙特利尔+温哥华厅",
       "track": "大会主会场",
       "type": "讨论",
-      "title": "新型JAK抑制剂治疗骨髓纤维化临床研究的系统性布局与事后分析启示讨论",
+      "title": "讨论",
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
@@ -2139,10 +2141,10 @@ window.MEETING_DATA = {
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
-      "chairs": [],
-      "summaries": [
+      "chairs": [
         "冯佳"
       ],
+      "summaries": [],
       "speakers": [],
       "discussants": [],
       "reviewers": [],
@@ -2203,7 +2205,7 @@ window.MEETING_DATA = {
       "venue": "多伦多厅",
       "track": "多伦多分会场",
       "type": "讨论",
-      "title": "霍奇金淋巴瘤诊疗新进展讨论",
+      "title": "讨论",
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
@@ -2251,7 +2253,7 @@ window.MEETING_DATA = {
       "venue": "多伦多厅",
       "track": "多伦多分会场",
       "type": "讨论",
-      "title": "外周T细胞淋巴瘤指南解读讨论",
+      "title": "讨论",
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
@@ -2298,7 +2300,7 @@ window.MEETING_DATA = {
       "venue": "多伦多厅",
       "track": "多伦多分会场",
       "type": "讨论",
-      "title": "多发性骨髓瘤维持治疗真实世界数据分享讨论",
+      "title": "讨论",
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
@@ -2343,7 +2345,7 @@ window.MEETING_DATA = {
       "venue": "多伦多厅",
       "track": "多伦多分会场",
       "type": "讨论",
-      "title": "2026EHAPI研究精粹讨论",
+      "title": "讨论",
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
@@ -2371,11 +2373,11 @@ window.MEETING_DATA = {
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
-      "chairs": [],
-      "summaries": [
+      "chairs": [
         "冯佳",
         "黎永谦"
       ],
+      "summaries": [],
       "speakers": [],
       "discussants": [],
       "reviewers": [],
@@ -2412,7 +2414,7 @@ window.MEETING_DATA = {
       "venue": "多伦多厅",
       "track": "大会主会场",
       "type": "讨论",
-      "title": "异基因造血干细胞移植治疗CMML近期研究进展讨论",
+      "title": "讨论",
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
@@ -2459,7 +2461,7 @@ window.MEETING_DATA = {
       "venue": "多伦多厅",
       "track": "大会主会场",
       "type": "讨论",
-      "title": "双表达DLBCL诊疗进展讨论",
+      "title": "讨论",
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
@@ -2506,7 +2508,7 @@ window.MEETING_DATA = {
       "venue": "多伦多厅",
       "track": "大会主会场",
       "type": "讨论",
-      "title": "小活检时代淋巴瘤病理诊断及案例分享讨论",
+      "title": "讨论",
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
@@ -2553,7 +2555,7 @@ window.MEETING_DATA = {
       "venue": "多伦多厅",
       "track": "大会主会场",
       "type": "讨论",
-      "title": "CART治疗多发性骨髓瘤髓外病变讨论",
+      "title": "讨论",
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
@@ -2600,7 +2602,7 @@ window.MEETING_DATA = {
       "venue": "多伦多厅",
       "track": "大会主会场",
       "type": "讨论",
-      "title": "系统性轻链型淀粉样变的诊疗实践探索讨论",
+      "title": "讨论",
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
@@ -2664,7 +2666,7 @@ window.MEETING_DATA = {
       "venue": "多伦多厅",
       "track": "大会主会场",
       "type": "讨论",
-      "title": "基于MRD检测结果指导ALL的免疫干预和治疗策略讨论",
+      "title": "讨论",
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
@@ -2710,7 +2712,7 @@ window.MEETING_DATA = {
       "venue": "多伦多厅",
       "track": "大会主会场",
       "type": "讨论",
-      "title": "骨髓瘤疗效评估及MRD检测讨论",
+      "title": "讨论",
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
@@ -2733,7 +2735,7 @@ window.MEETING_DATA = {
       "venue": "多伦多厅",
       "track": "大会主会场",
       "type": "主题报告",
-      "title": "BCMA新靶点免疫疗法治疗新进展",
+      "title": "从BCMA靶点到BCMA ADC的前世今生",
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
@@ -2756,7 +2758,7 @@ window.MEETING_DATA = {
       "venue": "多伦多厅",
       "track": "大会主会场",
       "type": "讨论",
-      "title": "BCMA新靶点免疫疗法治疗新进展讨论",
+      "title": "讨论",
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
@@ -2802,7 +2804,7 @@ window.MEETING_DATA = {
       "venue": "多伦多厅",
       "track": "大会主会场",
       "type": "讨论",
-      "title": "弥漫大B细胞淋巴瘤诊疗路径讨论",
+      "title": "讨论",
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
@@ -2848,7 +2850,7 @@ window.MEETING_DATA = {
       "venue": "多伦多厅",
       "track": "大会主会场",
       "type": "讨论",
-      "title": "外周T细胞淋巴瘤诊断治疗新进展讨论",
+      "title": "讨论",
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
@@ -2876,10 +2878,10 @@ window.MEETING_DATA = {
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
-      "chairs": [],
-      "summaries": [
+      "chairs": [
         "冯佳"
       ],
+      "summaries": [],
       "speakers": [],
       "discussants": [],
       "reviewers": [],
@@ -2940,7 +2942,7 @@ window.MEETING_DATA = {
       "venue": "波士顿厅",
       "track": "免疫治疗专场",
       "type": "讨论",
-      "title": "复发难治骨髓瘤/淋巴瘤CAR-T筛选、预处理评估专家研讨",
+      "title": "讨论：复发难治骨髓瘤/淋巴瘤CAR-T筛选、预处理评估专家研讨",
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
@@ -2950,9 +2952,9 @@ window.MEETING_DATA = {
       ],
       "speakers": [],
       "discussants": [
-        "廖娅平",
-        "范憬超",
         "周凌云",
+        "范懿超",
+        "廖娅平",
         "李回军",
         "杨华"
       ],
@@ -2972,7 +2974,6 @@ window.MEETING_DATA = {
       "presidents": [],
       "speeches": [],
       "chairs": [
-        "陈海飞",
         "林海清"
       ],
       "speakers": [
@@ -3039,7 +3040,7 @@ window.MEETING_DATA = {
       "venue": "波士顿厅",
       "track": "免疫治疗专场",
       "type": "讨论",
-      "title": "双靶点CAR-T、通用型CAR、CAR-NK临床应用前景",
+      "title": "讨论：双靶点CAR-T、通用型CAR、CAR-NK临床应用前景",
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
@@ -3069,11 +3070,11 @@ window.MEETING_DATA = {
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
-      "chairs": [],
-      "summaries": [
+      "chairs": [
         "冯佳",
         "周继豪"
       ],
+      "summaries": [],
       "speakers": [],
       "discussants": [],
       "reviewers": [],
@@ -3136,7 +3137,7 @@ window.MEETING_DATA = {
       "venue": "波士顿厅",
       "track": "出凝血专场",
       "type": "讨论",
-      "title": "ITP规范化治疗讨论",
+      "title": "讨论",
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
@@ -3186,7 +3187,7 @@ window.MEETING_DATA = {
       "venue": "波士顿厅",
       "track": "出凝血专场",
       "type": "讨论",
-      "title": "如何平衡ITP患者升板需求和血栓风险？讨论",
+      "title": "讨论",
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
@@ -3259,7 +3260,7 @@ window.MEETING_DATA = {
       "venue": "波士顿厅",
       "track": "出凝血专场",
       "type": "讨论",
-      "title": "CLAG+VEN方案在CR1期AML中巩固治疗经验分享讨论",
+      "title": "讨论",
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
@@ -3290,12 +3291,12 @@ window.MEETING_DATA = {
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
-      "chairs": [],
-      "summaries": [
+      "chairs": [
         "冯佳",
         "夏忠军",
         "杜新"
       ],
+      "summaries": [],
       "speakers": [],
       "discussants": [],
       "reviewers": [],
@@ -3374,7 +3375,7 @@ window.MEETING_DATA = {
       "venue": "蒙特利尔+温哥华厅",
       "track": "女医师协会分会场",
       "type": "讨论",
-      "title": "重组人凝血因子VIIa7在危重抢救患者中应用讨论",
+      "title": "讨论",
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
@@ -3422,7 +3423,7 @@ window.MEETING_DATA = {
       "venue": "蒙特利尔+温哥华厅",
       "track": "女医师协会分会场",
       "type": "讨论",
-      "title": "PNH补体抑制剂治疗专家共识解读讨论",
+      "title": "讨论",
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
@@ -3469,7 +3470,7 @@ window.MEETING_DATA = {
       "venue": "蒙特利尔+温哥华厅",
       "track": "女医师协会分会场",
       "type": "讨论",
-      "title": "外周血流式细胞术在成熟淋巴细胞肿瘤中的应用讨论",
+      "title": "讨论",
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
@@ -3517,7 +3518,7 @@ window.MEETING_DATA = {
       "venue": "蒙特利尔+温哥华厅",
       "track": "女医师协会分会场",
       "type": "讨论",
-      "title": "非共价BTKi在CLL中的获益及管理经验讨论",
+      "title": "讨论",
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
@@ -3546,7 +3547,7 @@ window.MEETING_DATA = {
       "presidents": [],
       "speeches": [],
       "chairs": [
-        "龙涛",
+        "龙潺",
         "林海清"
       ],
       "speakers": [
@@ -3564,12 +3565,12 @@ window.MEETING_DATA = {
       "venue": "蒙特利尔+温哥华厅",
       "track": "女医师协会分会场",
       "type": "讨论",
-      "title": "多发性骨髓瘤的克隆演变讨论",
+      "title": "讨论",
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
       "chairs": [
-        "龙涛",
+        "龙潺",
         "林海清"
       ],
       "speakers": [],
@@ -3592,10 +3593,10 @@ window.MEETING_DATA = {
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
-      "chairs": [],
-      "summaries": [
+      "chairs": [
         "冯佳"
       ],
+      "summaries": [],
       "speakers": [],
       "discussants": [],
       "reviewers": [],
@@ -3712,7 +3713,7 @@ window.MEETING_DATA = {
     return raw
       .flatMap((item) => String(item || "").replace(splitPattern, "、").split("、"))
       .map(normalizeName)
-      .filter((name, index, arr) => name && !excludedPeople.has(name) && arr.indexOf(name) === index);
+      .filter((name, index, arr) => name && arr.indexOf(name) === index);
   }
 
   function pinyinForName(name) {
@@ -3747,6 +3748,7 @@ window.MEETING_DATA = {
   data.sessions.forEach((session) => {
     roleFields.forEach((field) => {
       session[field].forEach((name) => {
+        if (excludedPeople.has(name)) return;
         if (expertByName.has(name)) return;
         const expert = {
           id: expertIdForName(name),
@@ -3803,4 +3805,6 @@ window.MEETING_DATA = {
     });
   });
   data.tasks = [...taskByExpertSession.values()];
+  const activeExpertIds = new Set(data.tasks.map((task) => task.expertId));
+  data.experts = data.experts.filter((expert) => activeExpertIds.has(expert.id));
 })(window.MEETING_DATA);
