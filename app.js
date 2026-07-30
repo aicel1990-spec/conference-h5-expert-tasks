@@ -85,9 +85,46 @@ function sessionPersonRows(session) {
     ["致辞", session.speeches],
     ["主持", session.chairs],
     ["讲者", session.speakers],
-    ["讨论/点评", session.discussants],
+    ["讨论", session.discussants],
     ["评审", session.reviewers]
   ].map(([label, value]) => [label, validText(value)]).filter(([, text]) => text);
+}
+
+function nextAgendaSession(session) {
+  const sortedSessions = data.sessions
+    .filter((item) => item.date === session.date && item.venue === session.venue && item.track === session.track)
+    .sort((a, b) => {
+      const byDate = timeValue(a).localeCompare(timeValue(b));
+      if (byDate) return byDate;
+      return (a.endTime || "").localeCompare(b.endTime || "");
+    });
+  const index = sortedSessions.findIndex((item) => item.id === session.id);
+  return index >= 0 ? sortedSessions[index + 1] : null;
+}
+
+function relatedDiscussionRows(session) {
+  if (validText(session.discussants) || !validText(session.speakers)) return [];
+  const next = nextAgendaSession(session);
+  if (!next) return [];
+  const isAdjacentDiscussion =
+    next.date === session.date &&
+    next.venue === session.venue &&
+    next.track === session.track &&
+    next.startTime === session.endTime &&
+    /讨论|点评/.test(next.type || "") &&
+    validText(next.discussants);
+  return isAdjacentDiscussion ? [["讨论", validText(next.discussants)]] : [];
+}
+
+function taskAgendaRows(session) {
+  const rows = sessionPersonRows(session);
+  const relatedRows = relatedDiscussionRows(session);
+  relatedRows.forEach(([label, text]) => {
+    if (!rows.some(([rowLabel, rowText]) => rowLabel === label && rowText === text)) {
+      rows.push([label, text]);
+    }
+  });
+  return rows;
 }
 
 function renderConference() {
@@ -187,7 +224,7 @@ function renderTaskDetail() {
   const expertMeta = [displayOrganization(expert.organization), validText(expert.title)].filter(Boolean).join(" · ");
   const taskItems = tasks.map((task) => {
     const session = sessionById.get(task.sessionId);
-    const personRows = sessionPersonRows(session).map(([label, text]) => taskTextLine(label, text)).join("");
+    const personRows = taskAgendaRows(session).map(([label, text]) => taskTextLine(label, text)).join("");
     return `
       <article class="task-card">
         <div class="task-card__time">
@@ -235,9 +272,11 @@ function copyExpertTasks(expert, tasks) {
     const session = sessionById.get(task.sessionId);
     lines.push(`${index + 1}. ${formatDate(session.date)} ${session.startTime}-${session.endTime}`);
     lines.push(`   会场：${session.venue}`);
-    lines.push(`   角色：${task.role}`);
-    lines.push(`   环节：${session.track}｜${session.title}`);
-    sessionPersonRows(session).forEach(([label, text]) => {
+    lines.push(`   当前专家角色：${task.role}`);
+    lines.push(`   专题/分会场：${session.track}`);
+    lines.push(`   环节类型：${session.type}`);
+    lines.push(`   讲题/议题：${session.title}`);
+    taskAgendaRows(session).forEach(([label, text]) => {
       lines.push(`   ${label}：${text}`);
     });
   });
