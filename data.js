@@ -1659,7 +1659,8 @@ window.MEETING_DATA = {
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
-      "chairs": [
+      "chairs": [],
+      "summaries": [
         "张红宇",
         "郭智"
       ],
@@ -1681,10 +1682,7 @@ window.MEETING_DATA = {
       "presidents": [
         "冯佳"
       ],
-      "speeches": [
-        "赵永胜",
-        "刘启发"
-      ],
+      "speeches": [],
       "chairs": [],
       "speakers": [],
       "discussants": [],
@@ -2145,7 +2143,8 @@ window.MEETING_DATA = {
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
-      "chairs": [
+      "chairs": [],
+      "summaries": [
         "冯佳"
       ],
       "speakers": [],
@@ -2163,7 +2162,10 @@ window.MEETING_DATA = {
       "type": "致辞",
       "title": "开场致词",
       "speakerChairs": [],
-      "presidents": [],
+      "presidents": [
+        "冯佳",
+        "黎永谦"
+      ],
       "speeches": [],
       "chairs": [
         "冯佳",
@@ -2370,7 +2372,8 @@ window.MEETING_DATA = {
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
-      "chairs": [
+      "chairs": [],
+      "summaries": [
         "冯佳",
         "黎永谦"
       ],
@@ -2873,7 +2876,8 @@ window.MEETING_DATA = {
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
-      "chairs": [
+      "chairs": [],
+      "summaries": [
         "冯佳"
       ],
       "speakers": [],
@@ -2891,7 +2895,10 @@ window.MEETING_DATA = {
       "type": "致辞",
       "title": "主席致辞",
       "speakerChairs": [],
-      "presidents": [],
+      "presidents": [
+        "冯佳",
+        "周继豪"
+      ],
       "speeches": [],
       "chairs": [
         "冯佳",
@@ -3065,7 +3072,8 @@ window.MEETING_DATA = {
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
-      "chairs": [
+      "chairs": [],
+      "summaries": [
         "冯佳",
         "周继豪"
       ],
@@ -3084,7 +3092,11 @@ window.MEETING_DATA = {
       "type": "致辞",
       "title": "主席致辞",
       "speakerChairs": [],
-      "presidents": [],
+      "presidents": [
+        "冯佳",
+        "夏忠军",
+        "杜新"
+      ],
       "speeches": [],
       "chairs": [
         "冯佳",
@@ -3258,7 +3270,8 @@ window.MEETING_DATA = {
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
-      "chairs": [
+      "chairs": [],
+      "summaries": [
         "冯佳",
         "夏忠军",
         "杜新"
@@ -3296,7 +3309,10 @@ window.MEETING_DATA = {
       "type": "致辞",
       "title": "开幕致辞",
       "speakerChairs": [],
-      "presidents": [],
+      "presidents": [
+        "李玉华",
+        "冯佳"
+      ],
       "speeches": [],
       "chairs": [
         "李玉华",
@@ -3556,7 +3572,8 @@ window.MEETING_DATA = {
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
-      "chairs": [
+      "chairs": [],
+      "summaries": [
         "冯佳"
       ],
       "speakers": [],
@@ -3568,7 +3585,7 @@ window.MEETING_DATA = {
 };
 
 (function resolveTasks(data) {
-  const roleFields = ["speakerChairs", "presidents", "speeches", "chairs", "speakers", "discussants", "reviewers"];
+  const roleFields = ["speakerChairs", "presidents", "chairs", "speakers", "discussants", "reviewers", "summaries"];
   const excludedPeople = new Set(["会务组", "大会主席", "参会代表", "会议代表", "专家", "点评专家", "主持", "讲者", "评审", "讨论"]);
   const pinyinByChar = {
     常: "chang", 英: "ying", 军: "jun", 车: "che", 菲: "fei", 陈: "chen", 喜: "xi", 填: "tian",
@@ -3677,11 +3694,11 @@ window.MEETING_DATA = {
   const roleConfigs = [
     ["speakerChairs", "主讲/主持"],
     ["presidents", "大会主席"],
-    ["speeches", "致辞"],
     ["chairs", "主持"],
     ["speakers", "讲者"],
     ["discussants", "讨论"],
-    ["reviewers", "评审"]
+    ["reviewers", "评审"],
+    ["summaries", "总结"]
   ];
 
   const taskByExpertSession = new Map();

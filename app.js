@@ -87,7 +87,8 @@ function sessionPersonRows(session) {
     ["讲者", session.speakers],
     ["主持", session.chairs],
     ["讨论", session.discussants],
-    ["评审", session.reviewers]
+    ["评审", session.reviewers],
+    ["总结", session.summaries]
   ].map(([label, value]) => [label, validText(value)]).filter(([, text]) => text);
 }
 
@@ -119,6 +120,7 @@ function getExpertTaskCount(expertId) {
 }
 
 function expertMatches(expert, query) {
+  if (!getExpertTaskCount(expert.id)) return false;
   if (!query) return getExpertTaskCount(expert.id) > 0;
   const taskTitles = (tasksByExpert.get(expert.id) || [])
     .map((task) => sessionById.get(task.sessionId)?.title || "")
@@ -383,7 +385,8 @@ function renderSchedule() {
       fieldRow("讲者", session.speakers),
       fieldRow("主持", session.chairs),
       fieldRow("讨论/点评", session.discussants),
-      fieldRow("评审", session.reviewers)
+      fieldRow("评审", session.reviewers),
+      fieldRow("总结", session.summaries)
     ].join("");
     return `
       <article class="schedule-card">
