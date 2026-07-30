@@ -24,6 +24,8 @@
     <meta name="twitter:image" content="https://aicel1990-spec.github.io/hematology2026/assets/share-cover.jpg">
     <link rel="icon" href="logo广东省临床医学会logo.jpeg">
     <link rel="stylesheet" href="styles.css">
+    <script src="data.js" defer></script>
+    <script src="app.js" defer></script>
   </head>
   <body>
     <main>
@@ -39,10 +41,10 @@
           </div>
 
           <div class="logo-strip" aria-label="参会单位标识">
-            <span class="logo-mark"><img src="logo广东省临床医学会logo.jpeg" alt="广东省临床医学会 Logo"></span>
-            <span class="logo-mark"><img src="logo深圳市健康管理协会logo.jpeg" alt="深圳市健康管理协会 Logo"></span>
-            <span class="logo-mark"><img src="logo广东省女医师协会logo.png" alt="广东省女医师协会 Logo"></span>
-            <span class="logo-mark"><img src="logo北京大学深圳医院logo.jpeg" alt="北京大学深圳医院 Logo"></span>
+            <span class="logo-mark"><img src="assets/logo-gd-clinical.webp" alt="广东省临床医学会 Logo" width="200" height="200" decoding="async" fetchpriority="high"></span>
+            <span class="logo-mark"><img src="assets/logo-sz-health.webp" alt="深圳市健康管理协会 Logo" width="200" height="200" decoding="async" fetchpriority="high"></span>
+            <span class="logo-mark"><img src="assets/logo-gd-women.webp" alt="广东省女医师协会 Logo" width="200" height="200" decoding="async" fetchpriority="high"></span>
+            <span class="logo-mark"><img src="assets/logo-pku-hospital.webp" alt="北京大学深圳医院 Logo" width="200" height="200" decoding="async" fetchpriority="high"></span>
           </div>
 
           <div class="hero__content">
@@ -60,10 +62,10 @@
 
           <div class="hero-media" aria-hidden="true">
             <figure class="hero-media__city">
-              <img src="深圳春笋大厦照片.jpeg" alt="">
+              <img src="assets/hero-chunsun.webp" alt="" width="540" height="720" decoding="async" fetchpriority="high">
             </figure>
             <figure class="hero-media__hospital">
-              <img src="北京大学深圳医院建筑.jpeg" alt="">
+              <img src="assets/hero-pku-hospital.webp" alt="" width="800" height="400" decoding="async" fetchpriority="high">
             </figure>
           </div>
         </div>
@@ -73,7 +75,7 @@
             <label for="globalSearch">专家任务查询</label>
             <div class="searchbox__row">
               <input id="globalSearch" type="search" placeholder="输入姓名、拼音、单位搜索">
-              <button type="submit">查询</button>
+              <button type="submit" disabled data-ready-label="查询">加载中</button>
             </div>
           </form>
         </div>
@@ -112,7 +114,7 @@
             <label for="expertSearch">搜索：</label>
             <div class="searchline">
               <input id="expertSearch" type="search" placeholder="输入姓名、拼音、单位搜索">
-              <button type="button" id="searchJump">查询</button>
+              <button type="button" id="searchJump" disabled data-ready-label="查询">加载中</button>
             </div>
           </div>
           <div class="result-layout">
@@ -217,8 +219,5 @@
         <div class="filter-options" id="filterOptions"></div>
       </section>
     </div>
-
-    <script src="data.js"></script>
-    <script src="app.js"></script>
   </body>
 </html>

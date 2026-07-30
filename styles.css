@@ -219,9 +219,6 @@ main {
   padding: 3.5px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.74);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 80%;
   border: 1px solid rgba(90, 13, 101, 0.035);
   box-shadow: 0 1px 5px rgba(90, 13, 101, 0.025);
 }
@@ -230,27 +227,24 @@ main {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  opacity: 0;
+  display: block;
+  opacity: 1;
 }
 
 .logo-strip .logo-mark:nth-of-type(1) {
   order: 1;
-  background-image: url("logo广东省临床医学会logo.jpeg");
 }
 
 .logo-strip .logo-mark:nth-of-type(2) {
   order: 2;
-  background-image: url("logo深圳市健康管理协会logo.jpeg");
 }
 
 .logo-strip .logo-mark:nth-of-type(3) {
   order: 3;
-  background-image: url("logo广东省女医师协会logo.png");
 }
 
 .logo-strip .logo-mark:nth-of-type(4) {
   order: 4;
-  background-image: url("logo北京大学深圳医院logo.jpeg");
 }
 
 .hero__content {
@@ -551,6 +545,12 @@ button {
 button:hover,
 .module-card:hover {
   filter: brightness(1.04);
+}
+
+button:disabled {
+  cursor: wait;
+  opacity: 0.68;
+  filter: grayscale(0.08);
 }
 
 .ghost {

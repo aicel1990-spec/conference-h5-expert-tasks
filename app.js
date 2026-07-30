@@ -511,12 +511,21 @@ function bindEvents() {
   bindSectionNavigation();
 }
 
+function enableSearchControls() {
+  document.querySelectorAll("[data-ready-label]").forEach((button) => {
+    button.textContent = button.dataset.readyLabel || "查询";
+    button.disabled = false;
+    button.removeAttribute("aria-busy");
+  });
+}
+
 function init() {
   renderConference();
   renderFilters();
   renderSchedule();
   renderExpertResults();
   bindEvents();
+  enableSearchControls();
 }
 
 init();
