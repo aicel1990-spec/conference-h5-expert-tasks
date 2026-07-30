@@ -106,63 +106,109 @@ window.MEETING_DATA = {
     { id: "expert-lixiaoqing", name: "李晓清", pinyin: "lixiaoqing", initials: "lxq", organization: "参会单位待补充", title: "专家" }
   ],
   sessions: [
-    { id: "s0731-001", date: "2026-07-31", startTime: "14:30", endTime: "14:40", venue: "蒙特利尔+温哥华厅", track: "健康管理协会换届大会", type: "报到", title: "参会代表签到领取会议资料", chairs: [], speakers: [], discussants: [], reviewers: [], note: "会务组负责" },
-    { id: "s0731-002", date: "2026-07-31", startTime: "14:40", endTime: "15:30", venue: "蒙特利尔+温哥华厅", track: "健康管理协会换届大会", type: "会议组织", title: "深圳市健康管理协会细胞免疫学专业委员会换届大会", chairs: ["李萍"], speakers: [], discussants: [], reviewers: [], note: "会务组按现场流程执行" },
-    { id: "s0731-003", date: "2026-07-31", startTime: "15:35", endTime: "15:45", venue: "蒙特利尔+温哥华厅", track: "学术会议", type: "致辞", title: "开幕致辞", chairs: ["张红宇", "郭智"], speakers: [], discussants: [], reviewers: [], note: "大会主席致欢迎辞" },
-    { id: "s0731-004", date: "2026-07-31", startTime: "15:45", endTime: "16:15", venue: "蒙特利尔+温哥华厅", track: "学术会议", type: "主题报告", title: "微生态干预在血液肿瘤的应用价值", chairs: ["林东军", "陈艳"], speakers: ["郭智"], discussants: [], reviewers: [], note: "" },
-    { id: "s0731-005", date: "2026-07-31", startTime: "16:15", endTime: "16:35", venue: "蒙特利尔+温哥华厅", track: "学术会议", type: "讨论", title: "微生态干预专题讨论", chairs: ["王立新"], speakers: [], discussants: ["黎建云", "张晓瀚", "覃宝珍", "蒋官忆"], reviewers: [], note: "" },
-    { id: "s0731-006", date: "2026-07-31", startTime: "16:35", endTime: "17:00", venue: "蒙特利尔+温哥华厅", track: "学术会议", type: "主题报告", title: "MRD流式监测在血液肿瘤中的应用", chairs: ["李庆山", "黄艳"], speakers: ["晏李平"], discussants: [], reviewers: [], note: "" },
-    { id: "s0731-007", date: "2026-07-31", startTime: "17:00", endTime: "17:20", venue: "蒙特利尔+温哥华厅", track: "学术会议", type: "讨论", title: "MRD流式监测专题讨论", chairs: [], speakers: [], discussants: ["吕成芳", "翁光祥", "戴婧", "杨慧芳"], reviewers: [], note: "" },
-    { id: "s0731-008", date: "2026-07-31", startTime: "17:20", endTime: "17:50", venue: "蒙特利尔+温哥华厅", track: "圆桌共话", type: "评审", title: "CAR-T与双特异性抗体的临床定位、体内CAR-T和双靶点CAR-T策略", chairs: ["黄走方", "张文丽"], speakers: [], discussants: ["张红宇", "刘黎琼", "卢博", "庞艳彬", "李回军", "曾芸馨", "孟景晔", "夏冰天", "李晋萌", "吴利新"], reviewers: ["黄走方", "张文丽"], note: "请选择感兴趣议题进行深入交流" },
-    { id: "s0731-009", date: "2026-07-31", startTime: "17:50", endTime: "18:00", venue: "蒙特利尔+温哥华厅", track: "学术会议", type: "会议总结", title: "会议总结", chairs: ["张红宇", "郭智"], speakers: [], discussants: [], reviewers: [], note: "" },
+    { id: "s0731-001", date: "2026-07-31", startTime: "14:30", endTime: "14:40", venue: "蒙特利尔+温哥华厅", track: "健康管理协会换届大会", type: "报到", title: "参会代表签到领取会议资料", chairs: [], speakers: [], discussants: [], reviewers: [] },
+    { id: "s0731-002", date: "2026-07-31", startTime: "14:40", endTime: "15:30", venue: "蒙特利尔+温哥华厅", track: "健康管理协会换届大会", type: "会议组织", title: "深圳市健康管理协会细胞免疫学专业委员会换届大会", chairs: ["李萍"], speakers: [], discussants: [], reviewers: [] },
+    { id: "s0731-003", date: "2026-07-31", startTime: "15:30", endTime: "15:35", venue: "蒙特利尔+温哥华厅", track: "学术会议", type: "茶歇", title: "茶歇", chairs: [], speakers: [], discussants: [], reviewers: [] },
+    { id: "s0731-004", date: "2026-07-31", startTime: "15:35", endTime: "15:45", venue: "蒙特利尔+温哥华厅", track: "学术会议", type: "致辞", title: "开幕致辞", presidents: ["张红宇", "郭智"], chairs: [], speakers: [], discussants: [], reviewers: [] },
+    { id: "s0731-005", date: "2026-07-31", startTime: "15:45", endTime: "16:15", venue: "蒙特利尔+温哥华厅", track: "学术会议", type: "主题报告", title: "微生态干预在血液肿瘤的应用价值", chairs: ["林东军", "陈艳"], speakers: ["郭智"], discussants: [], reviewers: [] },
+    { id: "s0731-006", date: "2026-07-31", startTime: "16:15", endTime: "16:35", venue: "蒙特利尔+温哥华厅", track: "学术会议", type: "讨论", title: "微生态干预专题讨论", chairs: ["王立新"], speakers: [], discussants: ["黎建云", "张晓瀚", "覃宝珍", "蒋官忆"], reviewers: [] },
+    { id: "s0731-007", date: "2026-07-31", startTime: "16:35", endTime: "17:00", venue: "蒙特利尔+温哥华厅", track: "学术会议", type: "主题报告", title: "MRD流式监测在血液肿瘤中的应用", chairs: ["李庆山", "黄艳"], speakers: ["晏李平"], discussants: [], reviewers: [] },
+    { id: "s0731-008", date: "2026-07-31", startTime: "17:00", endTime: "17:20", venue: "蒙特利尔+温哥华厅", track: "学术会议", type: "讨论", title: "MRD流式监测专题讨论", chairs: [], speakers: [], discussants: ["吕成芳", "翁光祥", "戴婧", "杨慧芳"], reviewers: [] },
+    { id: "s0731-009", date: "2026-07-31", startTime: "17:20", endTime: "17:50", venue: "蒙特利尔+温哥华厅", track: "圆桌共话", type: "圆桌讨论", title: "CAR-T与双特异性抗体的临床定位、体内CAR-T和双靶点CAR-T策略", chairs: ["黄走方", "张文丽"], speakers: [], discussants: ["张红宇", "刘黎琼", "卢博", "庞艳彬", "李回军", "曾芸馨", "孟景晔", "夏冰天", "李晋萌", "吴利新"], reviewers: [] },
+    { id: "s0731-010", date: "2026-07-31", startTime: "17:50", endTime: "18:00", venue: "蒙特利尔+温哥华厅", track: "学术会议", type: "会议总结", title: "会议总结", chairs: ["张红宇", "郭智"], speakers: [], discussants: [], reviewers: [] },
 
-    { id: "s0801-001", date: "2026-08-01", startTime: "08:30", endTime: "08:45", venue: "蒙特利尔+温哥华厅", track: "大会主会场", type: "致辞", title: "开幕致辞", chairs: ["冯佳", "赵永胜", "刘启发"], speakers: [], discussants: [], reviewers: [], note: "" },
-    { id: "s0801-002", date: "2026-08-01", startTime: "08:45", endTime: "09:15", venue: "蒙特利尔+温哥华厅", track: "大会主会场", type: "主题报告", title: "轻链淀粉样变治疗新进展", chairs: ["张新友", "蓝海"], speakers: ["路瑾"], discussants: [], reviewers: [], commentators: ["冯佳"], note: "点评专家请结合临床实践简要点评" },
-    { id: "s0801-003", date: "2026-08-01", startTime: "09:15", endTime: "09:25", venue: "蒙特利尔+温哥华厅", track: "大会主会场", type: "讨论", title: "轻链淀粉样变治疗讨论", chairs: ["张新友", "蓝海"], speakers: [], discussants: ["林海清", "夏冰天"], reviewers: [], note: "" },
-    { id: "s0801-004", date: "2026-08-01", startTime: "09:25", endTime: "09:55", venue: "蒙特利尔+温哥华厅", track: "大会主会场", type: "主题报告", title: "B-ALL诊疗进展及珠江医院诊疗经验分享", chairs: ["涂传清", "黄望香"], speakers: ["黄睿"], discussants: [], reviewers: [], note: "" },
-    { id: "s0801-005", date: "2026-08-01", startTime: "09:55", endTime: "10:05", venue: "蒙特利尔+温哥华厅", track: "大会主会场", type: "讨论", title: "B-ALL诊疗进展讨论", chairs: ["涂传清", "黄望香"], speakers: [], discussants: ["陈喜填", "庞雯文"], reviewers: [], note: "" },
-    { id: "s0801-006", date: "2026-08-01", startTime: "10:05", endTime: "10:35", venue: "蒙特利尔+温哥华厅", track: "大会主会场", type: "主题报告", title: "RNA修饰在肿瘤免疫中的作用机制和转化研究", chairs: ["刘泽林", "陈蒂珩"], speakers: ["陈振华"], discussants: [], reviewers: [], note: "" },
-    { id: "s0801-007", date: "2026-08-01", startTime: "10:35", endTime: "10:45", venue: "蒙特利尔+温哥华厅", track: "大会主会场", type: "讨论", title: "RNA修饰专题讨论", chairs: ["刘泽林", "陈蒂珩"], speakers: [], discussants: ["柯鹏", "王婷"], reviewers: [], note: "" },
-    { id: "s0801-008", date: "2026-08-01", startTime: "10:45", endTime: "11:15", venue: "蒙特利尔+温哥华厅", track: "大会主会场", type: "主题报告", title: "骨髓瘤淋巴瘤细胞免疫治疗", chairs: ["柳金", "吴远彬"], speakers: ["邝沃林"], discussants: [], reviewers: [], note: "" },
-    { id: "s0801-009", date: "2026-08-01", startTime: "11:15", endTime: "11:25", venue: "蒙特利尔+温哥华厅", track: "大会主会场", type: "讨论", title: "骨髓瘤淋巴瘤细胞免疫治疗讨论", chairs: ["柳金", "吴远彬"], speakers: [], discussants: ["李晋萌", "黄鹏程"], reviewers: [], note: "" },
-    { id: "s0801-010", date: "2026-08-01", startTime: "11:25", endTime: "11:55", venue: "蒙特利尔+温哥华厅", track: "大会主会场", type: "主题报告", title: "SLL/CLL惰性淋巴瘤前沿进展", chairs: ["余国攀", "夏维林"], speakers: ["郭绪涛"], discussants: [], reviewers: [], note: "" },
-    { id: "s0801-011", date: "2026-08-01", startTime: "14:10", endTime: "14:35", venue: "多伦多厅", track: "多伦多分会场", type: "主题报告", title: "霍奇金淋巴瘤诊疗新进展", chairs: ["黎国伟"], speakers: ["李回军"], discussants: [], reviewers: [], note: "" },
-    { id: "s0801-012", date: "2026-08-01", startTime: "14:50", endTime: "15:15", venue: "多伦多厅", track: "多伦多分会场", type: "主题报告", title: "外周T细胞淋巴瘤指南解读", chairs: ["陈海飞"], speakers: ["孙鹏"], discussants: [], reviewers: [], note: "" },
-    { id: "s0801-013", date: "2026-08-01", startTime: "15:30", endTime: "15:55", venue: "多伦多厅", track: "多伦多分会场", type: "主题报告", title: "多发性骨髓瘤维持治疗真实世界数据分享", chairs: ["邓兰"], speakers: ["车菲菲"], discussants: [], reviewers: [], note: "" },
-    { id: "s0801-014", date: "2026-08-01", startTime: "16:10", endTime: "16:35", venue: "多伦多厅", track: "多伦多分会场", type: "主题报告", title: "2026 EHA PI研究精粹", chairs: ["林海清"], speakers: ["许蕾"], discussants: [], reviewers: [], note: "" },
-    { id: "s0801-015", date: "2026-08-01", startTime: "16:50", endTime: "17:00", venue: "多伦多厅", track: "多伦多分会场", type: "会议总结", title: "会议总结", chairs: ["冯佳", "黎永谦"], speakers: [], discussants: [], reviewers: [], note: "" },
+    { id: "s0801-main-001", date: "2026-08-01", startTime: "08:30", endTime: "08:45", venue: "蒙特利尔+温哥华厅", track: "大会主会场", type: "致辞", title: "开幕致辞", presidents: ["冯佳"], speeches: ["赵永胜", "刘启发"], chairs: [], speakers: [], discussants: [], reviewers: [] },
+    { id: "s0801-main-002", date: "2026-08-01", startTime: "08:45", endTime: "09:15", venue: "蒙特利尔+温哥华厅", track: "大会主会场", type: "主题报告", title: "轻链淀粉样变治疗新进展", chairs: ["张新友", "蓝海"], speakers: ["路瑾"], discussants: [], reviewers: [] },
+    { id: "s0801-main-003", date: "2026-08-01", startTime: "09:15", endTime: "09:25", venue: "蒙特利尔+温哥华厅", track: "大会主会场", type: "讨论", title: "轻链淀粉样变治疗讨论", chairs: ["张新友", "蓝海"], speakers: [], discussants: ["林海清", "夏冰天"], reviewers: [] },
+    { id: "s0801-main-004", date: "2026-08-01", startTime: "09:25", endTime: "09:55", venue: "蒙特利尔+温哥华厅", track: "大会主会场", type: "主题报告", title: "B-ALL诊疗进展及珠江医院诊疗经验分享", chairs: ["涂传清", "黄望香"], speakers: ["黄睿"], discussants: [], reviewers: [] },
+    { id: "s0801-main-005", date: "2026-08-01", startTime: "09:55", endTime: "10:05", venue: "蒙特利尔+温哥华厅", track: "大会主会场", type: "讨论", title: "B-ALL诊疗进展讨论", chairs: ["涂传清", "黄望香"], speakers: [], discussants: ["陈喜填", "庞雯文"], reviewers: [] },
+    { id: "s0801-main-006", date: "2026-08-01", startTime: "10:05", endTime: "10:35", venue: "蒙特利尔+温哥华厅", track: "大会主会场", type: "主题报告", title: "RNA修饰在肿瘤免疫中的作用机制和转化研究", chairs: ["刘泽林", "陈蒂珩"], speakers: ["陈振华"], discussants: [], reviewers: [] },
+    { id: "s0801-main-007", date: "2026-08-01", startTime: "10:35", endTime: "10:45", venue: "蒙特利尔+温哥华厅", track: "大会主会场", type: "讨论", title: "RNA修饰专题讨论", chairs: ["刘泽林", "陈蒂珩"], speakers: [], discussants: ["柯鹏", "王婷"], reviewers: [] },
+    { id: "s0801-main-008", date: "2026-08-01", startTime: "10:45", endTime: "11:15", venue: "蒙特利尔+温哥华厅", track: "大会主会场", type: "主题报告", title: "骨髓瘤淋巴瘤细胞免疫治疗", chairs: ["柳金", "吴远彬"], speakers: ["邝沃林"], discussants: [], reviewers: [] },
+    { id: "s0801-main-009", date: "2026-08-01", startTime: "11:15", endTime: "11:25", venue: "蒙特利尔+温哥华厅", track: "大会主会场", type: "讨论", title: "骨髓瘤淋巴瘤细胞免疫治疗讨论", chairs: ["柳金", "吴远彬"], speakers: [], discussants: ["李晋萌", "黄鹏程"], reviewers: [] },
+    { id: "s0801-main-010", date: "2026-08-01", startTime: "11:25", endTime: "11:55", venue: "蒙特利尔+温哥华厅", track: "大会主会场", type: "主题报告", title: "SLL/CLL惰性淋巴瘤前沿进展", chairs: ["余国攀", "夏维林"], speakers: ["郭绪涛"], discussants: [], reviewers: [] },
+    { id: "s0801-main-011", date: "2026-08-01", startTime: "11:55", endTime: "12:00", venue: "蒙特利尔+温哥华厅", track: "大会主会场", type: "讨论", title: "SLL/CLL惰性淋巴瘤前沿进展讨论", chairs: ["余国攀", "夏维林"], speakers: [], discussants: ["牛晓敏", "赵英玲"], reviewers: [] },
+    { id: "s0801-main-012", date: "2026-08-01", startTime: "12:00", endTime: "14:00", venue: "蒙特利尔+温哥华厅", track: "大会主会场", type: "午餐", title: "午餐", chairs: [], speakers: [], discussants: [], reviewers: [] },
+    { id: "s0801-main-013", date: "2026-08-01", startTime: "14:00", endTime: "14:30", venue: "蒙特利尔+温哥华厅", track: "大会主会场", type: "主题报告", title: "不同型血小板输注原则及策略", chairs: ["庄乃保", "王素云"], speakers: ["周世乔"], discussants: [], reviewers: [] },
+    { id: "s0801-main-014", date: "2026-08-01", startTime: "14:30", endTime: "14:45", venue: "蒙特利尔+温哥华厅", track: "大会主会场", type: "讨论", title: "不同型血小板输注原则及策略讨论", chairs: ["庄乃保", "王素云"], speakers: [], discussants: ["郑方英", "张晓玲"], reviewers: [] },
+    { id: "s0801-main-015", date: "2026-08-01", startTime: "14:45", endTime: "15:15", venue: "蒙特利尔+温哥华厅", track: "大会主会场", type: "主题报告", title: "异基因造血干细胞移植GVHD诊疗现状和进展", chairs: ["夏勇", "黄艳"], speakers: ["莫晓冬"], discussants: [], reviewers: [] },
+    { id: "s0801-main-016", date: "2026-08-01", startTime: "15:15", endTime: "15:30", venue: "蒙特利尔+温哥华厅", track: "大会主会场", type: "讨论", title: "异基因造血干细胞移植GVHD专题讨论", chairs: ["夏勇", "黄艳"], speakers: [], discussants: ["吴泽华", "钟凤鸾"], reviewers: [] },
+    { id: "s0801-main-017", date: "2026-08-01", startTime: "15:30", endTime: "16:00", venue: "蒙特利尔+温哥华厅", track: "大会主会场", type: "主题报告", title: "Tp53突变髓系疾病患者造血干细胞移植治疗进展", chairs: ["黎永谦", "杨振江"], speakers: ["王昱"], discussants: [], reviewers: [] },
+    { id: "s0801-main-018", date: "2026-08-01", startTime: "16:00", endTime: "16:45", venue: "蒙特利尔+温哥华厅", track: "大会主会场", type: "讨论", title: "Tp53突变髓系疾病专题讨论", chairs: ["黎永谦", "杨振江"], speakers: [], discussants: ["覃宝珍", "陈美玲"], reviewers: [] },
+    { id: "s0801-main-019", date: "2026-08-01", startTime: "16:45", endTime: "17:15", venue: "蒙特利尔+温哥华厅", track: "大会主会场", type: "主题报告", title: "新型JAK抑制剂治疗骨髓纤维化临床研究的系统性布局与事后分析启示", chairs: ["冯永怀", "张治业"], speakers: ["张仪"], discussants: [], reviewers: [] },
+    { id: "s0801-main-020", date: "2026-08-01", startTime: "17:15", endTime: "17:30", venue: "蒙特利尔+温哥华厅", track: "大会主会场", type: "讨论", title: "JAK抑制剂治疗骨髓纤维化专题讨论", chairs: ["冯永怀", "张治业"], speakers: [], discussants: ["王宁", "张旭艳"], reviewers: [] },
+    { id: "s0801-main-021", date: "2026-08-01", startTime: "17:30", endTime: "17:40", venue: "蒙特利尔+温哥华厅", track: "大会主会场", type: "会议总结", title: "会议总结", chairs: ["冯佳"], speakers: [], discussants: [], reviewers: [] },
 
-    { id: "s0802-001", date: "2026-08-02", startTime: "08:30", endTime: "09:00", venue: "多伦多厅", track: "大会主会场", type: "主题报告", title: "异基因造血干细胞移植治疗CMML近期研究进展", chairs: ["冯佳", "王钧"], speakers: ["张晓辉"], discussants: [], reviewers: [], note: "" },
-    { id: "s0802-002", date: "2026-08-02", startTime: "09:00", endTime: "09:15", venue: "多伦多厅", track: "大会主会场", type: "讨论", title: "CMML移植研究进展讨论", chairs: ["冯佳", "王钧"], speakers: [], discussants: ["孙丽华", "杨华"], reviewers: [], note: "" },
-    { id: "s0802-003", date: "2026-08-02", startTime: "09:15", endTime: "09:45", venue: "多伦多厅", track: "大会主会场", type: "主题报告", title: "双表达DLBCL诊疗进展", chairs: ["黄振倩", "吴建伟"], speakers: ["蔡清清"], discussants: [], reviewers: [], commentators: ["郭智"], note: "" },
-    { id: "s0802-004", date: "2026-08-02", startTime: "10:15", endTime: "10:45", venue: "多伦多厅", track: "大会主会场", type: "主题报告", title: "小活检时代淋巴瘤病理诊断及案例分享", chairs: ["聂大年", "郑润辉"], speakers: ["尹为华"], discussants: [], reviewers: [], note: "" },
-    { id: "s0802-005", date: "2026-08-02", startTime: "11:00", endTime: "11:30", venue: "多伦多厅", track: "大会主会场", type: "主题报告", title: "CAR-T治疗多发性骨髓瘤髓外病变", chairs: ["郭子文", "李宜真"], speakers: ["闫志凌"], discussants: [], reviewers: [], note: "" },
-    { id: "s0802-006", date: "2026-08-02", startTime: "11:45", endTime: "12:15", venue: "多伦多厅", track: "大会主会场", type: "主题报告", title: "系统性轻链型淀粉样变的诊疗实践探索", chairs: ["黄刚", "李勇华"], speakers: ["赖沛龙"], discussants: [], reviewers: [], note: "" },
-    { id: "s0802-007", date: "2026-08-02", startTime: "14:00", endTime: "14:30", venue: "多伦多厅", track: "大会主会场", type: "主题报告", title: "基于MRD检测结果指导ALL的免疫干预和治疗策略", chairs: ["田发青", "纪玲"], speakers: ["常英军"], discussants: [], reviewers: [], note: "讲者录播" },
-    { id: "s0802-008", date: "2026-08-02", startTime: "14:40", endTime: "15:10", venue: "多伦多厅", track: "大会主会场", type: "主题报告", title: "骨髓瘤疗效评估及MRD检测", chairs: ["宣丽"], speakers: ["钟立业"], discussants: [], reviewers: [], note: "" },
-    { id: "s0802-009", date: "2026-08-02", startTime: "15:20", endTime: "15:50", venue: "多伦多厅", track: "大会主会场", type: "主题报告", title: "BCMA新靶点免疫疗法治疗新进展", chairs: ["姜义荣", "苏永忠"], speakers: ["魏永强"], discussants: [], reviewers: [], note: "" },
-    { id: "s0802-010", date: "2026-08-02", startTime: "16:00", endTime: "16:20", venue: "多伦多厅", track: "大会主会场", type: "主题报告", title: "弥漫大B细胞淋巴瘤诊疗路径", chairs: ["孙洪波", "冠伟"], speakers: ["张倩"], discussants: [], reviewers: [], note: "" },
-    { id: "s0802-011", date: "2026-08-02", startTime: "16:25", endTime: "16:55", venue: "多伦多厅", track: "大会主会场", type: "主题报告", title: "外周T细胞淋巴瘤诊断治疗新进展", chairs: ["陈自仁", "曾芸馨"], speakers: ["李志铭"], discussants: [], reviewers: [], note: "" },
-    { id: "s0802-012", date: "2026-08-02", startTime: "08:40", endTime: "09:10", venue: "波士顿厅", track: "免疫治疗专场", type: "专题会", title: "细胞免疫疗法在多发性骨髓瘤整体治疗中的排兵布阵策略", chairs: ["周继豪", "古庆利"], speakers: ["谭晓虹"], discussants: [], reviewers: [], note: "" },
-    { id: "s0802-013", date: "2026-08-02", startTime: "09:10", endTime: "09:40", venue: "波士顿厅", track: "免疫治疗专场", type: "讨论", title: "复发难治骨髓瘤/淋巴瘤CAR-T筛选、预处理评估专家讨论", chairs: ["周继豪", "古庆利"], speakers: [], discussants: ["廖娅平", "范懿超", "戴婧", "周凌云", "李回军", "杨华"], reviewers: [], note: "" },
-    { id: "s0802-014", date: "2026-08-02", startTime: "09:40", endTime: "10:10", venue: "波士顿厅", track: "免疫治疗专场", type: "专题会", title: "CAR-T相关CRS、ICANS早期识别与分层干预策略", chairs: ["陈海飞", "林海清"], speakers: ["徐海婵"], discussants: [], reviewers: [], note: "" },
-    { id: "s0802-015", date: "2026-08-02", startTime: "10:10", endTime: "10:40", venue: "波士顿厅", track: "免疫治疗专场", type: "讨论", title: "CAR-T后血细胞重建、感染防控、血栓风险平衡", chairs: ["许晓军"], speakers: [], discussants: ["杨斯恬", "谢沐尘", "杨会林", "罗畅如", "张文丽", "王淡瑜"], reviewers: [], note: "" },
-    { id: "s0802-016", date: "2026-08-02", startTime: "10:40", endTime: "11:10", venue: "波士顿厅", track: "免疫治疗专场", type: "专题会", title: "CSCO血液肿瘤CAR-T及新型细胞治疗指南更新深度解读", chairs: ["刘四喜", "陈艳"], speakers: ["王秀菊"], discussants: [], reviewers: [], note: "" },
-    { id: "s0802-017", date: "2026-08-02", startTime: "11:10", endTime: "11:40", venue: "波士顿厅", track: "免疫治疗专场", type: "讨论", title: "双靶点CAR-T、通用型CAR、CAR-NK临床应用前景研讨", chairs: ["罗华山"], speakers: [], discussants: ["翁光祥", "夏冰天", "彭浩宇", "钟凤鸾", "向泓先", "吴微"], reviewers: [], note: "" },
-    { id: "s0802-018", date: "2026-08-02", startTime: "14:10", endTime: "14:40", venue: "波士顿厅", track: "出凝血专场", type: "专题会", title: "ITP规范化治疗", chairs: ["杜新", "龙涛"], speakers: ["李梦娟"], discussants: [], reviewers: [], note: "" },
-    { id: "s0802-019", date: "2026-08-02", startTime: "15:10", endTime: "15:40", venue: "波士顿厅", track: "出凝血专场", type: "专题会", title: "如何平衡ITP患者升板需求和血栓风险？", chairs: ["孙志强", "郭智"], speakers: ["徐海婵"], discussants: [], reviewers: [], note: "" },
-    { id: "s0802-020", date: "2026-08-02", startTime: "16:10", endTime: "16:40", venue: "波士顿厅", track: "出凝血专场", type: "专题会", title: "CSCO肿瘤治疗所致血小板减少症指南更新解读", chairs: ["陈艳", "吴东升"], speakers: ["张晓瀚"], discussants: [], reviewers: [], note: "" },
-    { id: "s0802-021", date: "2026-08-02", startTime: "14:10", endTime: "14:20", venue: "蒙特利尔+温哥华厅", track: "女医师协会分会场", type: "致辞", title: "凤栖梧桐·再启新章精准血液病学学术会议开幕致辞", chairs: ["李玉华", "冯佳"], speakers: [], discussants: [], reviewers: [], note: "" },
-    { id: "s0802-022", date: "2026-08-02", startTime: "14:20", endTime: "14:45", venue: "蒙特利尔+温哥华厅", track: "女医师协会分会场", type: "主题报告", title: "重组人凝血因子VIIIa在危重抢救患者中应用", chairs: ["李玉华", "平宝红"], speakers: ["徐海婵"], discussants: [], reviewers: [], commentators: ["冯佳"], note: "点评专家请结合出凝血专题简要点评" },
-    { id: "s0802-023", date: "2026-08-02", startTime: "15:05", endTime: "15:30", venue: "蒙特利尔+温哥华厅", track: "女医师协会分会场", type: "主题报告", title: "PNH补体抑制剂治疗专家共识解读", chairs: ["陶红芳", "何红华"], speakers: ["蒋玲"], discussants: [], reviewers: [], note: "" },
-    { id: "s0802-024", date: "2026-08-02", startTime: "15:50", endTime: "16:15", venue: "蒙特利尔+温哥华厅", track: "女医师协会分会场", type: "主题报告", title: "外周血流式细胞术在成熟淋巴细胞肿瘤中的应用", chairs: ["赵莹", "孙丽华"], speakers: ["谢闫悦"], discussants: [], reviewers: [], note: "" },
-    { id: "s0802-025", date: "2026-08-02", startTime: "16:30", endTime: "16:55", venue: "蒙特利尔+温哥华厅", track: "女医师协会分会场", type: "主题报告", title: "非共价BTKi在CLL中的获益及管理经验", chairs: ["姜义荣", "钟樱红"], speakers: ["张文丽"], discussants: [], reviewers: [], note: "" },
-    { id: "s0802-026", date: "2026-08-02", startTime: "17:10", endTime: "17:35", venue: "蒙特利尔+温哥华厅", track: "女医师协会分会场", type: "主题报告", title: "多发性骨髓瘤的克隆演变", chairs: ["龙涛", "林海清"], speakers: ["李晓清"], discussants: [], reviewers: [], note: "" }
+    { id: "s0801-tor-001", date: "2026-08-01", startTime: "14:00", endTime: "14:10", venue: "多伦多厅", track: "多伦多分会场", type: "致辞", title: "开场致词", chairs: ["冯佳", "黎永谦"], speakers: [], discussants: [], reviewers: [] },
+    { id: "s0801-tor-002", date: "2026-08-01", startTime: "14:10", endTime: "14:35", venue: "多伦多厅", track: "多伦多分会场", type: "主题报告", title: "霍奇金淋巴瘤诊疗新进展", chairs: ["黎国伟"], speakers: ["李回军"], discussants: [], reviewers: [] },
+    { id: "s0801-tor-003", date: "2026-08-01", startTime: "14:35", endTime: "14:50", venue: "多伦多厅", track: "多伦多分会场", type: "讨论", title: "霍奇金淋巴瘤诊疗新进展讨论", chairs: ["黎国伟"], speakers: [], discussants: ["张倩", "王淡瑜", "金梦迪"], reviewers: [] },
+    { id: "s0801-tor-004", date: "2026-08-01", startTime: "14:50", endTime: "15:15", venue: "多伦多厅", track: "多伦多分会场", type: "主题报告", title: "外周T细胞淋巴瘤指南解读", chairs: ["陈海飞"], speakers: ["孙鹏"], discussants: [], reviewers: [] },
+    { id: "s0801-tor-005", date: "2026-08-01", startTime: "15:15", endTime: "15:30", venue: "多伦多厅", track: "多伦多分会场", type: "讨论", title: "外周T细胞淋巴瘤指南解读讨论", chairs: ["陈海飞"], speakers: [], discussants: ["张文丽", "刘黎琼", "刘玉坤"], reviewers: [] },
+    { id: "s0801-tor-006", date: "2026-08-01", startTime: "15:30", endTime: "15:55", venue: "多伦多厅", track: "多伦多分会场", type: "主题报告", title: "多发性骨髓瘤维持治疗真实世界数据分享", chairs: ["邓兰"], speakers: ["车菲菲"], discussants: [], reviewers: [] },
+    { id: "s0801-tor-007", date: "2026-08-01", startTime: "15:55", endTime: "16:10", venue: "多伦多厅", track: "多伦多分会场", type: "讨论", title: "多发性骨髓瘤维持治疗讨论", chairs: ["邓兰"], speakers: [], discussants: ["周擎", "徐莹", "庞艳彬"], reviewers: [] },
+    { id: "s0801-tor-008", date: "2026-08-01", startTime: "16:10", endTime: "16:35", venue: "多伦多厅", track: "多伦多分会场", type: "主题报告", title: "2026 EHA PI研究精粹", chairs: ["林海清"], speakers: ["许蕾"], discussants: [], reviewers: [] },
+    { id: "s0801-tor-009", date: "2026-08-01", startTime: "16:35", endTime: "16:50", venue: "多伦多厅", track: "多伦多分会场", type: "讨论", title: "2026 EHA PI研究精粹讨论", chairs: ["林海清"], speakers: [], discussants: ["文冰冰", "张弋慧智", "戴婧"], reviewers: [] },
+    { id: "s0801-tor-010", date: "2026-08-01", startTime: "16:50", endTime: "17:00", venue: "多伦多厅", track: "多伦多分会场", type: "会议总结", title: "会议总结", chairs: ["冯佳", "黎永谦"], speakers: [], discussants: [], reviewers: [] },
+
+    { id: "s0802-main-001", date: "2026-08-02", startTime: "08:30", endTime: "09:00", venue: "多伦多厅", track: "大会主会场", type: "主题报告", title: "异基因造血干细胞移植治疗CMML近期研究进展", chairs: ["冯佳", "王钧"], speakers: ["张晓辉"], discussants: [], reviewers: [] },
+    { id: "s0802-main-002", date: "2026-08-02", startTime: "09:00", endTime: "09:15", venue: "多伦多厅", track: "大会主会场", type: "讨论", title: "CMML移植研究进展讨论", chairs: ["冯佳", "王钧"], speakers: [], discussants: ["孙丽华", "杨华"], reviewers: [] },
+    { id: "s0802-main-003", date: "2026-08-02", startTime: "09:15", endTime: "09:45", venue: "多伦多厅", track: "大会主会场", type: "主题报告", title: "双表达DLBCL诊疗进展", chairs: ["黄振倩", "吴建伟"], speakers: ["蔡清清"], discussants: [], reviewers: [] },
+    { id: "s0802-main-004", date: "2026-08-02", startTime: "09:45", endTime: "10:15", venue: "多伦多厅", track: "大会主会场", type: "讨论", title: "双表达DLBCL诊疗进展讨论", chairs: ["黄振倩", "吴建伟"], speakers: [], discussants: ["周凌云", "李振海"], reviewers: [] },
+    { id: "s0802-main-005", date: "2026-08-02", startTime: "10:15", endTime: "10:45", venue: "多伦多厅", track: "大会主会场", type: "主题报告", title: "小活检时代淋巴瘤病理诊断及案例分享", chairs: ["聂大年", "郑润辉"], speakers: ["尹为华"], discussants: [], reviewers: [] },
+    { id: "s0802-main-006", date: "2026-08-02", startTime: "10:45", endTime: "11:00", venue: "多伦多厅", track: "大会主会场", type: "讨论", title: "小活检时代淋巴瘤病理诊断讨论", chairs: ["聂大年", "郑润辉"], speakers: [], discussants: ["孙佳耐", "王新根"], reviewers: [] },
+    { id: "s0802-main-007", date: "2026-08-02", startTime: "11:00", endTime: "11:30", venue: "多伦多厅", track: "大会主会场", type: "主题报告", title: "CAR-T治疗多发性骨髓瘤髓外病变", chairs: ["郭子文", "李宜真"], speakers: ["闫志凌"], discussants: [], reviewers: [] },
+    { id: "s0802-main-008", date: "2026-08-02", startTime: "11:30", endTime: "11:45", venue: "多伦多厅", track: "大会主会场", type: "讨论", title: "CAR-T治疗多发性骨髓瘤髓外病变讨论", chairs: ["郭子文", "李宜真"], speakers: [], discussants: ["蒋官忆", "黄珊"], reviewers: [] },
+    { id: "s0802-main-009", date: "2026-08-02", startTime: "11:45", endTime: "12:15", venue: "多伦多厅", track: "大会主会场", type: "主题报告", title: "系统性轻链型淀粉样变的诊疗实践探索", chairs: ["黄刚", "李勇华"], speakers: ["赖沛龙"], discussants: [], reviewers: [] },
+    { id: "s0802-main-010", date: "2026-08-02", startTime: "12:15", endTime: "12:30", venue: "多伦多厅", track: "大会主会场", type: "讨论", title: "系统性轻链型淀粉样变诊疗实践讨论", chairs: ["黄刚", "李勇华"], speakers: [], discussants: ["刘玉坤"], reviewers: [] },
+    { id: "s0802-main-011", date: "2026-08-02", startTime: "12:30", endTime: "14:00", venue: "多伦多厅", track: "大会主会场", type: "午休", title: "午休", chairs: [], speakers: [], discussants: [], reviewers: [] },
+    { id: "s0802-main-012", date: "2026-08-02", startTime: "14:00", endTime: "14:30", venue: "多伦多厅", track: "大会主会场", type: "主题报告", title: "基于MRD检测结果指导ALL的免疫干预和治疗策略", chairs: ["田发青", "纪玲"], speakers: ["常英军"], discussants: [], reviewers: [] },
+    { id: "s0802-main-013", date: "2026-08-02", startTime: "14:30", endTime: "14:40", venue: "多伦多厅", track: "大会主会场", type: "讨论", title: "ALL免疫干预和治疗策略讨论", chairs: ["田发青", "纪玲"], speakers: [], discussants: ["张淑萍", "彭赛辉"], reviewers: [] },
+    { id: "s0802-main-014", date: "2026-08-02", startTime: "14:40", endTime: "15:10", venue: "多伦多厅", track: "大会主会场", type: "主题报告", title: "骨髓瘤疗效评估及MRD检测", chairs: ["宣丽"], speakers: ["钟立业"], discussants: [], reviewers: [] },
+    { id: "s0802-main-015", date: "2026-08-02", startTime: "15:10", endTime: "15:20", venue: "多伦多厅", track: "大会主会场", type: "讨论", title: "骨髓瘤疗效评估及MRD检测讨论", chairs: ["宣丽"], speakers: [], discussants: ["肖小灵", "刘畅"], reviewers: [] },
+    { id: "s0802-main-016", date: "2026-08-02", startTime: "15:20", endTime: "15:50", venue: "多伦多厅", track: "大会主会场", type: "专题会", title: "BCMA新靶点免疫疗法治疗新进展", chairs: ["姜义荣", "苏永忠"], speakers: ["魏永强"], discussants: [], reviewers: [] },
+    { id: "s0802-main-017", date: "2026-08-02", startTime: "15:50", endTime: "16:00", venue: "多伦多厅", track: "大会主会场", type: "讨论", title: "BCMA新靶点免疫疗法讨论", chairs: ["姜义荣", "苏永忠"], speakers: [], discussants: ["牛晓敏", "宾婷"], reviewers: [] },
+    { id: "s0802-main-018", date: "2026-08-02", startTime: "16:00", endTime: "16:20", venue: "多伦多厅", track: "大会主会场", type: "主题报告", title: "弥漫大B细胞淋巴瘤诊疗路径", chairs: ["孙洪波", "寇伟"], speakers: ["张倩"], discussants: [], reviewers: [] },
+    { id: "s0802-main-019", date: "2026-08-02", startTime: "16:20", endTime: "16:25", venue: "多伦多厅", track: "大会主会场", type: "讨论", title: "弥漫大B细胞淋巴瘤诊疗路径讨论", chairs: ["孙洪波", "寇伟"], speakers: [], discussants: ["冯碧珊", "何金辉"], reviewers: [] },
+    { id: "s0802-main-020", date: "2026-08-02", startTime: "16:25", endTime: "16:55", venue: "多伦多厅", track: "大会主会场", type: "主题报告", title: "外周T细胞淋巴瘤诊断治疗新进展", chairs: ["陈自仁", "曾芸馨"], speakers: ["李志铭"], discussants: [], reviewers: [] },
+    { id: "s0802-main-021", date: "2026-08-02", startTime: "16:55", endTime: "17:05", venue: "多伦多厅", track: "大会主会场", type: "讨论", title: "外周T细胞淋巴瘤诊断治疗讨论", chairs: ["陈自仁", "曾芸馨"], speakers: [], discussants: ["潘伟锋"], reviewers: [] },
+    { id: "s0802-main-022", date: "2026-08-02", startTime: "17:05", endTime: "17:10", venue: "多伦多厅", track: "大会主会场", type: "会议总结", title: "会议总结", chairs: ["冯佳"], speakers: [], discussants: [], reviewers: [] },
+
+    { id: "s0802-immune-001", date: "2026-08-02", startTime: "08:30", endTime: "08:40", venue: "波士顿厅", track: "免疫治疗专场", type: "致辞", title: "主席致辞", chairs: ["冯佳", "周继豪"], speakers: [], discussants: [], reviewers: [] },
+    { id: "s0802-immune-002", date: "2026-08-02", startTime: "08:40", endTime: "09:10", venue: "波士顿厅", track: "免疫治疗专场", type: "专题会", title: "细胞免疫疗法在多发性骨髓瘤整体治疗中的排兵布阵策略", chairs: ["周继豪", "古庆利"], speakers: ["谭晓虹"], discussants: [], reviewers: [] },
+    { id: "s0802-immune-003", date: "2026-08-02", startTime: "09:10", endTime: "09:40", venue: "波士顿厅", track: "免疫治疗专场", type: "讨论", title: "复发难治骨髓瘤/淋巴瘤CAR-T筛选、预处理评估专家讨论", chairs: ["周继豪", "古庆利"], speakers: [], discussants: ["廖娅平", "范懿超", "戴婧", "周凌云", "李回军", "杨华"], reviewers: [] },
+    { id: "s0802-immune-004", date: "2026-08-02", startTime: "09:40", endTime: "10:10", venue: "波士顿厅", track: "免疫治疗专场", type: "专题会", title: "CAR-T相关CRS、ICANS早期识别与分层干预策略", chairs: ["陈海飞", "林海清"], speakers: ["徐海婵"], discussants: [], reviewers: [] },
+    { id: "s0802-immune-005", date: "2026-08-02", startTime: "10:10", endTime: "10:40", venue: "波士顿厅", track: "免疫治疗专场", type: "讨论", title: "CAR-T后血细胞重建、感染防控、血栓风险平衡", chairs: ["许晓军"], speakers: [], discussants: ["杨斯恬", "谢沐尘", "杨会林", "罗畅如", "张文丽", "王淡瑜"], reviewers: [] },
+    { id: "s0802-immune-006", date: "2026-08-02", startTime: "10:40", endTime: "11:10", venue: "波士顿厅", track: "免疫治疗专场", type: "专题会", title: "CSCO血液肿瘤CAR-T及新型细胞治疗指南更新深度解读", chairs: ["刘四喜", "陈艳"], speakers: ["王秀菊"], discussants: [], reviewers: [] },
+    { id: "s0802-immune-007", date: "2026-08-02", startTime: "11:10", endTime: "11:40", venue: "波士顿厅", track: "免疫治疗专场", type: "讨论", title: "双靶点CAR-T、通用型CAR、CAR-NK临床应用前景研讨", chairs: ["罗华山"], speakers: [], discussants: ["翁光祥", "夏冰天", "彭浩宇", "钟凤鸾", "向泓先", "吴微"], reviewers: [] },
+    { id: "s0802-immune-008", date: "2026-08-02", startTime: "11:40", endTime: "12:00", venue: "波士顿厅", track: "免疫治疗专场", type: "大会总结", title: "大会总结", chairs: ["冯佳", "周继豪"], speakers: [], discussants: [], reviewers: [] },
+
+    { id: "s0802-coag-001", date: "2026-08-02", startTime: "14:00", endTime: "14:10", venue: "波士顿厅", track: "出凝血专场", type: "致辞", title: "主席致辞", chairs: ["冯佳", "夏忠军", "杜新"], speakers: [], discussants: [], reviewers: [] },
+    { id: "s0802-coag-002", date: "2026-08-02", startTime: "14:10", endTime: "14:40", venue: "波士顿厅", track: "出凝血专场", type: "专题会", title: "ITP规范化治疗", chairs: ["杜新", "龙涛"], speakers: ["李梦娟"], discussants: [], reviewers: [] },
+    { id: "s0802-coag-003", date: "2026-08-02", startTime: "14:40", endTime: "15:10", venue: "波士顿厅", track: "出凝血专场", type: "讨论", title: "ITP规范化治疗讨论", chairs: ["杜新", "龙涛"], speakers: [], discussants: ["李晓清", "黄凯凯", "金梦迪", "李国强", "杨斯恬"], reviewers: [] },
+    { id: "s0802-coag-004", date: "2026-08-02", startTime: "15:10", endTime: "15:40", venue: "波士顿厅", track: "出凝血专场", type: "专题会", title: "如何平衡ITP患者升板需求和血栓风险？", chairs: ["孙志强", "郭智"], speakers: ["徐海婵"], discussants: [], reviewers: [] },
+    { id: "s0802-coag-005", date: "2026-08-02", startTime: "15:40", endTime: "16:10", venue: "波士顿厅", track: "出凝血专场", type: "讨论", title: "ITP患者升板需求与血栓风险讨论", chairs: ["孙志强", "郭智"], speakers: [], discussants: ["王小博", "郝丹", "胡晓婧", "刘宁", "文冰冰"], reviewers: [] },
+    { id: "s0802-coag-006", date: "2026-08-02", startTime: "16:10", endTime: "16:40", venue: "波士顿厅", track: "出凝血专场", type: "专题会", title: "CSCO肿瘤治疗所致血小板减少症指南更新解读", chairs: ["陈艳", "吴东升"], speakers: ["张晓瀚"], discussants: [], reviewers: [] },
+    { id: "s0802-coag-007", date: "2026-08-02", startTime: "16:40", endTime: "17:10", venue: "波士顿厅", track: "出凝血专场", type: "讨论", title: "血小板减少症指南更新讨论", chairs: ["陈艳", "吴东升"], speakers: [], discussants: ["李回军", "庞艳彬", "方翔", "彭浩宇", "覃宝珍"], reviewers: [] },
+    { id: "s0802-coag-008", date: "2026-08-02", startTime: "17:10", endTime: "17:20", venue: "波士顿厅", track: "出凝血专场", type: "大会总结", title: "大会总结", chairs: ["冯佳", "夏忠军", "杜新"], speakers: [], discussants: [], reviewers: [] },
+
+    { id: "s0802-women-001", date: "2026-08-02", startTime: "14:00", endTime: "14:10", venue: "蒙特利尔+温哥华厅", track: "女医师协会分会场", type: "报到", title: "签到", chairs: [], speakers: [], discussants: [], reviewers: [] },
+    { id: "s0802-women-002", date: "2026-08-02", startTime: "14:10", endTime: "14:20", venue: "蒙特利尔+温哥华厅", track: "女医师协会分会场", type: "致辞", title: "凤栖梧桐·再启新章精准血液病学学术会议开幕致辞", chairs: ["李玉华", "冯佳"], speakers: [], discussants: [], reviewers: [] },
+    { id: "s0802-women-003", date: "2026-08-02", startTime: "14:20", endTime: "14:45", venue: "蒙特利尔+温哥华厅", track: "女医师协会分会场", type: "主题报告", title: "重组人凝血因子VIIIa在危重抢救患者中应用", chairs: ["李玉华", "平宝红"], speakers: ["徐海婵"], discussants: [], reviewers: [] },
+    { id: "s0802-women-004", date: "2026-08-02", startTime: "14:45", endTime: "15:05", venue: "蒙特利尔+温哥华厅", track: "女医师协会分会场", type: "讨论", title: "重组人凝血因子VIIIa应用讨论", chairs: ["李玉华", "平宝红"], speakers: [], discussants: ["谢晓玲", "邢学仰", "冯春"], reviewers: [] },
+    { id: "s0802-women-005", date: "2026-08-02", startTime: "15:05", endTime: "15:30", venue: "蒙特利尔+温哥华厅", track: "女医师协会分会场", type: "主题报告", title: "PNH补体抑制剂治疗专家共识解读", chairs: ["陶红芳", "何红华"], speakers: ["蒋玲"], discussants: [], reviewers: [] },
+    { id: "s0802-women-006", date: "2026-08-02", startTime: "15:30", endTime: "15:50", venue: "蒙特利尔+温哥华厅", track: "女医师协会分会场", type: "讨论", title: "PNH补体抑制剂治疗讨论", chairs: ["冯佳"], speakers: [], discussants: ["李梅芳", "侯婕", "覃宝珍"], reviewers: [] },
+    { id: "s0802-women-007", date: "2026-08-02", startTime: "15:50", endTime: "16:15", venue: "蒙特利尔+温哥华厅", track: "女医师协会分会场", type: "主题报告", title: "外周血流式细胞术在成熟淋巴细胞肿瘤中的应用", chairs: ["赵莹", "孙丽华"], speakers: ["谢闫悦"], discussants: [], reviewers: [] },
+    { id: "s0802-women-008", date: "2026-08-02", startTime: "16:15", endTime: "16:30", venue: "蒙特利尔+温哥华厅", track: "女医师协会分会场", type: "讨论", title: "外周血流式细胞术应用讨论", chairs: ["赵莹", "孙丽华"], speakers: [], discussants: ["楼瑾", "黄培翠", "蔡林静"], reviewers: [] },
+    { id: "s0802-women-009", date: "2026-08-02", startTime: "16:30", endTime: "16:55", venue: "蒙特利尔+温哥华厅", track: "女医师协会分会场", type: "主题报告", title: "非共价BTKi在CLL中的获益及管理经验", chairs: ["姜义荣", "钟樱红"], speakers: ["张文丽"], discussants: [], reviewers: [] },
+    { id: "s0802-women-010", date: "2026-08-02", startTime: "16:55", endTime: "17:10", venue: "蒙特利尔+温哥华厅", track: "女医师协会分会场", type: "讨论", title: "非共价BTKi在CLL中的获益及管理经验讨论", chairs: ["姜义荣", "钟樱红"], speakers: [], discussants: ["王春莲", "李晋萌"], reviewers: [] },
+    { id: "s0802-women-011", date: "2026-08-02", startTime: "17:10", endTime: "17:35", venue: "蒙特利尔+温哥华厅", track: "女医师协会分会场", type: "主题报告", title: "多发性骨髓瘤的克隆演变", chairs: ["龙涛", "林海清"], speakers: ["李晓清"], discussants: [], reviewers: [] },
+    { id: "s0802-women-012", date: "2026-08-02", startTime: "17:35", endTime: "17:50", venue: "蒙特利尔+温哥华厅", track: "女医师协会分会场", type: "讨论", title: "多发性骨髓瘤的克隆演变讨论", chairs: ["龙涛", "林海清"], speakers: [], discussants: ["夏冰天", "庞雯文"], reviewers: [] },
+    { id: "s0802-women-013", date: "2026-08-02", startTime: "17:50", endTime: "18:00", venue: "蒙特利尔+温哥华厅", track: "女医师协会分会场", type: "会议总结", title: "会议总结", chairs: ["冯佳"], speakers: [], discussants: [], reviewers: [] }
   ]
 };
 
 (function resolveTasks(data) {
-  const roleFields = ["chairs", "speakers", "discussants", "reviewers", "commentators"];
+  const roleFields = ["presidents", "speeches", "chairs", "speakers", "discussants", "reviewers"];
   const excludedPeople = new Set(["会务组", "大会主席", "参会代表", "会议代表", "专家", "点评专家", "主持", "讲者", "评审", "讨论"]);
   const pinyinByChar = {
     常: "chang", 英: "ying", 军: "jun", 车: "che", 菲: "fei", 陈: "chen", 喜: "xi", 填: "tian",
@@ -195,13 +241,20 @@ window.MEETING_DATA = {
     豪: "hao", 古: "gu", 庆: "qing", 徐: "xu", 婵: "chan", 飞: "fei", 军: "jun",
     秀: "xiu", 菊: "ju", 四: "si", 喜: "xi", 罗: "luo", 华: "hua", 杜: "du",
     梦: "meng", 娟: "juan", 涛: "tao", 郭: "guo", 智: "zhi", 玉: "yu", 宝: "bao",
-    陶: "tao", 何: "he", 学: "xue", 仰: "yang", 春: "chun", 莹: "ying", 樱: "ying"
+    陶: "tao", 何: "he", 学: "xue", 仰: "yang", 春: "chun", 莹: "ying", 樱: "ying",
+    碧: "bi", 珊: "shan", 郝: "hao", 丹: "dan", 侯: "hou", 婕: "jie", 凯: "kai",
+    培: "pei", 翠: "cui", 寇: "kou", 宁: "ning", 坤: "kun", 楼: "lou", 莫: "mo",
+    冬: "dong", 牛: "niu", 敏: "min", 潘: "pan", 锋: "feng", 肖: "xiao", 小: "xiao",
+    灵: "ling", 世: "shi", 乔: "qiao", 庄: "zhuang", 乃: "nai", 保: "bao",
+    宾: "bin", 静: "jing", 美: "mei", 翔: "xiang", 怀: "huai", 胡: "hu", 迪: "di",
+    梅: "mei", 赛: "sai", 耐: "nai", 莲: "lian", 素: "su", 根: "gen", 昱: "yu",
+    江: "jiang", 淑: "shu", 旭: "xu", 弋: "yi", 治: "zhi", 擎: "qing"
   };
   const splitPattern = /[、，,；;／/｜|&+\n\r\t]+/g;
 
   function normalizeName(name) {
     return String(name || "")
-      .replace(/^(主持|讲者|发言|讨论|点评|评审|搭档专家\/主持|搭档专家|专家)[:：]/, "")
+      .replace(/^(大会主席|主持|讲者|发言|致辞|讨论|点评|评审|搭档专家\/主持|搭档专家|专家)[:：]/, "")
       .replace(/(教授|主任|博士|医生|医师|老师|专家)$/g, "")
       .trim();
   }
@@ -253,11 +306,12 @@ window.MEETING_DATA = {
   });
 
   const roleConfigs = [
+    ["presidents", "大会主席"],
+    ["speeches", "致辞"],
     ["chairs", "主持"],
     ["speakers", "讲者"],
     ["discussants", "讨论"],
-    ["reviewers", "评审"],
-    ["commentators", "点评"]
+    ["reviewers", "评审"]
   ];
   const taskByExpertSession = new Map();
   data.sessions.forEach((session) => {

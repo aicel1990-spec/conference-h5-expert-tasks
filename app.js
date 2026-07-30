@@ -61,7 +61,6 @@ function validText(value) {
   if (Array.isArray(value)) return value.filter(validText).join("、");
   if (value === null || value === undefined) return "";
   const text = String(value).trim();
-  if (text === "点评专家请提前到场") return "";
   return text && text !== "无" && text !== "undefined" && text !== "null" ? text : "";
 }
 
@@ -82,11 +81,12 @@ function taskTextLine(label, value) {
 
 function sessionPersonRows(session) {
   return [
+    ["大会主席", session.presidents],
+    ["致辞", session.speeches],
     ["主持", session.chairs],
     ["讲者", session.speakers],
     ["讨论/点评", session.discussants],
-    ["评审", session.reviewers],
-    ["点评", session.commentators]
+    ["评审", session.reviewers]
   ].map(([label, value]) => [label, validText(value)]).filter(([, text]) => text);
 }
 
@@ -362,9 +362,12 @@ function renderSchedule() {
 
   $("#scheduleList").innerHTML = list.map((session) => {
     const fields = [
+      fieldRow("大会主席", session.presidents),
+      fieldRow("致辞", session.speeches),
       fieldRow("主持", session.chairs),
       fieldRow("讲者", session.speakers),
-      fieldRow("讨论/点评", [...(session.discussants || []), ...(session.reviewers || []), ...(session.commentators || [])])
+      fieldRow("讨论/点评", session.discussants),
+      fieldRow("评审", session.reviewers)
     ].join("");
     return `
       <article class="schedule-card">
