@@ -59,17 +59,17 @@ main {
 .hero {
   position: relative;
   display: grid;
-  gap: 12px;
+  gap: 10px;
   align-content: start;
-  padding: 12px 0 20px;
+  padding: 10px 0 16px;
 }
 
 .hero-stage {
   position: relative;
-  min-height: clamp(244px, 28svh, 300px);
+  min-height: clamp(218px, 24svh, 266px);
   overflow: hidden;
   border-radius: 22px;
-  padding: 18px 22px 16px;
+  padding: 15px 20px 13px;
   display: grid;
   align-content: start;
   background:
@@ -200,7 +200,7 @@ main {
   align-items: center;
   justify-content: flex-start;
   gap: 8px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   max-width: 68%;
 }
 
@@ -278,7 +278,7 @@ main {
 
 .hero__subtitle {
   max-width: 420px;
-  margin-bottom: 7px;
+  margin-bottom: 5px;
   color: rgba(90, 13, 101, 0.46);
   font-size: 10.5px;
   line-height: 1.36;
@@ -299,7 +299,7 @@ h1 {
   margin: 0;
   color: #a7004f;
   font-size: 24px;
-  line-height: 1.56;
+  line-height: 1.5;
   font-weight: 810;
   letter-spacing: 0;
 }
@@ -334,9 +334,9 @@ h1 span {
 
 .hero-media__city {
   right: 18px;
-  top: 72px;
-  width: min(24vw, 158px);
-  height: min(24vw, 158px);
+  top: 62px;
+  width: min(22vw, 142px);
+  height: min(22vw, 142px);
   border-radius: 50%;
   border: 3px solid rgba(255, 194, 55, 0.2);
   background: linear-gradient(135deg, #fff7fb, #f4e8f6);
@@ -358,9 +358,9 @@ h1 span {
 
 .hero-media__hospital {
   right: 104px;
-  bottom: 12px;
-  width: min(25vw, 166px);
-  height: min(25vw, 166px);
+  bottom: 10px;
+  width: min(23vw, 148px);
+  height: min(23vw, 148px);
   border-radius: 50%;
   border: 3px solid rgba(197, 0, 107, 0.3);
   z-index: 3;
@@ -372,7 +372,7 @@ h1 span {
 
 .hero-summary {
   width: min(500px, 100%);
-  margin-top: 9px;
+  margin-top: 7px;
   padding: 2px 0 2px 8px;
   border: 0;
   border-left: 2px solid rgba(197, 0, 107, 0.11);
@@ -387,10 +387,10 @@ h1 span {
   display: grid;
   grid-template-columns: 58px minmax(0, 1fr);
   gap: 7px;
-  margin: 0 0 3px;
+  margin: 0 0 2px;
   color: rgba(90, 13, 101, 0.72);
   font-size: 10.5px;
-  line-height: 1.42;
+  line-height: 1.34;
 }
 
 .hero-summary b {
@@ -399,9 +399,9 @@ h1 span {
 
 .hero-place {
   display: grid;
-  gap: 2px;
-  margin-top: 5px;
-  padding-top: 5px;
+  gap: 1px;
+  margin-top: 4px;
+  padding-top: 4px;
   border-top: 1px solid rgba(197, 0, 107, 0.055);
 }
 
@@ -1332,18 +1332,18 @@ button:hover,
     min-height: auto;
     grid-template-columns: none;
     align-items: start;
-    padding-top: 22px;
+    padding-top: 18px;
   }
 
   .hero-stage {
-    min-height: 286px;
-    padding: 22px 36px 20px;
+    min-height: 252px;
+    padding: 18px 34px 16px;
   }
 
   .logo-strip {
-    gap: 10px;
+    gap: 9px;
     max-width: 55%;
-    margin-bottom: 12px;
+    margin-bottom: 9px;
   }
 
   .logo-mark {
@@ -1358,21 +1358,21 @@ button:hover,
 
   h1 {
     font-size: 32px;
-    line-height: 1.56;
+    line-height: 1.48;
   }
 
   .hero-media__city {
     right: 34px;
-    top: 70px;
-    width: 156px;
-    height: 156px;
+    top: 62px;
+    width: 140px;
+    height: 140px;
   }
 
   .hero-media__hospital {
-    right: 168px;
-    bottom: 16px;
-    width: 152px;
-    height: 152px;
+    right: 156px;
+    bottom: 12px;
+    width: 136px;
+    height: 136px;
   }
 
   .hero-search-card {
@@ -1462,25 +1462,25 @@ button:hover,
   }
 
   .hero {
-    gap: 9px;
-    padding-top: 8px;
+    gap: 7px;
+    padding-top: 6px;
   }
 
   .hero-stage {
-    min-height: 262px;
-    padding: 12px 14px 12px;
+    min-height: 224px;
+    padding: 10px 12px 9px;
   }
 
   .logo-strip {
     max-width: 100%;
-    gap: 7px;
-    margin-bottom: 8px;
+    gap: 6px;
+    margin-bottom: 6px;
   }
 
   .logo-mark {
-    width: 27px;
-    height: 27px;
-    padding: 3px;
+    width: 25px;
+    height: 25px;
+    padding: 2.5px;
   }
 
   .hero__content {
@@ -1490,32 +1490,32 @@ button:hover,
 
   .hero__subtitle {
     max-width: calc(100% - 24px);
-    margin-bottom: 5px;
+    margin-bottom: 4px;
     font-size: 8.5px;
-    line-height: 1.3;
+    line-height: 1.24;
   }
 
   h1 {
     font-size: 18px;
-    line-height: 1.58;
+    line-height: 1.5;
   }
 
   .hero-summary {
     width: calc(100% - 84px);
-    margin-top: 6px;
-    padding: 2px 0 2px 7px;
+    margin-top: 5px;
+    padding: 1px 0 1px 6px;
   }
 
   .hero-summary p {
     grid-template-columns: 48px minmax(0, 1fr);
     gap: 5px;
     font-size: 8.5px;
-    line-height: 1.28;
+    line-height: 1.22;
   }
 
   .hero-place {
-    margin-top: 4px;
-    padding-top: 4px;
+    margin-top: 3px;
+    padding-top: 3px;
   }
 
   .hero-place strong {
@@ -1532,17 +1532,17 @@ button:hover,
 
   .hero-media__city {
     right: 8px;
-    top: 116px;
-    width: 78px;
-    height: 78px;
+    top: 104px;
+    width: 72px;
+    height: 72px;
     border-width: 2px;
   }
 
   .hero-media__hospital {
-    right: 38px;
-    bottom: 10px;
-    width: 94px;
-    height: 94px;
+    right: 34px;
+    bottom: 8px;
+    width: 86px;
+    height: 86px;
     border-width: 2px;
   }
 
@@ -1551,13 +1551,13 @@ button:hover,
   }
 
   .module-card {
-    min-height: 72px;
-    gap: 18px;
-    padding: 10px 8px;
+    min-height: 68px;
+    gap: 14px;
+    padding: 9px 7px;
   }
 
   .module-card--featured {
-    min-height: 154px;
+    min-height: 144px;
   }
 
   .module-card strong {
