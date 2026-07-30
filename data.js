@@ -3568,14 +3568,37 @@ window.MEETING_DATA = {
 
 (function mergePairedDiscussions(data) {
   const merges = [
+    ["s0731-007", "s0731-008"],
+    ["s0801-main-002", "s0801-main-003"],
     ["s0801-main-004", "s0801-main-005"],
+    ["s0801-main-006", "s0801-main-007"],
+    ["s0801-main-008", "s0801-main-009"],
+    ["s0801-main-010", "s0801-main-011"],
     ["s0801-main-013", "s0801-main-014"],
+    ["s0801-main-015", "s0801-main-016"],
+    ["s0801-main-017", "s0801-main-018"],
+    ["s0801-main-019", "s0801-main-020"],
+    ["s0801-tor-002", "s0801-tor-003"],
     ["s0801-tor-004", "s0801-tor-005"],
+    ["s0801-tor-006", "s0801-tor-007"],
+    ["s0801-tor-008", "s0801-tor-009"],
+    ["s0802-main-003", "s0802-main-004"],
+    ["s0802-main-005", "s0802-main-006"],
+    ["s0802-main-007", "s0802-main-008"],
+    ["s0802-main-009", "s0802-main-010"],
     ["s0802-main-012", "s0802-main-013"],
+    ["s0802-main-014", "s0802-main-015"],
+    ["s0802-main-016", "s0802-main-017"],
+    ["s0802-main-018", "s0802-main-019"],
+    ["s0802-main-020", "s0802-main-021"],
+    ["s0802-immune-002", "s0802-immune-003"],
     ["s0802-coag-002", "s0802-coag-003"],
     ["s0802-coag-004", "s0802-coag-005"],
     ["s0802-coag-006", "s0802-coag-007"],
-    ["s0802-women-007", "s0802-women-008"]
+    ["s0802-women-003", "s0802-women-004"],
+    ["s0802-women-007", "s0802-women-008"],
+    ["s0802-women-009", "s0802-women-010"],
+    ["s0802-women-011", "s0802-women-012"]
   ];
   const sessionById = new Map(data.sessions.map((session) => [session.id, session]));
   const removed = new Set();
