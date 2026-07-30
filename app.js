@@ -91,11 +91,21 @@ function sessionPersonRows(session) {
   ].map(([label, value]) => [label, validText(value)]).filter(([, text]) => text);
 }
 
-function taskAgendaRows(session) {
-  return [
+function taskAgendaRows(session, task = {}) {
+  const rows = [
     ["讲题/议题", session.title],
     ...sessionPersonRows(session)
-  ].map(([label, value]) => [label, validText(value)]).filter(([, text]) => text);
+  ];
+  if (task.role?.includes("主持") && session.linkedDiscussion?.discussants?.length) {
+    rows.push(["讨论", session.linkedDiscussion.discussants]);
+  }
+  return rows.map(([label, value]) => [label, validText(value)]).filter(([, text]) => text);
+}
+
+function taskEndTime(task, session) {
+  return task.role?.includes("主持") && session.linkedDiscussion?.endTime
+    ? session.linkedDiscussion.endTime
+    : session.endTime;
 }
 
 function renderConference() {
@@ -195,12 +205,12 @@ function renderTaskDetail() {
   const expertMeta = [displayOrganization(expert.organization), validText(expert.title)].filter(Boolean).join(" · ");
   const taskItems = tasks.map((task) => {
     const session = sessionById.get(task.sessionId);
-    const personRows = taskAgendaRows(session).map(([label, text]) => taskTextLine(label, text)).join("");
+    const personRows = taskAgendaRows(session, task).map(([label, text]) => taskTextLine(label, text)).join("");
     return `
       <article class="task-card">
         <div class="task-card__time">
           <strong>${formatDate(session.date)}</strong>
-          <span>${session.startTime}-${session.endTime}</span>
+          <span>${session.startTime}-${taskEndTime(task, session)}</span>
         </div>
         <div class="task-card__body">
           <div class="task-card__top">
@@ -241,13 +251,13 @@ function copyExpertTasks(expert, tasks) {
   ];
   sortedTasks(tasks).forEach((task, index) => {
     const session = sessionById.get(task.sessionId);
-    lines.push(`${index + 1}. ${formatDate(session.date)} ${session.startTime}-${session.endTime}`);
+    lines.push(`${index + 1}. ${formatDate(session.date)} ${session.startTime}-${taskEndTime(task, session)}`);
     lines.push(`   会场：${session.venue}`);
     lines.push(`   当前专家角色：${task.role}`);
     lines.push(`   专题/分会场：${session.track}`);
     lines.push(`   环节类型：${session.type}`);
     lines.push(`   讲题/议题：${session.title}`);
-    taskAgendaRows(session).forEach(([label, text]) => {
+    taskAgendaRows(session, task).forEach(([label, text]) => {
       lines.push(`   ${label}：${text}`);
     });
   });
