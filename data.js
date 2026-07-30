@@ -38,13 +38,28 @@ window.MEETING_DATA = {
       "note": "会议日程与专家任务查询以用户提供的三张最新议程海报为最高权威来源"
     }
   ],
+  "taskOrganizationOverrides": {
+    "s0802-coag-004|郭智": "深圳市南山区人民医院",
+    "s0801-tor-005|刘黎琼": "深圳大学附属南山医院",
+    "s0802-immune-004|林海清": "深圳市南山区人民医院",
+    "s0802-women-012|庞雯文": "北京大学深圳医院",
+    "s0802-coag-003|金梦迪": "深圳市南山区人民医院"
+  },
+  "additionalExpertOrganizations": {
+    "寇伟": "深圳大学附属华南医院",
+    "王华": "中山大学肿瘤防治中心",
+    "杨林林": "深圳市第二人民医院",
+    "鲁文怡": "北京大学深圳医院",
+    "包世杰": "南方医科大学深圳医院",
+    "刘璐": "深圳市第二人民医院"
+  },
   "experts": [
     {
       "id": "expert-001",
       "name": "李萍",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "深圳市健康管理协会",
       "title": "专家"
     },
     {
@@ -52,7 +67,7 @@ window.MEETING_DATA = {
       "name": "张红宇",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "北京大学深圳医院",
       "title": "专家"
     },
     {
@@ -60,7 +75,7 @@ window.MEETING_DATA = {
       "name": "郭智",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "深圳大学附属南山医院",
       "title": "专家"
     },
     {
@@ -68,7 +83,7 @@ window.MEETING_DATA = {
       "name": "林东军",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "中山大学附属第七医院",
       "title": "专家"
     },
     {
@@ -76,7 +91,7 @@ window.MEETING_DATA = {
       "name": "陈艳",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "中山大学附属第八医院",
       "title": "专家"
     },
     {
@@ -84,7 +99,7 @@ window.MEETING_DATA = {
       "name": "王立新",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "深圳大学总医院",
       "title": "专家"
     },
     {
@@ -92,7 +107,7 @@ window.MEETING_DATA = {
       "name": "黎建云",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "宝安医院",
       "title": "专家"
     },
     {
@@ -108,7 +123,7 @@ window.MEETING_DATA = {
       "name": "覃宝珍",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "北京大学深圳医院",
       "title": "专家"
     },
     {
@@ -116,7 +131,7 @@ window.MEETING_DATA = {
       "name": "蒋官忆",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "北京大学深圳医院",
       "title": "专家"
     },
     {
@@ -124,7 +139,7 @@ window.MEETING_DATA = {
       "name": "李庆山",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "广州市红十字会医院",
       "title": "专家"
     },
     {
@@ -132,7 +147,7 @@ window.MEETING_DATA = {
       "name": "黄艳",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "深圳市中西医结合医院",
       "title": "专家"
     },
     {
@@ -140,7 +155,7 @@ window.MEETING_DATA = {
       "name": "聂李平",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "北京大学深圳医院",
       "title": "专家"
     },
     {
@@ -148,15 +163,15 @@ window.MEETING_DATA = {
       "name": "吕成芳",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "深圳市龙岗中心医院",
       "title": "专家"
     },
     {
       "id": "expert-015",
-      "name": "翁光样",
+      "name": "翁光祥",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "深圳市第二人民医院",
       "title": "专家"
     },
     {
@@ -164,7 +179,7 @@ window.MEETING_DATA = {
       "name": "戴婧",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "北京大学深圳医院",
       "title": "专家"
     },
     {
@@ -172,7 +187,7 @@ window.MEETING_DATA = {
       "name": "杨慧芳",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "深圳市中西医结合医院",
       "title": "专家"
     },
     {
@@ -180,7 +195,7 @@ window.MEETING_DATA = {
       "name": "黄走方",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "宝安医院",
       "title": "专家"
     },
     {
@@ -188,7 +203,7 @@ window.MEETING_DATA = {
       "name": "张文丽",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "北京大学深圳医院",
       "title": "专家"
     },
     {
@@ -196,7 +211,7 @@ window.MEETING_DATA = {
       "name": "刘黎琼",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "深圳市南山区人民医院",
       "title": "专家"
     },
     {
@@ -204,7 +219,7 @@ window.MEETING_DATA = {
       "name": "卢博",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "中山大学附属第七医院",
       "title": "专家"
     },
     {
@@ -212,7 +227,7 @@ window.MEETING_DATA = {
       "name": "庞艳彬",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "南方医科大学深圳医院",
       "title": "专家"
     },
     {
@@ -220,7 +235,7 @@ window.MEETING_DATA = {
       "name": "李回军",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "深圳市人民医院",
       "title": "专家"
     },
     {
@@ -228,7 +243,7 @@ window.MEETING_DATA = {
       "name": "曾芸馨",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "中山大学附属第七医院",
       "title": "专家"
     },
     {
@@ -236,7 +251,7 @@ window.MEETING_DATA = {
       "name": "孟景晔",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "深圳市第三人民医院",
       "title": "专家"
     },
     {
@@ -244,7 +259,7 @@ window.MEETING_DATA = {
       "name": "夏冰天",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "北京大学深圳医院",
       "title": "专家"
     },
     {
@@ -252,7 +267,7 @@ window.MEETING_DATA = {
       "name": "李晋萌",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "北京大学深圳医院",
       "title": "专家"
     },
     {
@@ -260,7 +275,7 @@ window.MEETING_DATA = {
       "name": "吴利新",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "北京大学深圳医院",
       "title": "专家"
     },
     {
@@ -300,7 +315,7 @@ window.MEETING_DATA = {
       "name": "蓝海",
       "pinyin": "",
       "initials": "",
-      "organization": "深圳市人民医院",
+      "organization": "广州中医药大学附属顺德医院",
       "title": "专家"
     },
     {
@@ -316,7 +331,7 @@ window.MEETING_DATA = {
       "name": "林海清",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "深圳市人民医院",
       "title": "专家"
     },
     {
@@ -324,7 +339,7 @@ window.MEETING_DATA = {
       "name": "涂传清",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "深圳市宝安区人民医院",
       "title": "专家"
     },
     {
@@ -332,7 +347,7 @@ window.MEETING_DATA = {
       "name": "黄望香",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "深圳市龙岗中心医院",
       "title": "专家"
     },
     {
@@ -348,7 +363,7 @@ window.MEETING_DATA = {
       "name": "陈喜填",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "揭阳市人民医院",
       "title": "专家"
     },
     {
@@ -356,7 +371,7 @@ window.MEETING_DATA = {
       "name": "庞雯文",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "深圳市新华医院",
       "title": "专家"
     },
     {
@@ -364,15 +379,15 @@ window.MEETING_DATA = {
       "name": "刘泽林",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "深圳市南山区人民医院",
       "title": "专家"
     },
     {
       "id": "expert-042",
-      "name": "陈芾珩",
+      "name": "陈蒂珩",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "汕头大学医学院第一附属医院",
       "title": "专家"
     },
     {
@@ -388,7 +403,7 @@ window.MEETING_DATA = {
       "name": "柯鹏",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "深圳市人民医院",
       "title": "专家"
     },
     {
@@ -396,7 +411,7 @@ window.MEETING_DATA = {
       "name": "王婷",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "北京大学深圳医院",
       "title": "专家"
     },
     {
@@ -404,7 +419,7 @@ window.MEETING_DATA = {
       "name": "柳金",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "深圳市盐田区人民医院",
       "title": "专家"
     },
     {
@@ -412,7 +427,7 @@ window.MEETING_DATA = {
       "name": "吴远彬",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "广东省中医院",
       "title": "专家"
     },
     {
@@ -428,7 +443,7 @@ window.MEETING_DATA = {
       "name": "黄鹏程",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "肇庆市第一人民医院",
       "title": "专家"
     },
     {
@@ -444,7 +459,7 @@ window.MEETING_DATA = {
       "name": "余国攀",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "广东省第二人民医院",
       "title": "专家"
     },
     {
@@ -452,7 +467,7 @@ window.MEETING_DATA = {
       "name": "夏维林",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "揭阳市人民医院",
       "title": "专家"
     },
     {
@@ -468,7 +483,7 @@ window.MEETING_DATA = {
       "name": "牛晓敏",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "中山市人民医院",
       "title": "专家"
     },
     {
@@ -476,7 +491,7 @@ window.MEETING_DATA = {
       "name": "赵英玲",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "深圳市龙岗中心医院",
       "title": "专家"
     },
     {
@@ -484,7 +499,7 @@ window.MEETING_DATA = {
       "name": "庄乃保",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "深圳市血液中心",
       "title": "专家"
     },
     {
@@ -492,7 +507,7 @@ window.MEETING_DATA = {
       "name": "王素云",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "深圳大学附属龙华医院",
       "title": "专家"
     },
     {
@@ -500,7 +515,7 @@ window.MEETING_DATA = {
       "name": "周世乔",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "南方医科大学深圳医院",
       "title": "专家"
     },
     {
@@ -508,7 +523,7 @@ window.MEETING_DATA = {
       "name": "郑方英",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "惠州市第一人民医院",
       "title": "专家"
     },
     {
@@ -516,7 +531,7 @@ window.MEETING_DATA = {
       "name": "张晓玲",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "惠州市第一人民医院",
       "title": "专家"
     },
     {
@@ -524,7 +539,7 @@ window.MEETING_DATA = {
       "name": "夏勇",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "北京大学深圳医院",
       "title": "专家"
     },
     {
@@ -532,7 +547,7 @@ window.MEETING_DATA = {
       "name": "莫晓冬",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "北京大学人民医院",
       "title": "专家"
     },
     {
@@ -540,7 +555,7 @@ window.MEETING_DATA = {
       "name": "吴泽华",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "北京大学深圳医院",
       "title": "专家"
     },
     {
@@ -548,7 +563,7 @@ window.MEETING_DATA = {
       "name": "钟凤鸾",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "北京大学深圳医院",
       "title": "专家"
     },
     {
@@ -564,7 +579,7 @@ window.MEETING_DATA = {
       "name": "杨振江",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "深圳市中医院",
       "title": "专家"
     },
     {
@@ -572,7 +587,7 @@ window.MEETING_DATA = {
       "name": "王昱",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "北京大学人民医院",
       "title": "专家"
     },
     {
@@ -588,7 +603,7 @@ window.MEETING_DATA = {
       "name": "冯永怀",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "东莞市人民医院",
       "title": "专家"
     },
     {
@@ -596,7 +611,7 @@ window.MEETING_DATA = {
       "name": "张治业",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "广东医科大学附属东莞第一医院",
       "title": "专家"
     },
     {
@@ -612,7 +627,7 @@ window.MEETING_DATA = {
       "name": "王宁",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "深圳理工大学总医院",
       "title": "专家"
     },
     {
@@ -620,7 +635,7 @@ window.MEETING_DATA = {
       "name": "张旭艳",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "深圳市宝安区人民医院",
       "title": "专家"
     },
     {
@@ -628,7 +643,7 @@ window.MEETING_DATA = {
       "name": "黎国伟",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "惠州市中心人民医院",
       "title": "专家"
     },
     {
@@ -636,7 +651,7 @@ window.MEETING_DATA = {
       "name": "张倩",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "北京大学深圳医院",
       "title": "专家"
     },
     {
@@ -644,7 +659,7 @@ window.MEETING_DATA = {
       "name": "王淡瑜",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "深圳大学附属南山医院",
       "title": "专家"
     },
     {
@@ -652,15 +667,7 @@ window.MEETING_DATA = {
       "name": "金梦迪",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
-      "title": "专家"
-    },
-    {
-      "id": "expert-078",
-      "name": "陈海飞",
-      "pinyin": "",
-      "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "深圳大学附属南山医院",
       "title": "专家"
     },
     {
@@ -668,7 +675,7 @@ window.MEETING_DATA = {
       "name": "孙鹏",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "中山大学肿瘤防治中心",
       "title": "专家"
     },
     {
@@ -676,7 +683,7 @@ window.MEETING_DATA = {
       "name": "刘玉坤",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "深圳市第三人民医院",
       "title": "专家"
     },
     {
@@ -684,7 +691,7 @@ window.MEETING_DATA = {
       "name": "邓兰",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "南方医科大学第八附属医院",
       "title": "专家"
     },
     {
@@ -692,7 +699,7 @@ window.MEETING_DATA = {
       "name": "车菲菲",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "四川省人民医院",
       "title": "专家"
     },
     {
@@ -700,7 +707,7 @@ window.MEETING_DATA = {
       "name": "周挚",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "昆明医科大学附属第一医院",
       "title": "专家"
     },
     {
@@ -716,7 +723,7 @@ window.MEETING_DATA = {
       "name": "许蕾",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "北京大学深圳医院",
       "title": "专家"
     },
     {
@@ -724,7 +731,7 @@ window.MEETING_DATA = {
       "name": "文冰冰",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "深圳市第二人民医院",
       "title": "专家"
     },
     {
@@ -740,7 +747,7 @@ window.MEETING_DATA = {
       "name": "王钧",
       "pinyin": "",
       "initials": "",
-      "organization": "北京大学深圳医院",
+      "organization": "香港大学深圳医院",
       "title": "专家"
     },
     {
@@ -756,7 +763,7 @@ window.MEETING_DATA = {
       "name": "孙丽华",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "北京大学深圳医院",
       "title": "专家"
     },
     {
@@ -764,7 +771,7 @@ window.MEETING_DATA = {
       "name": "杨华",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "香港大学深圳医院",
       "title": "专家"
     },
     {
@@ -772,7 +779,7 @@ window.MEETING_DATA = {
       "name": "黄振倩",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "广州医科大学附属第一医院",
       "title": "专家"
     },
     {
@@ -780,7 +787,7 @@ window.MEETING_DATA = {
       "name": "吴建伟",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "江门市五邑中医院",
       "title": "专家"
     },
     {
@@ -796,7 +803,7 @@ window.MEETING_DATA = {
       "name": "周凌云",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "深圳市罗湖区人民医院",
       "title": "专家"
     },
     {
@@ -804,7 +811,7 @@ window.MEETING_DATA = {
       "name": "李振海",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "北京大学深圳医院",
       "title": "专家"
     },
     {
@@ -812,7 +819,7 @@ window.MEETING_DATA = {
       "name": "聂大年",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "中山大学孙逸仙纪念医院",
       "title": "专家"
     },
     {
@@ -820,7 +827,7 @@ window.MEETING_DATA = {
       "name": "郑润辉",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "广州医科大学附属第五医院",
       "title": "专家"
     },
     {
@@ -836,7 +843,7 @@ window.MEETING_DATA = {
       "name": "孙佳耐",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "浙江大学附属第一医院",
       "title": "专家"
     },
     {
@@ -852,7 +859,7 @@ window.MEETING_DATA = {
       "name": "郭子文",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "中山市人民医院",
       "title": "专家"
     },
     {
@@ -860,7 +867,7 @@ window.MEETING_DATA = {
       "name": "李宜真",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "广州市中西医结合医院",
       "title": "专家"
     },
     {
@@ -876,7 +883,7 @@ window.MEETING_DATA = {
       "name": "黄珊",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "中山大学附属第七医院",
       "title": "专家"
     },
     {
@@ -884,7 +891,7 @@ window.MEETING_DATA = {
       "name": "黄刚",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "粤北人民医院",
       "title": "专家"
     },
     {
@@ -892,7 +899,7 @@ window.MEETING_DATA = {
       "name": "李勇华",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "南部战区总医院",
       "title": "专家"
     },
     {
@@ -908,7 +915,7 @@ window.MEETING_DATA = {
       "name": "田发青",
       "pinyin": "",
       "initials": "",
-      "organization": "暨南大学附属第一医院",
+      "organization": "香港中文大学（深圳）附属第二医院",
       "title": "专家"
     },
     {
@@ -916,7 +923,7 @@ window.MEETING_DATA = {
       "name": "纪玲",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "北京大学深圳医院",
       "title": "专家"
     },
     {
@@ -924,7 +931,7 @@ window.MEETING_DATA = {
       "name": "常英军",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "北京大学人民医院",
       "title": "专家"
     },
     {
@@ -932,7 +939,7 @@ window.MEETING_DATA = {
       "name": "张淑萍",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "北京大学深圳医院",
       "title": "专家"
     },
     {
@@ -940,7 +947,7 @@ window.MEETING_DATA = {
       "name": "彭赛辉",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "北京大学深圳医院",
       "title": "专家"
     },
     {
@@ -948,7 +955,7 @@ window.MEETING_DATA = {
       "name": "宣丽",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "南方医科大学南方医院",
       "title": "专家"
     },
     {
@@ -964,7 +971,7 @@ window.MEETING_DATA = {
       "name": "肖小灵",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "深圳市龙岗中心医院",
       "title": "专家"
     },
     {
@@ -972,7 +979,7 @@ window.MEETING_DATA = {
       "name": "刘畅",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "北京大学深圳医院",
       "title": "专家"
     },
     {
@@ -980,7 +987,7 @@ window.MEETING_DATA = {
       "name": "姜义荣",
       "pinyin": "",
       "initials": "",
-      "organization": "南方医科大学南方医院",
+      "organization": "东莞市人民医院",
       "title": "专家"
     },
     {
@@ -988,7 +995,7 @@ window.MEETING_DATA = {
       "name": "苏永忠",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "汕头大学医学院第一附属医院",
       "title": "专家"
     },
     {
@@ -996,7 +1003,7 @@ window.MEETING_DATA = {
       "name": "魏永强",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "南方医科大学南方医院",
       "title": "专家"
     },
     {
@@ -1004,7 +1011,7 @@ window.MEETING_DATA = {
       "name": "宾婷",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "中山大学附属第七医院",
       "title": "专家"
     },
     {
@@ -1012,7 +1019,7 @@ window.MEETING_DATA = {
       "name": "孙洪波",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "深圳市龙华区人民医院",
       "title": "专家"
     },
     {
@@ -1020,7 +1027,7 @@ window.MEETING_DATA = {
       "name": "冯碧珊",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "龙岗中心医院",
       "title": "专家"
     },
     {
@@ -1028,7 +1035,7 @@ window.MEETING_DATA = {
       "name": "何金辉",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "香港大学深圳医院",
       "title": "专家"
     },
     {
@@ -1036,7 +1043,7 @@ window.MEETING_DATA = {
       "name": "陈自仁",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "深圳市宝安区松岗人民医院",
       "title": "专家"
     },
     {
@@ -1044,7 +1051,7 @@ window.MEETING_DATA = {
       "name": "李志铭",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "中山大学肿瘤防治中心",
       "title": "专家"
     },
     {
@@ -1052,7 +1059,7 @@ window.MEETING_DATA = {
       "name": "潘伟锋",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "北京大学深圳医院",
       "title": "专家"
     },
     {
@@ -1060,7 +1067,7 @@ window.MEETING_DATA = {
       "name": "周继豪",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "深圳市人民医院",
       "title": "专家"
     },
     {
@@ -1068,7 +1075,7 @@ window.MEETING_DATA = {
       "name": "古庆利",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "深圳市第二人民医院",
       "title": "专家"
     },
     {
@@ -1084,7 +1091,7 @@ window.MEETING_DATA = {
       "name": "廖娅平",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "中山大学附属第八医院",
       "title": "专家"
     },
     {
@@ -1092,7 +1099,7 @@ window.MEETING_DATA = {
       "name": "范憬超",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "深圳市第二人民医院",
       "title": "专家"
     },
     {
@@ -1108,7 +1115,7 @@ window.MEETING_DATA = {
       "name": "许晓军",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "中山大学附属第七医院",
       "title": "专家"
     },
     {
@@ -1116,7 +1123,7 @@ window.MEETING_DATA = {
       "name": "杨斯恬",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "深圳市第二人民医院",
       "title": "专家"
     },
     {
@@ -1124,7 +1131,7 @@ window.MEETING_DATA = {
       "name": "谢沐尘",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "南方医科大学深圳医院",
       "title": "专家"
     },
     {
@@ -1132,7 +1139,7 @@ window.MEETING_DATA = {
       "name": "杨会林",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "北京大学深圳医院",
       "title": "专家"
     },
     {
@@ -1140,7 +1147,7 @@ window.MEETING_DATA = {
       "name": "罗畅如",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "深圳市第二人民医院",
       "title": "专家"
     },
     {
@@ -1148,7 +1155,7 @@ window.MEETING_DATA = {
       "name": "刘四喜",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "深圳市儿童医院",
       "title": "专家"
     },
     {
@@ -1156,7 +1163,7 @@ window.MEETING_DATA = {
       "name": "王秀菊",
       "pinyin": "",
       "initials": "",
-      "organization": "中山大学孙逸仙纪念医院",
+      "organization": "中山大学孙逸仙纪念医院医院",
       "title": "专家"
     },
     {
@@ -1164,7 +1171,7 @@ window.MEETING_DATA = {
       "name": "罗华山",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "梅州市人民医院",
       "title": "专家"
     },
     {
@@ -1172,7 +1179,7 @@ window.MEETING_DATA = {
       "name": "彭浩宇",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "深圳市第二人民医院",
       "title": "专家"
     },
     {
@@ -1180,7 +1187,7 @@ window.MEETING_DATA = {
       "name": "向泓先",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "罗湖区人民医院",
       "title": "专家"
     },
     {
@@ -1188,7 +1195,7 @@ window.MEETING_DATA = {
       "name": "吴微",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "南方医科大学深圳医院",
       "title": "专家"
     },
     {
@@ -1196,7 +1203,7 @@ window.MEETING_DATA = {
       "name": "夏忠军",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "中山大学肿瘤防治中心",
       "title": "专家"
     },
     {
@@ -1212,7 +1219,7 @@ window.MEETING_DATA = {
       "name": "龙潺",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "惠州市第一人民医院",
       "title": "专家"
     },
     {
@@ -1228,7 +1235,7 @@ window.MEETING_DATA = {
       "name": "李晓清",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "深圳市第二人民医院",
       "title": "专家"
     },
     {
@@ -1236,7 +1243,7 @@ window.MEETING_DATA = {
       "name": "李国强",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "深圳市人民医院",
       "title": "专家"
     },
     {
@@ -1244,7 +1251,7 @@ window.MEETING_DATA = {
       "name": "孙志强",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "南方医科大学深圳医院",
       "title": "专家"
     },
     {
@@ -1252,7 +1259,7 @@ window.MEETING_DATA = {
       "name": "王小博",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "中山大学附属第七医院",
       "title": "专家"
     },
     {
@@ -1260,7 +1267,7 @@ window.MEETING_DATA = {
       "name": "郝丹",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "南方医科大学深圳医院",
       "title": "专家"
     },
     {
@@ -1268,7 +1275,7 @@ window.MEETING_DATA = {
       "name": "胡晓婧",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "东莞市人民医院",
       "title": "专家"
     },
     {
@@ -1276,7 +1283,7 @@ window.MEETING_DATA = {
       "name": "刘宁",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "深圳市南山区人民医院",
       "title": "专家"
     },
     {
@@ -1284,7 +1291,7 @@ window.MEETING_DATA = {
       "name": "吴东升",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "东莞东华医院",
       "title": "专家"
     },
     {
@@ -1292,7 +1299,7 @@ window.MEETING_DATA = {
       "name": "方翔",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "东莞东华医院",
       "title": "专家"
     },
     {
@@ -1300,7 +1307,7 @@ window.MEETING_DATA = {
       "name": "李玉华",
       "pinyin": "",
       "initials": "",
-      "organization": "广东省女医师协会",
+      "organization": "南方医科大学珠江医院",
       "title": "教授"
     },
     {
@@ -1308,7 +1315,7 @@ window.MEETING_DATA = {
       "name": "平宝红",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "南方医科大学南方医院",
       "title": "专家"
     },
     {
@@ -1316,7 +1323,7 @@ window.MEETING_DATA = {
       "name": "谢晓玲",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "惠州市中心人民医院",
       "title": "专家"
     },
     {
@@ -1324,7 +1331,7 @@ window.MEETING_DATA = {
       "name": "邢学仰",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "汕头大学医学院第一附属医院",
       "title": "专家"
     },
     {
@@ -1332,7 +1339,7 @@ window.MEETING_DATA = {
       "name": "冯春",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "深圳市人民医院",
       "title": "专家"
     },
     {
@@ -1340,7 +1347,7 @@ window.MEETING_DATA = {
       "name": "陶红芳",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "汕头大学医学院第一附属医院",
       "title": "专家"
     },
     {
@@ -1348,7 +1355,7 @@ window.MEETING_DATA = {
       "name": "何红华",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "广东医科大学附属医院",
       "title": "专家"
     },
     {
@@ -1356,7 +1363,7 @@ window.MEETING_DATA = {
       "name": "蒋玲",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "南方医科大学南方医院",
       "title": "专家"
     },
     {
@@ -1364,7 +1371,7 @@ window.MEETING_DATA = {
       "name": "李梅芳",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "南方医科大学珠江医院",
       "title": "专家"
     },
     {
@@ -1372,7 +1379,7 @@ window.MEETING_DATA = {
       "name": "侯婕",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "惠州中心人民医院",
       "title": "专家"
     },
     {
@@ -1380,7 +1387,7 @@ window.MEETING_DATA = {
       "name": "赵莹",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "佛山市第一人民医院",
       "title": "专家"
     },
     {
@@ -1388,7 +1395,7 @@ window.MEETING_DATA = {
       "name": "谢闻悦",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "北京大学深圳医院",
       "title": "专家"
     },
     {
@@ -1396,7 +1403,7 @@ window.MEETING_DATA = {
       "name": "楼瑾",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "深圳市第二人民医院",
       "title": "专家"
     },
     {
@@ -1404,7 +1411,7 @@ window.MEETING_DATA = {
       "name": "黄培翠",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "惠州市中心人民医院",
       "title": "专家"
     },
     {
@@ -1412,7 +1419,7 @@ window.MEETING_DATA = {
       "name": "蔡林静",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "惠州第一人民医院",
       "title": "专家"
     },
     {
@@ -1420,7 +1427,7 @@ window.MEETING_DATA = {
       "name": "钟樱红",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "梅州市人民医院",
       "title": "专家"
     },
     {
@@ -1428,7 +1435,7 @@ window.MEETING_DATA = {
       "name": "王春莲",
       "pinyin": "",
       "initials": "",
-      "organization": "参会单位待补充",
+      "organization": "惠州市第一人民医院",
       "title": "专家"
     }
   ],
@@ -1602,7 +1609,7 @@ window.MEETING_DATA = {
       "speakers": [],
       "discussants": [
         "吕成芳",
-        "翁光样",
+        "翁光祥",
         "戴婧",
         "杨慧芳"
       ],
@@ -1794,7 +1801,7 @@ window.MEETING_DATA = {
       "speeches": [],
       "chairs": [
         "刘泽林",
-        "陈芾珩"
+        "陈蒂珩"
       ],
       "speakers": [
         "陈振华"
@@ -1817,7 +1824,7 @@ window.MEETING_DATA = {
       "speeches": [],
       "chairs": [
         "刘泽林",
-        "陈芾珩"
+        "陈蒂珩"
       ],
       "speakers": [],
       "discussants": [
@@ -2974,7 +2981,6 @@ window.MEETING_DATA = {
       "presidents": [],
       "speeches": [],
       "chairs": [
-        "陈海飞",
         "林海清"
       ],
       "speakers": [
@@ -3673,14 +3679,14 @@ window.MEETING_DATA = {
     大: "da", 年: "nian", 庞: "pang", 雯: "wen", 文: "wen", 彬: "bin", 彭: "peng",
     浩: "hao", 宇: "yu", 孙: "sun", 覃: "qin", 宝: "bao", 珍: "zhen", 涂: "tu",
     传: "chuan", 王: "wang", 淡: "dan", 瑜: "yu", 立: "li", 新: "xin", 魏: "wei",
-    永: "yong", 强: "qiang", 翁: "weng", 光: "guang", 样: "yang", 祥: "xiang", 吴: "wu", 利: "li",
+    永: "yong", 强: "qiang", 翁: "weng", 光: "guang", 祥: "xiang", 吴: "wu", 利: "li",
     微: "wei", 夏: "xia", 冰: "bing", 天: "tian", 向: "xiang", 泓: "hong", 先: "xian",
     谢: "xie", 沐: "mu", 尘: "chen", 闫: "yan", 闻: "wen", 悦: "yue", 许: "xu", 蕾: "lei",
     晏: "yan", 杨: "yang", 会: "hui", 慧: "hui", 斯: "si", 恬: "tian", 张: "zhang",
     红: "hong", 郑: "zheng", 润: "run", 辉: "hui", 钟: "zhong", 凤: "feng", 鸾: "luan",
     周: "zhou", 凌: "ling", 走: "zou", 方: "fang", 丽: "li", 晓: "xiao", 瀚: "han",
     冯: "feng", 佳: "jia", 赵: "zhao", 胜: "sheng", 启: "qi", 发: "fa", 友: "you",
-    蓝: "lan", 路: "lu", 瑾: "jin", 睿: "rui", 泽: "ze", 林: "lin", 蒂: "di", 芾: "fu",
+    蓝: "lan", 路: "lu", 瑾: "jin", 睿: "rui", 泽: "ze", 林: "lin", 蒂: "di",
     珩: "heng", 柯: "ke", 婷: "ting", 邝: "kuang", 沃: "wo", 金: "jin", 柳: "liu", 远: "yuan",
     彬: "bin", 绪: "xu", 涛: "tao", 潺: "chan", 余: "yu", 攀: "pan", 维: "wei", 仪: "yi",
     辉: "hui", 钧: "jun", 志: "zhi", 凌: "ling", 蔡: "cai", 尹: "yin", 为: "wei",
@@ -3756,7 +3762,7 @@ window.MEETING_DATA = {
           name,
           pinyin: pinyinForName(name),
           initials: initialsForName(name),
-          organization: "参会单位待补充",
+          organization: data.additionalExpertOrganizations?.[name] || "参会单位待补充",
           title: "专家"
         };
         data.experts.push(expert);
