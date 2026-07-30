@@ -917,19 +917,29 @@ button:disabled {
 .schedule-card {
   display: grid;
   gap: 12px;
+  align-items: start;
+  min-width: 0;
+  height: auto;
   padding: 12px;
   border: 1px solid var(--line);
   border-radius: 15px;
   background: linear-gradient(180deg, #fff, #fffafd);
 }
 
+.task-card__body,
+.schedule-card__main {
+  min-width: 0;
+}
+
 .task-card__time,
 .schedule-card__time {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 12px;
   color: var(--magenta);
   font-weight: 900;
+  min-width: 0;
 }
 
 .task-card__time span,
@@ -944,18 +954,21 @@ button:disabled {
   gap: 8px;
   color: var(--muted);
   font-size: 13px;
+  min-width: 0;
 }
 
 .task-card h4 {
   margin: 8px 0 6px;
   color: var(--ink);
   font-size: 17px;
+  overflow-wrap: anywhere;
 }
 
 .task-card p {
   margin: 4px 0;
   color: var(--muted);
   font-size: 14px;
+  overflow-wrap: anywhere;
 }
 
 .filters {

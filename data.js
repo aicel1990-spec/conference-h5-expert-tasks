@@ -1682,7 +1682,10 @@ window.MEETING_DATA = {
       "presidents": [
         "冯佳"
       ],
-      "speeches": [],
+      "speeches": [
+        "赵永胜",
+        "刘启发"
+      ],
       "chairs": [],
       "speakers": [],
       "discussants": [],
@@ -3585,7 +3588,7 @@ window.MEETING_DATA = {
 };
 
 (function resolveTasks(data) {
-  const roleFields = ["speakerChairs", "presidents", "chairs", "speakers", "discussants", "reviewers", "summaries"];
+  const roleFields = ["speakerChairs", "presidents", "speeches", "chairs", "speakers", "discussants", "reviewers", "summaries"];
   const excludedPeople = new Set(["会务组", "大会主席", "参会代表", "会议代表", "专家", "点评专家", "主持", "讲者", "评审", "讨论"]);
   const pinyinByChar = {
     常: "chang", 英: "ying", 军: "jun", 车: "che", 菲: "fei", 陈: "chen", 喜: "xi", 填: "tian",
@@ -3694,6 +3697,7 @@ window.MEETING_DATA = {
   const roleConfigs = [
     ["speakerChairs", "主讲/主持"],
     ["presidents", "大会主席"],
+    ["speeches", "致辞"],
     ["chairs", "主持"],
     ["speakers", "讲者"],
     ["discussants", "讨论"],
