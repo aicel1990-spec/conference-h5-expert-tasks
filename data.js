@@ -1232,14 +1232,6 @@ window.MEETING_DATA = {
       "title": "专家"
     },
     {
-      "id": "expert-150",
-      "name": "黄凯凯",
-      "pinyin": "",
-      "initials": "",
-      "organization": "参会单位待补充",
-      "title": "专家"
-    },
-    {
       "id": "expert-151",
       "name": "李国强",
       "pinyin": "",
@@ -3088,8 +3080,8 @@ window.MEETING_DATA = {
     {
       "id": "s0802-coag-001",
       "date": "2026-08-02",
-      "startTime": "14:00",
-      "endTime": "14:10",
+      "startTime": "13:50",
+      "endTime": "14:00",
       "venue": "波士顿厅",
       "track": "出凝血专场",
       "type": "致辞",
@@ -3114,8 +3106,8 @@ window.MEETING_DATA = {
     {
       "id": "s0802-coag-002",
       "date": "2026-08-02",
-      "startTime": "14:10",
-      "endTime": "14:40",
+      "startTime": "14:00",
+      "endTime": "14:30",
       "venue": "波士顿厅",
       "track": "出凝血专场",
       "type": "主题报告",
@@ -3125,7 +3117,7 @@ window.MEETING_DATA = {
       "speeches": [],
       "chairs": [
         "杜新",
-        "龙涛"
+        "龙潺"
       ],
       "speakers": [
         "李梦娟"
@@ -3137,8 +3129,8 @@ window.MEETING_DATA = {
     {
       "id": "s0802-coag-003",
       "date": "2026-08-02",
-      "startTime": "14:40",
-      "endTime": "15:10",
+      "startTime": "14:30",
+      "endTime": "15:00",
       "venue": "波士顿厅",
       "track": "出凝血专场",
       "type": "讨论",
@@ -3148,14 +3140,14 @@ window.MEETING_DATA = {
       "speeches": [],
       "chairs": [
         "杜新",
-        "龙涛"
+        "龙潺"
       ],
       "speakers": [],
       "discussants": [
         "李晓清",
-        "黄凯凯",
         "金梦迪",
         "李国强",
+        "包世杰",
         "杨斯恬"
       ],
       "reviewers": [],
@@ -3164,8 +3156,8 @@ window.MEETING_DATA = {
     {
       "id": "s0802-coag-004",
       "date": "2026-08-02",
-      "startTime": "15:10",
-      "endTime": "15:40",
+      "startTime": "15:00",
+      "endTime": "15:20",
       "venue": "波士顿厅",
       "track": "出凝血专场",
       "type": "主题报告",
@@ -3187,8 +3179,8 @@ window.MEETING_DATA = {
     {
       "id": "s0802-coag-005",
       "date": "2026-08-02",
-      "startTime": "15:40",
-      "endTime": "16:10",
+      "startTime": "15:20",
+      "endTime": "15:50",
       "venue": "波士顿厅",
       "track": "出凝血专场",
       "type": "讨论",
@@ -3214,8 +3206,8 @@ window.MEETING_DATA = {
     {
       "id": "s0802-coag-006",
       "date": "2026-08-02",
-      "startTime": "16:10",
-      "endTime": "16:40",
+      "startTime": "15:50",
+      "endTime": "16:10",
       "venue": "波士顿厅",
       "track": "出凝血专场",
       "type": "主题报告",
@@ -3237,12 +3229,35 @@ window.MEETING_DATA = {
     {
       "id": "s0802-coag-007",
       "date": "2026-08-02",
+      "startTime": "16:10",
+      "endTime": "16:40",
+      "venue": "波士顿厅",
+      "track": "出凝血专场",
+      "type": "主题报告",
+      "title": "CLAG+VEN方案在CR1期AML中巩固治疗经验分享",
+      "speakerChairs": [],
+      "presidents": [],
+      "speeches": [],
+      "chairs": [
+        "陈艳",
+        "吴东升"
+      ],
+      "speakers": [
+        "刘璐"
+      ],
+      "discussants": [],
+      "reviewers": [],
+      "sourceAgenda": "2026年8月2日（星期日）出凝血专场"
+    },
+    {
+      "id": "s0802-coag-008",
+      "date": "2026-08-02",
       "startTime": "16:40",
-      "endTime": "17:10",
+      "endTime": "17:00",
       "venue": "波士顿厅",
       "track": "出凝血专场",
       "type": "讨论",
-      "title": "CSCO肿瘤治疗所致血小板减少症指南更新解读讨论",
+      "title": "CLAG+VEN方案在CR1期AML中巩固治疗经验分享讨论",
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
@@ -3262,10 +3277,10 @@ window.MEETING_DATA = {
       "sourceAgenda": "2026年8月2日（星期日）出凝血专场"
     },
     {
-      "id": "s0802-coag-008",
+      "id": "s0802-coag-009",
       "date": "2026-08-02",
-      "startTime": "17:10",
-      "endTime": "17:20",
+      "startTime": "17:00",
+      "endTime": "17:10",
       "venue": "波士顿厅",
       "track": "出凝血专场",
       "type": "大会总结",
@@ -3616,7 +3631,7 @@ window.MEETING_DATA = {
     ["s0802-immune-002", "s0802-immune-003"],
     ["s0802-coag-002", "s0802-coag-003"],
     ["s0802-coag-004", "s0802-coag-005"],
-    ["s0802-coag-006", "s0802-coag-007"],
+    ["s0802-coag-007", "s0802-coag-008"],
     ["s0802-women-003", "s0802-women-004"],
     ["s0802-women-007", "s0802-women-008"],
     ["s0802-women-009", "s0802-women-010"],
@@ -3663,7 +3678,7 @@ window.MEETING_DATA = {
     冯: "feng", 佳: "jia", 赵: "zhao", 胜: "sheng", 启: "qi", 发: "fa", 友: "you",
     蓝: "lan", 路: "lu", 瑾: "jin", 睿: "rui", 泽: "ze", 林: "lin", 蒂: "di",
     珩: "heng", 柯: "ke", 婷: "ting", 邝: "kuang", 沃: "wo", 金: "jin", 柳: "liu", 远: "yuan",
-    彬: "bin", 绪: "xu", 涛: "tao", 余: "yu", 攀: "pan", 维: "wei", 仪: "yi",
+    彬: "bin", 绪: "xu", 涛: "tao", 潺: "chan", 余: "yu", 攀: "pan", 维: "wei", 仪: "yi",
     辉: "hui", 钧: "jun", 志: "zhi", 凌: "ling", 蔡: "cai", 尹: "yin", 为: "wei",
     子: "zi", 宜: "yi", 真: "zhen", 赖: "lai", 沛: "pei", 龙: "long", 田: "tian",
     发: "fa", 青: "qing", 立: "li", 业: "ye", 宣: "xuan", 丽: "li", 姜: "jiang", 义: "yi",
@@ -3677,7 +3692,7 @@ window.MEETING_DATA = {
     培: "pei", 翠: "cui", 寇: "kou", 宁: "ning", 坤: "kun", 楼: "lou", 莫: "mo",
     冬: "dong", 牛: "niu", 敏: "min", 潘: "pan", 锋: "feng", 肖: "xiao", 小: "xiao",
     灵: "ling", 世: "shi", 乔: "qiao", 庄: "zhuang", 乃: "nai", 保: "bao",
-    宾: "bin", 静: "jing", 阳: "yang", 美: "mei", 憬: "jing", 弘: "hong", 翔: "xiang", 怀: "huai", 胡: "hu", 迪: "di",
+    宾: "bin", 静: "jing", 阳: "yang", 美: "mei", 憬: "jing", 弘: "hong", 翔: "xiang", 怀: "huai", 胡: "hu", 迪: "di", 包: "bao", 杰: "jie", 璐: "lu",
     梅: "mei", 赛: "sai", 耐: "nai", 莲: "lian", 素: "su", 根: "gen", 昱: "yu",
     江: "jiang", 淑: "shu", 旭: "xu", 弋: "yi", 治: "zhi", 擎: "qing", 升: "sheng", 邢: "xing"
   };

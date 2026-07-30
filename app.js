@@ -103,6 +103,9 @@ function taskAgendaRows(session, task = {}) {
 }
 
 function taskEndTime(task, session) {
+  if (task.includePairedDiscussion && task.roles?.includes("主持") && session.pairedDiscussion?.endTime) {
+    return session.pairedDiscussion.endTime;
+  }
   return session.endTime;
 }
 
