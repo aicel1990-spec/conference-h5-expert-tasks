@@ -3566,6 +3566,29 @@ window.MEETING_DATA = {
   ]
 };
 
+(function mergePairedDiscussions(data) {
+  const merges = [
+    ["s0801-main-004", "s0801-main-005"],
+    ["s0801-main-013", "s0801-main-014"],
+    ["s0801-tor-004", "s0801-tor-005"],
+    ["s0802-main-012", "s0802-main-013"],
+    ["s0802-coag-002", "s0802-coag-003"],
+    ["s0802-coag-004", "s0802-coag-005"],
+    ["s0802-coag-006", "s0802-coag-007"],
+    ["s0802-women-007", "s0802-women-008"]
+  ];
+  const sessionById = new Map(data.sessions.map((session) => [session.id, session]));
+  const removed = new Set();
+  merges.forEach(([targetId, discussionId]) => {
+    const target = sessionById.get(targetId);
+    const discussion = sessionById.get(discussionId);
+    if (!target || !discussion) return;
+    target.discussants = [...new Set([...(target.discussants || []), ...(discussion.discussants || [])])];
+    removed.add(discussionId);
+  });
+  data.sessions = data.sessions.filter((session) => !removed.has(session.id));
+})(window.MEETING_DATA);
+
 (function resolveTasks(data) {
   const roleFields = ["speakerChairs", "presidents", "speeches", "chairs", "speakers", "discussants", "reviewers", "summaries"];
   const excludedPeople = new Set(["会务组", "大会主席", "参会代表", "会议代表", "专家", "点评专家", "主持", "讲者", "评审", "讨论"]);
