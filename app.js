@@ -114,6 +114,34 @@ function renderConference() {
       <h3>会议简介</h3>
       <p>此次会议将特邀国内血液病领域顶尖专家，围绕急性髓系白血病、多发性骨髓瘤、淋巴瘤、骨髓纤维化、造血干细胞移植、CAR-T 细胞治疗等前沿热点议题进行深度探讨。会议特别设立“免疫治疗专场”，聚焦细胞治疗在血液肿瘤中的排兵布阵、毒副反应管理及指南更新解读；另设血小板管理专题分会场，探讨临床实际问题。</p>
     </article>
+    <article class="info-card info-card--notice">
+      <h3>参会信息</h3>
+      <div class="notice-details">
+        <section>
+          <strong>一、报到时间</strong>
+          <p>2026年7月31日</p>
+        </section>
+        <section>
+          <strong>二、报到地点</strong>
+          <p>深圳福田区好日子皇冠假日酒店</p>
+          <p class="notice-details__secondary">地址：广东省深圳市福田区福华一路28号。</p>
+        </section>
+        <section>
+          <strong>三、会议时间</strong>
+          <p>2026年8月1日8:30至2026年8月2日17:10</p>
+        </section>
+        <section>
+          <strong>四、会议地点</strong>
+          <p>线下会议地点：深圳福田区好日子皇冠假日酒店会议厅（详见日程）</p>
+          <p class="notice-details__secondary">地址：广东省深圳市福田区福华一路28号。</p>
+          <p class="notice-details__secondary">线上会议号：腾讯会议 813-726-169</p>
+        </section>
+        <section>
+          <strong>五、参会人员</strong>
+          <p>相关专业医师、研究员、研究生、护士、技师</p>
+        </section>
+      </div>
+    </article>
   `;
 }
 
@@ -391,7 +419,7 @@ function renderSchedule() {
       fieldRow("总结", session.summaries)
     ].join("");
     return `
-      <article class="schedule-card">
+      <article class="schedule-card" data-session-id="${session.id}">
         <div class="schedule-card__time">
           <strong>${session.startTime}</strong>
           <span>${session.endTime}</span>
@@ -408,6 +436,43 @@ function renderSchedule() {
       </article>
     `;
   }).join("");
+}
+
+function sessionTimestamp(session, key) {
+  return new Date(`${session.date}T${session[key]}:00+08:00`).getTime();
+}
+
+function scrollToScheduleSession(session, message) {
+  state.selectedDate = session.date;
+  state.venue = "all";
+  state.track = "all";
+  state.type = "all";
+  renderFilters();
+  renderSchedule();
+  requestAnimationFrame(() => {
+    const target = [...document.querySelectorAll("#scheduleList [data-session-id]")]
+      .find((card) => card.dataset.sessionId === session.id);
+    if (target) target.scrollIntoView({ behavior: "smooth", block: "center" });
+    if (message) showToast(message);
+  });
+}
+
+function jumpToCurrentSchedule() {
+  const now = Date.now();
+  const ordered = [...data.sessions].sort((a, b) => sessionTimestamp(a, "startTime") - sessionTimestamp(b, "startTime"));
+  const active = ordered.filter((session) => now >= sessionTimestamp(session, "startTime") && now < sessionTimestamp(session, "endTime"));
+  if (active.length) {
+    scrollToScheduleSession(active[0], active.length > 1 ? `当前有 ${active.length} 个并行日程，已定位第一项` : "已定位当前进行中的日程");
+    return;
+  }
+
+  const next = ordered.find((session) => sessionTimestamp(session, "startTime") > now);
+  if (next) {
+    scrollToScheduleSession(next, "当前暂无进行中日程，已定位下一项");
+    return;
+  }
+
+  scrollToScheduleSession(ordered[ordered.length - 1], "会议日程已结束，已定位最后一项");
 }
 
 function showToast(message) {
@@ -491,6 +556,13 @@ function bindEvents() {
   });
   Object.entries(FILTER_CONFIG).forEach(([filterKey, config]) => {
     $(config.triggerSelector).addEventListener("click", () => openFilterSheet(filterKey));
+  });
+  $("#scheduleFilterJump").addEventListener("click", () => {
+    $("#schedule .filters").scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+  $("#jumpToCurrent").addEventListener("click", jumpToCurrentSchedule);
+  $("#scheduleBackTop").addEventListener("click", () => {
+    $("#schedule").scrollIntoView({ behavior: "smooth", block: "start" });
   });
   $("#filterSheet").addEventListener("click", (event) => {
     const closeTarget = event.target.closest("[data-filter-close]");

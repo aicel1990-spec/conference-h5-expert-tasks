@@ -975,6 +975,36 @@ button:disabled {
   display: grid;
   gap: 12px;
   margin-bottom: 14px;
+  scroll-margin-top: 62px;
+}
+
+.schedule-quickbar {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 7px;
+  margin-bottom: 12px;
+  padding: 6px;
+  border: 1px solid rgba(197, 0, 107, 0.12);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 6px 18px rgba(90, 13, 101, 0.08);
+}
+
+.schedule-quickbar button {
+  min-width: 0;
+  min-height: 44px;
+  padding: 0 8px;
+  border: 1px solid rgba(197, 0, 107, 0.14);
+  background: #fff;
+  color: var(--magenta);
+  box-shadow: none;
+  font-size: 13px;
+}
+
+.schedule-quickbar button:nth-child(2) {
+  border-color: transparent;
+  background: linear-gradient(135deg, var(--rose), var(--magenta));
+  color: #fff;
 }
 
 .filter-label {
@@ -1088,6 +1118,45 @@ button:disabled {
   line-height: 1.75;
 }
 
+.info-card--notice {
+  grid-column: 1 / -1;
+}
+
+.notice-details {
+  display: grid;
+  gap: 0;
+}
+
+.notice-details section {
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr);
+  gap: 6px 14px;
+  padding: 11px 0;
+  border-top: 1px solid rgba(197, 0, 107, 0.1);
+}
+
+.notice-details section:first-child {
+  border-top: 0;
+  padding-top: 3px;
+}
+
+.notice-details strong {
+  color: var(--magenta);
+  font-size: 14px;
+}
+
+.notice-details p {
+  color: var(--ink);
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+
+.notice-details__secondary {
+  grid-column: 2;
+  color: var(--muted) !important;
+  font-size: 13px;
+}
+
 .info-card--key {
   background:
     linear-gradient(135deg, rgba(255, 240, 246, 0.98), rgba(255, 255, 255, 0.96)),
@@ -1172,7 +1241,7 @@ button:disabled {
 }
 
 .map-link {
-  min-height: 42px;
+  min-height: 44px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1283,8 +1352,9 @@ button:disabled {
 }
 
 .filter-sheet__close {
-  width: 36px;
-  min-height: 36px;
+  width: 44px;
+  height: 44px;
+  min-height: 44px;
   padding: 0;
   border-radius: 50%;
   background: var(--soft-rose);
@@ -1592,5 +1662,28 @@ button:disabled {
 
   .schedule-card dl div {
     grid-template-columns: 74px 1fr;
+  }
+
+  .notice-details section {
+    grid-template-columns: 1fr;
+    gap: 4px;
+    padding: 10px 0;
+  }
+
+  .notice-details__secondary {
+    grid-column: 1;
+  }
+
+  .schedule-quickbar {
+    position: sticky;
+    top: max(6px, env(safe-area-inset-top));
+    z-index: 20;
+    margin-right: -4px;
+    margin-left: -4px;
+    box-shadow: 0 8px 22px rgba(90, 13, 101, 0.14);
+  }
+
+  .schedule-quickbar button {
+    font-size: 12px;
   }
 }
