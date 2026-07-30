@@ -2404,27 +2404,6 @@ window.MEETING_DATA = {
       "speakers": [
         "张晓辉"
       ],
-      "discussants": [],
-      "reviewers": [],
-      "sourceAgenda": "2026年8月2日（星期日）大会主会场"
-    },
-    {
-      "id": "s0802-main-002",
-      "date": "2026-08-02",
-      "startTime": "09:00",
-      "endTime": "09:15",
-      "venue": "多伦多厅",
-      "track": "大会主会场",
-      "type": "讨论",
-      "title": "异基因造血干细胞移植治疗CMML近期研究进展讨论",
-      "speakerChairs": [],
-      "presidents": [],
-      "speeches": [],
-      "chairs": [
-        "冯佳",
-        "王钧"
-      ],
-      "speakers": [],
       "discussants": [
         "孙丽华",
         "杨华"
