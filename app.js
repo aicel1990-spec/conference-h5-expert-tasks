@@ -80,6 +80,16 @@ function taskTextLine(label, value) {
   return text ? `<p><b>${label}：</b>${text}</p>` : "";
 }
 
+function sessionPersonRows(session) {
+  return [
+    ["主持", session.chairs],
+    ["讲者", session.speakers],
+    ["讨论/点评", session.discussants],
+    ["评审", session.reviewers],
+    ["点评", session.commentators]
+  ].map(([label, value]) => [label, validText(value)]).filter(([, text]) => text);
+}
+
 function renderConference() {
   $("#heroTitle").innerHTML = "<span>血液肿瘤精准诊疗与</span><span>细胞治疗前沿学术会议</span>";
 
@@ -177,7 +187,7 @@ function renderTaskDetail() {
   const expertMeta = [displayOrganization(expert.organization), validText(expert.title)].filter(Boolean).join(" · ");
   const taskItems = tasks.map((task) => {
     const session = sessionById.get(task.sessionId);
-    const partners = getPartners(session, expert.name);
+    const personRows = sessionPersonRows(session).map(([label, text]) => taskTextLine(label, text)).join("");
     return `
       <article class="task-card">
         <div class="task-card__time">
@@ -191,7 +201,7 @@ function renderTaskDetail() {
           </div>
           <h4>${session.title}</h4>
           <p>${session.track} · ${session.type}</p>
-          ${taskTextLine("搭档专家/主持", partners)}
+          ${personRows}
         </div>
       </article>
     `;
@@ -215,17 +225,6 @@ function renderTaskDetail() {
   $("#copyTasks").addEventListener("click", () => copyExpertTasks(expert, tasks));
 }
 
-function getPartners(session, currentName) {
-  const names = [
-    ...(session.chairs || []),
-    ...(session.speakers || []),
-    ...(session.discussants || []),
-    ...(session.reviewers || []),
-    ...(session.commentators || [])
-  ].filter((name, index, arr) => name !== currentName && arr.indexOf(name) === index);
-  return names.join("、");
-}
-
 function copyExpertTasks(expert, tasks) {
   const lines = [
     `${expert.name}｜${expert.organization}｜会议任务清单`,
@@ -238,8 +237,9 @@ function copyExpertTasks(expert, tasks) {
     lines.push(`   会场：${session.venue}`);
     lines.push(`   角色：${task.role}`);
     lines.push(`   环节：${session.track}｜${session.title}`);
-    const partners = validText(getPartners(session, expert.name));
-    if (partners) lines.push(`   搭档专家/主持：${partners}`);
+    sessionPersonRows(session).forEach(([label, text]) => {
+      lines.push(`   ${label}：${text}`);
+    });
   });
   const text = lines.join("\n");
   tryCopyText(text);
