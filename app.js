@@ -192,7 +192,6 @@ function renderTaskDetail() {
           <h4>${session.title}</h4>
           <p>${session.track} · ${session.type}</p>
           ${taskTextLine("搭档专家/主持", partners)}
-          ${taskTextLine("备注", task.note)}
         </div>
       </article>
     `;
@@ -237,10 +236,10 @@ function copyExpertTasks(expert, tasks) {
     const session = sessionById.get(task.sessionId);
     lines.push(`${index + 1}. ${formatDate(session.date)} ${session.startTime}-${session.endTime}`);
     lines.push(`   会场：${session.venue}`);
-    lines.push(`   任务：${task.role}｜${session.track}｜${session.title}`);
+    lines.push(`   角色：${task.role}`);
+    lines.push(`   环节：${session.track}｜${session.title}`);
     const partners = validText(getPartners(session, expert.name));
     if (partners) lines.push(`   搭档专家/主持：${partners}`);
-    if (validText(task.note)) lines.push(`   备注：${task.note}`);
   });
   const text = lines.join("\n");
   tryCopyText(text);
@@ -365,8 +364,7 @@ function renderSchedule() {
     const fields = [
       fieldRow("主持", session.chairs),
       fieldRow("讲者", session.speakers),
-      fieldRow("讨论/点评", [...(session.discussants || []), ...(session.reviewers || []), ...(session.commentators || [])]),
-      fieldRow("备注", session.note)
+      fieldRow("讨论/点评", [...(session.discussants || []), ...(session.reviewers || []), ...(session.commentators || [])])
     ].join("");
     return `
       <article class="schedule-card">

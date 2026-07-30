@@ -162,28 +162,124 @@ window.MEETING_DATA = {
 };
 
 (function resolveTasks(data) {
+  const roleFields = ["chairs", "speakers", "discussants", "reviewers", "commentators"];
+  const excludedPeople = new Set(["会务组", "大会主席", "参会代表", "会议代表", "专家", "点评专家", "主持", "讲者", "评审", "讨论"]);
+  const pinyinByChar = {
+    常: "chang", 英: "ying", 军: "jun", 车: "che", 菲: "fei", 陈: "chen", 喜: "xi", 填: "tian",
+    戴: "dai", 婧: "jing", 邓: "deng", 兰: "lan", 范: "fan", 懿: "yi", 超: "chao",
+    黄: "huang", 刚: "gang", 鹏: "peng", 程: "cheng", 望: "wang", 香: "xiang", 艳: "yan",
+    振: "zhen", 倩: "qian", 纪: "ji", 玲: "ling", 蒋: "jiang", 官: "guan", 忆: "yi",
+    黎: "li", 国: "guo", 伟: "wei", 建: "jian", 云: "yun", 李: "li", 回: "hui", 晋: "jin",
+    萌: "meng", 萍: "ping", 庆: "qing", 山: "shan", 勇: "yong", 华: "hua", 志: "zhi", 铭: "ming",
+    廖: "liao", 娅: "ya", 平: "ping", 林: "lin", 东: "dong", 海: "hai", 清: "qing",
+    刘: "liu", 琼: "qiong", 卢: "lu", 博: "bo", 吕: "lv", 成: "cheng", 芳: "fang",
+    罗: "luo", 畅: "chang", 如: "ru", 孟: "meng", 景: "jing", 晔: "ye", 聂: "nie",
+    大: "da", 年: "nian", 庞: "pang", 雯: "wen", 文: "wen", 彬: "bin", 彭: "peng",
+    浩: "hao", 宇: "yu", 孙: "sun", 覃: "qin", 宝: "bao", 珍: "zhen", 涂: "tu",
+    传: "chuan", 王: "wang", 淡: "dan", 瑜: "yu", 立: "li", 新: "xin", 魏: "wei",
+    永: "yong", 强: "qiang", 翁: "weng", 光: "guang", 祥: "xiang", 吴: "wu", 利: "li",
+    微: "wei", 夏: "xia", 冰: "bing", 天: "tian", 向: "xiang", 泓: "hong", 先: "xian",
+    谢: "xie", 沐: "mu", 尘: "chen", 闫: "yan", 悦: "yue", 许: "xu", 蕾: "lei",
+    晏: "yan", 杨: "yang", 会: "hui", 慧: "hui", 斯: "si", 恬: "tian", 张: "zhang",
+    红: "hong", 郑: "zheng", 润: "run", 辉: "hui", 钟: "zhong", 凤: "feng", 鸾: "luan",
+    周: "zhou", 凌: "ling", 走: "zou", 方: "fang", 丽: "li", 晓: "xiao", 瀚: "han",
+    冯: "feng", 佳: "jia", 赵: "zhao", 胜: "sheng", 启: "qi", 发: "fa", 友: "you",
+    蓝: "lan", 路: "lu", 瑾: "jin", 睿: "rui", 泽: "ze", 林: "lin", 蒂: "di",
+    珩: "heng", 柯: "ke", 婷: "ting", 邝: "kuang", 沃: "wo", 金: "jin", 远: "yuan",
+    彬: "bin", 绪: "xu", 涛: "tao", 余: "yu", 攀: "pan", 维: "wei", 仪: "yi",
+    辉: "hui", 钧: "jun", 志: "zhi", 凌: "ling", 蔡: "cai", 尹: "yin", 为: "wei",
+    子: "zi", 宜: "yi", 真: "zhen", 赖: "lai", 沛: "pei", 龙: "long", 田: "tian",
+    发: "fa", 立: "li", 业: "ye", 宣: "xuan", 丽: "li", 姜: "jiang", 义: "yi",
+    荣: "rong", 苏: "su", 忠: "zhong", 洪: "hong", 波: "bo", 冠: "guan", 自: "zi",
+    仁: "ren", 芸: "yun", 馨: "xin", 谭: "tan", 晓: "xiao", 虹: "hong", 继: "ji",
+    豪: "hao", 古: "gu", 庆: "qing", 徐: "xu", 婵: "chan", 飞: "fei", 军: "jun",
+    秀: "xiu", 菊: "ju", 四: "si", 喜: "xi", 罗: "luo", 华: "hua", 杜: "du",
+    梦: "meng", 娟: "juan", 涛: "tao", 郭: "guo", 智: "zhi", 玉: "yu", 宝: "bao",
+    陶: "tao", 何: "he", 学: "xue", 仰: "yang", 春: "chun", 莹: "ying", 樱: "ying"
+  };
+  const splitPattern = /[、，,；;／/｜|&+\n\r\t]+/g;
+
+  function normalizeName(name) {
+    return String(name || "")
+      .replace(/^(主持|讲者|发言|讨论|点评|评审|搭档专家\/主持|搭档专家|专家)[:：]/, "")
+      .replace(/(教授|主任|博士|医生|医师|老师|专家)$/g, "")
+      .trim();
+  }
+
+  function splitPeople(value) {
+    const raw = Array.isArray(value) ? value : [value];
+    return raw
+      .flatMap((item) => String(item || "").replace(splitPattern, "、").split("、"))
+      .map(normalizeName)
+      .filter((name, index, arr) => name && !excludedPeople.has(name) && arr.indexOf(name) === index);
+  }
+
+  function pinyinForName(name) {
+    return [...name].map((char) => pinyinByChar[char] || "").join("");
+  }
+
+  function initialsForName(name) {
+    return [...name].map((char) => (pinyinByChar[char] || char).slice(0, 1)).join("");
+  }
+
+  function expertIdForName(name) {
+    const pinyin = pinyinForName(name);
+    return `expert-${pinyin || encodeURIComponent(name).replace(/%/g, "").toLowerCase()}`;
+  }
+
+  roleFields.forEach((field) => {
+    data.sessions.forEach((session) => {
+      session[field] = splitPeople(session[field]);
+    });
+  });
+
   const expertByName = new Map(data.experts.map((expert) => [expert.name, expert]));
+  data.sessions.forEach((session) => {
+    roleFields.forEach((field) => {
+      session[field].forEach((name) => {
+        if (expertByName.has(name)) return;
+        const expert = {
+          id: expertIdForName(name),
+          name,
+          pinyin: pinyinForName(name),
+          initials: initialsForName(name),
+          organization: "参会单位待补充",
+          title: "专家"
+        };
+        data.experts.push(expert);
+        expertByName.set(name, expert);
+      });
+    });
+  });
+
   const roleConfigs = [
     ["chairs", "主持"],
-    ["speakers", "发言"],
+    ["speakers", "讲者"],
     ["discussants", "讨论"],
     ["reviewers", "评审"],
     ["commentators", "点评"]
   ];
-  data.tasks = [];
+  const taskByExpertSession = new Map();
   data.sessions.forEach((session) => {
     roleConfigs.forEach(([field, role]) => {
       (session[field] || []).forEach((name, index) => {
         const expert = expertByName.get(name);
         if (!expert) return;
-        data.tasks.push({
-          id: `task-${session.id}-${role}-${index + 1}`,
-          expertId: expert.id,
-          sessionId: session.id,
-          role,
-          note: session.note || ""
-        });
+        const key = `${expert.id}|${session.id || `${session.date}-${session.startTime}-${session.endTime}-${session.venue}-${session.title}`}`;
+        if (!taskByExpertSession.has(key)) {
+          taskByExpertSession.set(key, {
+            id: `task-${session.id}-${expert.id}`,
+            expertId: expert.id,
+            sessionId: session.id,
+            roles: [],
+            role: ""
+          });
+        }
+        const task = taskByExpertSession.get(key);
+        if (!task.roles.includes(role)) task.roles.push(role);
+        task.role = task.roles.join(" / ");
       });
     });
   });
+  data.tasks = [...taskByExpertSession.values()];
 })(window.MEETING_DATA);
