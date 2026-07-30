@@ -90,41 +90,8 @@ function sessionPersonRows(session) {
   ].map(([label, value]) => [label, validText(value)]).filter(([, text]) => text);
 }
 
-function nextAgendaSession(session) {
-  const sortedSessions = data.sessions
-    .filter((item) => item.date === session.date && item.venue === session.venue && item.track === session.track)
-    .sort((a, b) => {
-      const byDate = timeValue(a).localeCompare(timeValue(b));
-      if (byDate) return byDate;
-      return (a.endTime || "").localeCompare(b.endTime || "");
-    });
-  const index = sortedSessions.findIndex((item) => item.id === session.id);
-  return index >= 0 ? sortedSessions[index + 1] : null;
-}
-
-function relatedDiscussionRows(session) {
-  if (validText(session.discussants) || !validText(session.speakers)) return [];
-  const next = nextAgendaSession(session);
-  if (!next) return [];
-  const isAdjacentDiscussion =
-    next.date === session.date &&
-    next.venue === session.venue &&
-    next.track === session.track &&
-    next.startTime === session.endTime &&
-    /讨论|点评/.test(next.type || "") &&
-    validText(next.discussants);
-  return isAdjacentDiscussion ? [["讨论", validText(next.discussants)]] : [];
-}
-
 function taskAgendaRows(session) {
-  const rows = sessionPersonRows(session);
-  const relatedRows = relatedDiscussionRows(session);
-  relatedRows.forEach(([label, text]) => {
-    if (!rows.some(([rowLabel, rowText]) => rowLabel === label && rowText === text)) {
-      rows.push([label, text]);
-    }
-  });
-  return rows;
+  return sessionPersonRows(session);
 }
 
 function renderConference() {
