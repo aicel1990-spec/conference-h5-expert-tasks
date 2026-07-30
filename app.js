@@ -81,17 +81,21 @@ function taskTextLine(label, value) {
 
 function sessionPersonRows(session) {
   return [
+    ["主讲/主持", session.speakerChairs],
     ["大会主席", session.presidents],
     ["致辞", session.speeches],
-    ["主持", session.chairs],
     ["讲者", session.speakers],
+    ["主持", session.chairs],
     ["讨论", session.discussants],
     ["评审", session.reviewers]
   ].map(([label, value]) => [label, validText(value)]).filter(([, text]) => text);
 }
 
 function taskAgendaRows(session) {
-  return sessionPersonRows(session);
+  return [
+    ["讲题/议题", session.title],
+    ...sessionPersonRows(session)
+  ].map(([label, value]) => [label, validText(value)]).filter(([, text]) => text);
 }
 
 function renderConference() {
@@ -368,10 +372,11 @@ function renderSchedule() {
 
   $("#scheduleList").innerHTML = list.map((session) => {
     const fields = [
+      fieldRow("主讲/主持", session.speakerChairs),
       fieldRow("大会主席", session.presidents),
       fieldRow("致辞", session.speeches),
-      fieldRow("主持", session.chairs),
       fieldRow("讲者", session.speakers),
+      fieldRow("主持", session.chairs),
       fieldRow("讨论/点评", session.discussants),
       fieldRow("评审", session.reviewers)
     ].join("");
