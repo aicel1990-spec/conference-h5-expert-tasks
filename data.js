@@ -697,7 +697,7 @@ window.MEETING_DATA = {
     },
     {
       "id": "expert-083",
-      "name": "周擎",
+      "name": "周挚",
       "pinyin": "",
       "initials": "",
       "organization": "参会单位待补充",
@@ -2328,7 +2328,7 @@ window.MEETING_DATA = {
       "presidents": [],
       "speeches": [],
       "chairs": [
-        "周擎"
+        "周挚"
       ],
       "speakers": [
         "许蕾"
@@ -2350,7 +2350,7 @@ window.MEETING_DATA = {
       "presidents": [],
       "speeches": [],
       "chairs": [
-        "周擎"
+        "周挚"
       ],
       "speakers": [],
       "discussants": [
@@ -3698,7 +3698,7 @@ window.MEETING_DATA = {
     灵: "ling", 世: "shi", 乔: "qiao", 庄: "zhuang", 乃: "nai", 保: "bao",
     宾: "bin", 静: "jing", 阳: "yang", 美: "mei", 憬: "jing", 弘: "hong", 翔: "xiang", 怀: "huai", 胡: "hu", 迪: "di", 包: "bao", 杰: "jie", 璐: "lu", 董: "dong", 航: "hang", 鲁: "lu", 怡: "yi",
     梅: "mei", 赛: "sai", 耐: "nai", 莲: "lian", 素: "su", 根: "gen", 昱: "yu",
-    江: "jiang", 淑: "shu", 旭: "xu", 弋: "yi", 治: "zhi", 擎: "qing", 升: "sheng", 邢: "xing"
+    江: "jiang", 淑: "shu", 旭: "xu", 弋: "yi", 治: "zhi", 挚: "zhi", 升: "sheng", 邢: "xing"
   };
   const splitPattern = /[、，,；;／/｜|&+\n\r\t]+/g;
 
