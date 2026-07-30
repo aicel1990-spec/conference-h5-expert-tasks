@@ -64,11 +64,6 @@ function validText(value) {
   return text && text !== "无" && text !== "undefined" && text !== "null" ? text : "";
 }
 
-function displayOrganization(value) {
-  const text = validText(value);
-  return text === "参会单位待补充" ? "" : text;
-}
-
 function fieldRow(label, value) {
   const text = validText(value);
   return text ? `<div><dt>${label}</dt><dd>${text}</dd></div>` : "";
@@ -195,12 +190,10 @@ function renderExpertResults() {
   $("#expertResults").classList.toggle("is-single-match", Boolean(query && matches.length === 1));
   $("#expertResults").innerHTML = visibleMatches.map((expert) => {
     const count = getExpertTaskCount(expert.id);
-    const organization = displayOrganization(expert.organization);
     return `
       <button class="expert-card ${expert.id === state.selectedExpertId ? "is-active" : ""}" type="button" data-expert-id="${expert.id}">
         <span>
           <strong>${expert.name}</strong>
-          ${organization ? `<small>${organization}</small>` : `<small class="is-muted">单位待补充</small>`}
         </span>
         <em>${count}项任务</em>
       </button>
@@ -230,7 +223,7 @@ function renderTaskDetail() {
   const expert = expertById.get(state.selectedExpertId);
   if (!expert) return;
   const tasks = sortedTasks(tasksByExpert.get(expert.id) || []);
-  const expertMeta = [displayOrganization(expert.organization), validText(expert.title)].filter(Boolean).join(" · ");
+  const expertMeta = validText(expert.title);
   const taskItems = tasks.map((task) => {
     const session = sessionById.get(task.sessionId);
     const personRows = taskAgendaRows(session, task).map(([label, text]) => taskTextLine(label, text)).join("");
@@ -273,7 +266,7 @@ function renderTaskDetail() {
 
 function copyExpertTasks(expert, tasks) {
   const lines = [
-    `${expert.name}｜${expert.organization}｜会议任务清单`,
+    `${expert.name}｜会议任务清单`,
     `${data.conference.name}`,
     ""
   ];
