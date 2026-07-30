@@ -577,7 +577,7 @@ window.MEETING_DATA = {
     },
     {
       "id": "expert-068",
-      "name": "陈美玲",
+      "name": "董航",
       "pinyin": "",
       "initials": "",
       "organization": "参会单位待补充",
@@ -1177,7 +1177,7 @@ window.MEETING_DATA = {
     },
     {
       "id": "expert-143",
-      "name": "向弘先",
+      "name": "向泓先",
       "pinyin": "",
       "initials": "",
       "organization": "参会单位待补充",
@@ -1495,7 +1495,7 @@ window.MEETING_DATA = {
       "startTime": "15:35",
       "endTime": "15:45",
       "venue": "蒙特利尔+温哥华厅",
-      "track": "健康管理协会换届大会",
+      "track": "学术会议",
       "type": "开幕致辞",
       "title": "开幕致辞",
       "speakerChairs": [],
@@ -1739,7 +1739,7 @@ window.MEETING_DATA = {
       "venue": "蒙特利尔+温哥华厅",
       "track": "大会主会场",
       "type": "主题报告",
-      "title": "B-ALL诊疗进展及珠江医院诊疗经验分享",
+      "title": "免疫时代B-ALL治疗进展",
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
@@ -1762,7 +1762,7 @@ window.MEETING_DATA = {
       "venue": "蒙特利尔+温哥华厅",
       "track": "大会主会场",
       "type": "讨论",
-      "title": "B-ALL诊疗进展及珠江医院诊疗经验分享讨论",
+      "title": "免疫时代B-ALL治疗进展讨论",
       "speakerChairs": [],
       "presidents": [],
       "speeches": [],
@@ -1820,7 +1820,8 @@ window.MEETING_DATA = {
       "speakers": [],
       "discussants": [
         "柯鹏",
-        "王婷"
+        "王婷",
+        "董航"
       ],
       "reviewers": [],
       "sourceAgenda": "2026年8月1日（星期六）大会主会场"
@@ -2073,8 +2074,7 @@ window.MEETING_DATA = {
       ],
       "speakers": [],
       "discussants": [
-        "覃宝珍",
-        "陈美玲"
+        "覃宝珍"
       ],
       "reviewers": [],
       "sourceAgenda": "2026年8月1日（星期六）大会主会场"
@@ -2121,7 +2121,8 @@ window.MEETING_DATA = {
       "speakers": [],
       "discussants": [
         "王宁",
-        "张旭艳"
+        "张旭艳",
+        "徐莹"
       ],
       "reviewers": [],
       "sourceAgenda": "2026年8月1日（星期六）大会主会场"
@@ -2184,7 +2185,8 @@ window.MEETING_DATA = {
       "presidents": [],
       "speeches": [],
       "chairs": [
-        "黎国伟"
+        "黎国伟",
+        "寇伟"
       ],
       "speakers": [
         "李回军"
@@ -2206,7 +2208,8 @@ window.MEETING_DATA = {
       "presidents": [],
       "speeches": [],
       "chairs": [
-        "黎国伟"
+        "黎国伟",
+        "寇伟"
       ],
       "speakers": [],
       "discussants": [
@@ -2230,7 +2233,8 @@ window.MEETING_DATA = {
       "presidents": [],
       "speeches": [],
       "chairs": [
-        "陈海飞"
+        "林海清",
+        "王华"
       ],
       "speakers": [
         "孙鹏"
@@ -2252,7 +2256,8 @@ window.MEETING_DATA = {
       "presidents": [],
       "speeches": [],
       "chairs": [
-        "陈海飞"
+        "林海清",
+        "王华"
       ],
       "speakers": [],
       "discussants": [
@@ -2302,9 +2307,8 @@ window.MEETING_DATA = {
       ],
       "speakers": [],
       "discussants": [
-        "周擎",
-        "徐莹",
-        "庞艳彬"
+        "庞艳彬",
+        "杨林林"
       ],
       "reviewers": [],
       "sourceAgenda": "2026年8月1日（星期六）多伦多分会场"
@@ -2322,7 +2326,7 @@ window.MEETING_DATA = {
       "presidents": [],
       "speeches": [],
       "chairs": [
-        "林海清"
+        "周擎"
       ],
       "speakers": [
         "许蕾"
@@ -2344,7 +2348,7 @@ window.MEETING_DATA = {
       "presidents": [],
       "speeches": [],
       "chairs": [
-        "林海清"
+        "周擎"
       ],
       "speakers": [],
       "discussants": [
@@ -2854,7 +2858,8 @@ window.MEETING_DATA = {
       ],
       "speakers": [],
       "discussants": [
-        "潘伟锋"
+        "潘伟锋",
+        "杨斯恬"
       ],
       "reviewers": [],
       "sourceAgenda": "2026年8月2日（星期日）大会主会场"
@@ -2947,7 +2952,6 @@ window.MEETING_DATA = {
       "discussants": [
         "廖娅平",
         "范憬超",
-        "戴婧",
         "周凌云",
         "李回军",
         "杨华"
@@ -2995,7 +2999,6 @@ window.MEETING_DATA = {
       ],
       "speakers": [],
       "discussants": [
-        "杨斯恬",
         "谢沐尘",
         "杨会林",
         "罗畅如",
@@ -3045,11 +3048,10 @@ window.MEETING_DATA = {
       ],
       "speakers": [],
       "discussants": [
-        "翁光祥",
         "夏冰天",
         "彭浩宇",
-        "钟凤鸾",
-        "向弘先",
+        "鲁文怡",
+        "向泓先",
         "吴微"
       ],
       "reviewers": [],
@@ -3692,7 +3694,7 @@ window.MEETING_DATA = {
     培: "pei", 翠: "cui", 寇: "kou", 宁: "ning", 坤: "kun", 楼: "lou", 莫: "mo",
     冬: "dong", 牛: "niu", 敏: "min", 潘: "pan", 锋: "feng", 肖: "xiao", 小: "xiao",
     灵: "ling", 世: "shi", 乔: "qiao", 庄: "zhuang", 乃: "nai", 保: "bao",
-    宾: "bin", 静: "jing", 阳: "yang", 美: "mei", 憬: "jing", 弘: "hong", 翔: "xiang", 怀: "huai", 胡: "hu", 迪: "di", 包: "bao", 杰: "jie", 璐: "lu",
+    宾: "bin", 静: "jing", 阳: "yang", 美: "mei", 憬: "jing", 弘: "hong", 翔: "xiang", 怀: "huai", 胡: "hu", 迪: "di", 包: "bao", 杰: "jie", 璐: "lu", 董: "dong", 航: "hang", 鲁: "lu", 怡: "yi",
     梅: "mei", 赛: "sai", 耐: "nai", 莲: "lian", 素: "su", 根: "gen", 昱: "yu",
     江: "jiang", 淑: "shu", 旭: "xu", 弋: "yi", 治: "zhi", 擎: "qing", 升: "sheng", 邢: "xing"
   };
