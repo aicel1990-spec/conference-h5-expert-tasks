@@ -168,7 +168,7 @@ window.MEETING_DATA = {
     },
     {
       "id": "expert-015",
-      "name": "翁光祥",
+      "name": "翁光样",
       "pinyin": "",
       "initials": "",
       "organization": "深圳市第二人民医院",
@@ -384,7 +384,7 @@ window.MEETING_DATA = {
     },
     {
       "id": "expert-042",
-      "name": "陈蒂珩",
+      "name": "陈芾珩",
       "pinyin": "",
       "initials": "",
       "organization": "汕头大学医学院第一附属医院",
@@ -1609,7 +1609,7 @@ window.MEETING_DATA = {
       "speakers": [],
       "discussants": [
         "吕成芳",
-        "翁光祥",
+        "翁光样",
         "戴婧",
         "杨慧芳"
       ],
@@ -1801,7 +1801,7 @@ window.MEETING_DATA = {
       "speeches": [],
       "chairs": [
         "刘泽林",
-        "陈蒂珩"
+        "陈芾珩"
       ],
       "speakers": [
         "陈振华"
@@ -1824,7 +1824,7 @@ window.MEETING_DATA = {
       "speeches": [],
       "chairs": [
         "刘泽林",
-        "陈蒂珩"
+        "陈芾珩"
       ],
       "speakers": [],
       "discussants": [
@@ -3679,14 +3679,14 @@ window.MEETING_DATA = {
     大: "da", 年: "nian", 庞: "pang", 雯: "wen", 文: "wen", 彬: "bin", 彭: "peng",
     浩: "hao", 宇: "yu", 孙: "sun", 覃: "qin", 宝: "bao", 珍: "zhen", 涂: "tu",
     传: "chuan", 王: "wang", 淡: "dan", 瑜: "yu", 立: "li", 新: "xin", 魏: "wei",
-    永: "yong", 强: "qiang", 翁: "weng", 光: "guang", 祥: "xiang", 吴: "wu", 利: "li",
+    永: "yong", 强: "qiang", 翁: "weng", 光: "guang", 样: "yang", 祥: "xiang", 吴: "wu", 利: "li",
     微: "wei", 夏: "xia", 冰: "bing", 天: "tian", 向: "xiang", 泓: "hong", 先: "xian",
     谢: "xie", 沐: "mu", 尘: "chen", 闫: "yan", 闻: "wen", 悦: "yue", 许: "xu", 蕾: "lei",
     晏: "yan", 杨: "yang", 会: "hui", 慧: "hui", 斯: "si", 恬: "tian", 张: "zhang",
     红: "hong", 郑: "zheng", 润: "run", 辉: "hui", 钟: "zhong", 凤: "feng", 鸾: "luan",
     周: "zhou", 凌: "ling", 走: "zou", 方: "fang", 丽: "li", 晓: "xiao", 瀚: "han",
     冯: "feng", 佳: "jia", 赵: "zhao", 胜: "sheng", 启: "qi", 发: "fa", 友: "you",
-    蓝: "lan", 路: "lu", 瑾: "jin", 睿: "rui", 泽: "ze", 林: "lin", 蒂: "di",
+    蓝: "lan", 路: "lu", 瑾: "jin", 睿: "rui", 泽: "ze", 林: "lin", 蒂: "di", 芾: "fu",
     珩: "heng", 柯: "ke", 婷: "ting", 邝: "kuang", 沃: "wo", 金: "jin", 柳: "liu", 远: "yuan",
     彬: "bin", 绪: "xu", 涛: "tao", 潺: "chan", 余: "yu", 攀: "pan", 维: "wei", 仪: "yi",
     辉: "hui", 钧: "jun", 志: "zhi", 凌: "ling", 蔡: "cai", 尹: "yin", 为: "wei",
