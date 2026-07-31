@@ -103,7 +103,7 @@ main {
   height: 112px;
   right: -30px;
   top: 26px;
-  opacity: 0.3;
+  opacity: 0.18;
 }
 
 .hero__visual::after {
@@ -112,7 +112,7 @@ main {
   right: 126px;
   top: 146px;
   border-color: rgba(197, 0, 107, 0.045);
-  opacity: 0.52;
+  opacity: 0.28;
 }
 
 .cell {
@@ -135,14 +135,11 @@ main {
   height: 44px;
   right: 26px;
   bottom: 16px;
+  opacity: 0.09;
 }
 
 .cell-c {
-  width: 34px;
-  height: 34px;
-  left: 68%;
-  top: 94px;
-  opacity: 0.1;
+  display: none;
 }
 
 .ribbon {
@@ -218,9 +215,9 @@ main {
   flex: 0 0 auto;
   padding: 3.5px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.74);
-  border: 1px solid rgba(90, 13, 101, 0.035);
-  box-shadow: 0 1px 5px rgba(90, 13, 101, 0.025);
+  background: rgba(255, 255, 255, 0.58);
+  border: 1px solid rgba(90, 13, 101, 0.025);
+  box-shadow: 0 1px 4px rgba(90, 13, 101, 0.015);
 }
 
 .logo-mark img {
@@ -235,16 +232,32 @@ main {
   order: 1;
 }
 
+.logo-strip .logo-mark:nth-of-type(1) img {
+  transform: scale(1.06);
+}
+
 .logo-strip .logo-mark:nth-of-type(2) {
   order: 2;
+}
+
+.logo-strip .logo-mark:nth-of-type(2) img {
+  transform: scale(0.98);
 }
 
 .logo-strip .logo-mark:nth-of-type(3) {
   order: 3;
 }
 
+.logo-strip .logo-mark:nth-of-type(3) img {
+  transform: scale(0.95);
+}
+
 .logo-strip .logo-mark:nth-of-type(4) {
   order: 4;
+}
+
+.logo-strip .logo-mark:nth-of-type(4) img {
+  transform: scale(1.07);
 }
 
 .hero__content {
@@ -273,8 +286,8 @@ main {
 .hero__subtitle {
   max-width: 420px;
   margin-bottom: 5px;
-  color: rgba(90, 13, 101, 0.46);
-  font-size: 10.5px;
+  color: rgba(90, 13, 101, 0.53);
+  font-size: 10px;
   line-height: 1.36;
   font-weight: 640;
   text-transform: none;
@@ -316,7 +329,7 @@ h1 span {
   margin: 0;
   overflow: hidden;
   background: white;
-  box-shadow: 0 10px 24px rgba(90, 13, 101, 0.12);
+  box-shadow: 0 8px 20px rgba(90, 13, 101, 0.09);
 }
 
 .hero-media img {
@@ -332,44 +345,47 @@ h1 span {
   width: min(22vw, 142px);
   height: min(22vw, 142px);
   border-radius: 50%;
-  border: 3px solid rgba(255, 194, 55, 0.2);
+  border: 2px solid rgba(255, 194, 55, 0.18);
   background: linear-gradient(135deg, #fff7fb, #f4e8f6);
-  opacity: 0.34;
+  opacity: 0.46;
 }
 
 .hero-media__city::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(197, 0, 107, 0.16));
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.04), rgba(197, 0, 107, 0.09));
   mix-blend-mode: multiply;
   pointer-events: none;
 }
 
 .hero-media__city img {
   object-position: 50% top;
+  filter: saturate(0.86) contrast(1.06);
 }
 
 .hero-media__hospital {
-  right: 120px;
+  right: 126px;
   bottom: 10px;
-  width: min(23vw, 148px);
-  height: min(23vw, 148px);
+  width: min(22vw, 140px);
+  height: min(22vw, 140px);
   border-radius: 50%;
-  border: 3px solid rgba(197, 0, 107, 0.3);
+  border: 2px solid rgba(197, 0, 107, 0.24);
   z-index: 3;
 }
 
 .hero-media__hospital img {
   object-position: 8% center;
+  filter: saturate(0.86) contrast(0.96) brightness(0.98);
 }
 
 .hero-summary {
+  position: relative;
   width: min(500px, 100%);
   margin-top: 7px;
   padding: 2px 0 2px 8px;
   border: 0;
-  border-left: 2px solid rgba(197, 0, 107, 0.11);
+  border-left: 0;
   border-radius: 0;
   background: transparent;
   backdrop-filter: none;
@@ -377,10 +393,21 @@ h1 span {
   box-shadow: none;
 }
 
+.hero-summary::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  left: 0;
+  width: 1px;
+  background: rgba(197, 0, 107, 0.09);
+}
+
 .hero-summary p {
   display: grid;
   grid-template-columns: 58px minmax(0, 1fr);
-  gap: 7px;
+  gap: 6px;
+  align-items: baseline;
   margin: 0 0 2px;
   color: rgba(90, 13, 101, 0.72);
   font-size: 10.5px;
@@ -1450,17 +1477,17 @@ button:disabled {
   }
 
   .hero-media__city {
-    right: 34px;
+    right: 30px;
     top: 62px;
-    width: 140px;
-    height: 140px;
+    width: 136px;
+    height: 136px;
   }
 
   .hero-media__hospital {
-    right: 172px;
-    bottom: 12px;
-    width: 136px;
-    height: 136px;
+    right: 174px;
+    bottom: 13px;
+    width: 128px;
+    height: 128px;
   }
 
   .hero-search-card {
@@ -1579,7 +1606,7 @@ button:disabled {
   .hero__subtitle {
     max-width: calc(100% - 24px);
     margin-bottom: 4px;
-    font-size: 8.5px;
+    font-size: 8.2px;
     line-height: 1.24;
   }
 
@@ -1621,16 +1648,16 @@ button:disabled {
   .hero-media__city {
     right: 8px;
     top: 104px;
-    width: 72px;
-    height: 72px;
+    width: 74px;
+    height: 74px;
     border-width: 2px;
   }
 
   .hero-media__hospital {
-    right: 58px;
+    right: 70px;
     bottom: 8px;
-    width: 86px;
-    height: 86px;
+    width: 82px;
+    height: 82px;
     border-width: 2px;
   }
 
